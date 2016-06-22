@@ -116,7 +116,7 @@ burakkose:blog            </a>
                 <p>Suffix dizisi, verilmiş olarak verilen stringe ait tüm suffixlerin alfabetik olarak sıralanmış halidir. Suffix array eğer elinizde bir suffix tree varsa, bu ağaç üzerinde DFS algoritmasını işletilmesi ile elde edilebilir.</p>
 <p>Suffix array veri yapısının, suffix tree'den avantajları, geliştirilmiş bellek performansı ve keşleme özelliğidir.</p>
 <p>Önreğin;</p>
-<div class="highlight"><pre>&quot;banana&quot; için.
+<div class="highlight"><pre><span></span>&quot;banana&quot; için.
 
 0 banana                          5 a
 1 anana     Suffixes sırala       3 ana
@@ -131,7 +131,7 @@ burakkose:blog            </a>
 
 <h3 id="suffix-array-olusturmak-icin-temel-metot">Suffix Array oluşturmak için temel metot</h3>
 <p>Açıkçası yukarıdaki örnek yeterince açık, basit bir kaç core fonksiyon sayesinde oluşturulabilecek bir algoritma. Ben biraz işin kolayına kaçarak Python'da basit şekilde oluşturacağım.</p>
-<div class="highlight"><pre>def build_suffix_array(text):
+<div class="highlight"><pre><span></span>def build_suffix_array(text):
     return sorted(range(len(text)), key=lambda x: text[x:])
 </pre></div>
 
@@ -140,7 +140,7 @@ burakkose:blog            </a>
 <h3 id="arama-islemi">Arama işlemi</h3>
 <p>Elimizde aslında sıralanmış bir string dizisi var gibi düşünebiliriz ve sıralanmış bir dizi içerisinde arama yapma işleminde herkesin muhtemelen aklına gelen algoritma <code>Binary Search</code> algoritmasıdır. Bu işlemdede bu algoritmayı kullanacağız.</p>
 <p>Çözüm aşağıdaki gibi olacaktır.</p>
-<div class="highlight"><pre>def search(text, pattern, suffs, l, r):
+<div class="highlight"><pre><span></span>def search(text, pattern, suffs, l, r):
     if r &lt; l:
         return -1
 

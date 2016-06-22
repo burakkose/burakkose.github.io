@@ -75,7 +75,7 @@ burakkose:blog            </a>
                 <h2><a href="../blog/search-common-element-three">Sıralı olarak verilmiş üç diziden ortak elemanları bulma - Arama Algoritması</a></h2>
                 <div class="summary"><p>Artan sırada verilmiş üç dizi içerisinde bulunan ortak elemanı bulmamıza yarayan algoritmaya bakacağız.</p>
 <p>Örneğin</p>
-<div class="highlight"><pre>ar1[] = {1, 5, 10, 20, 40, 80}
+<div class="highlight"><pre><span></span>ar1[] = {1, 5, 10, 20, 40, 80}
 ar2[] = {6, 7, 20, 80, 100}
 ar3[] = {3, 4, 15, 20, 30, 70, 80, 120}
 Output: 20, 80
@@ -92,7 +92,7 @@ ar3 ...</pre></div>
                 <div class="summary"><p>Suffix dizisi, verilmiş olarak verilen stringe ait tüm suffixlerin alfabetik olarak sıralanmış halidir. Suffix array eğer elinizde bir suffix tree varsa, bu ağaç üzerinde DFS algoritmasını işletilmesi ile elde edilebilir.</p>
 <p>Suffix array veri yapısının, suffix tree'den avantajları, geliştirilmiş bellek performansı ve keşleme özelliğidir.</p>
 <p>Önreğin;</p>
-<div class="highlight"><pre>&quot;banana&quot; için.
+<div class="highlight"><pre><span></span>&quot;banana&quot; için.
 
 0 banana                          5 ...</pre></div>
                     <a class="btn btn-default btn-xs" href="../blog/suffix-array">more ...</a>
@@ -103,7 +103,7 @@ ar3 ...</pre></div>
                 <h2><a href="../blog/find-closest-pair-sorted">Sıralı iki dizi içerisinde seçilen ikili toplamının hedef sayıya en yakın olması - Arama Algoritması</a></h2>
                 <div class="summary"><p>Hoşuma giden problem türlerinden olan yakın ikili sorularından biri. Bu problemde girdi olarak verilen iki tane sıralanmış dizi ve bir hedef numarası bulunuyor ve dizilerden seçilen hangi iki elemanın toplamının hedef elemana en yakın sayı olacağını bulmamız gerekiyor.</p>
 <p>Örnek olarak;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span>  <span class="n">ar1</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">};</span>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span>  <span class="n">ar1</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">};</span>
         <span class="n">ar2</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30 ...</span></pre></div>
                     <a class="btn btn-default btn-xs" href="../blog/find-closest-pair-sorted">more ...</a>
                 </div>
@@ -112,20 +112,20 @@ ar3 ...</pre></div>
             <article>
                 <h2><a href="../blog/naive-search-string">En basit hali ile text arama işlemi - String Algoritmaları</a></h2>
                 <div class="summary"><p>Text işlemlerinde, bir dizgi içerisinde dizgi aramadaki en basit çözümü inceleyeceğiz.</p>
-<div class="highlight"><pre>txt[] =  &quot;THIS IS A TEST TEXT&quot;
+<div class="highlight"><pre><span></span>txt[] =  &quot;THIS IS A TEST TEXT&quot;
 pat[] = &quot;TEST&quot;
 Output: 10
 </pre></div>
 
 
-<div class="highlight"><pre>txt[] =  &quot;AABAACAADAABAAABAA&quot;
+<div class="highlight"><pre><span></span>txt[] =  &quot;AABAACAADAABAAABAA&quot;
 pat[] = &quot;AABA&quot;
 Output: 0,9,13
 </pre></div>
 
 
 <p>Çözüm aşağıdaki gibi olacaktır.</p>
-<div class="highlight"><pre>def search(text, pattern):
+<div class="highlight"><pre><span></span>def search(text, pattern):
     m, n = len(pattern), len(text)
     for i in range(n - m + 1 ...</pre></div>
                     <a class="btn btn-default btn-xs" href="../blog/naive-search-string">more ...</a>
@@ -136,7 +136,7 @@ Output: 0,9,13
                 <h2><a href="../blog/almost-sorted-search">Neredeyse sıralı dizi içerisinde arama - Arama Algoritması</a></h2>
                 <div class="summary"><p>Ufak bir işlem sonrası sıralanmış dizinin bazı elemanlarının yerleri karıştırılıyor. Örneğin <code>i.</code> pozisyonda olması gereken eleman <code>i-1</code> ya da <code>i+1</code> pozisyonunda bulunuyor. Hedef olarak verilen sayının dizi içerisindeki pozisyonunun bulunması amaçlanıyor.</p>
 <p>Örneğin;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">70</span><span class="o">},</span> <span class="n">key</span> <span class="o">=</span> <span class="mi">40</span>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">70</span><span class="o">},</span> <span class="n">key</span> <span class="o">=</span> <span class="mi">40</span>
 <span class="n">Output</span><span class="o">:</span> <span class="mi">2</span>
 
 <span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3 ...</span></pre></div>
@@ -148,14 +148,14 @@ Output: 0,9,13
                 <h2><a href="../blog/kmp">KMP Algoritmasi - String Algoritmaları</a></h2>
                 <div class="summary"><p>Bir diğer string arama algoritmalarından olan <code>KMP</code> algoritmasına bakacağız.</p>
 <p>Örnek olarak;</p>
-<div class="highlight"><pre>txt =  &quot;THIS IS A TEST TEXT&quot;
+<div class="highlight"><pre><span></span>txt =  &quot;THIS IS A TEST TEXT&quot;
 pat = &quot;TEST&quot;
 Output : 10
 </pre></div>
 
 
 <p>ve</p>
-<div class="highlight"><pre>txt =  &quot;AABAACAADAABAAABAA&quot;
+<div class="highlight"><pre><span></span>txt =  &quot;AABAACAADAABAAABAA&quot;
 pat = &quot;AABA&quot;
 Output : 0, 9, 13
 </pre></div>
@@ -180,7 +180,7 @@ Output : 0, 9, 13
                 <h2><a href="../blog/search-k-largest-or-smalest">K. küçük veya büyük sayısı bulmak - Part 1 - Arama Algoritması</a></h2>
                 <div class="summary"><p>Bir dizi ve <code>k</code> sayısı veriliyor(k &lt; len(dizi)). Cevap olarak dizi içerisinde ki k. küçük veya büyük elemanın bulunması hedefleniyor.</p>
 <p>Örneğin;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="o">}</span>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="o">}</span>
        <span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">Output</span><span class="o">:</span> <span class="mi">7</span>
 

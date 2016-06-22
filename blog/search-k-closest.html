@@ -123,7 +123,7 @@ burakkose:blog            </a>
 <p>Genel olarak bu çözüm O(n) zaman alır.</p>
 <p>Şimdi daha optimize ve O(logn + k) zaman alan bir çözümü inceleyelim. Bu çözüm aslında yukarıdaki çözüme benziyor fakat geçit bölgesini binary search algoritması ile buluyoruz(Dizi sıralı çünkü).</p>
 <p>Çözüm aşağıdaki gibidir.</p>
-<div class="highlight"><pre>def find_cross_point(arr, low, high, x):
+<div class="highlight"><pre><span></span>def find_cross_point(arr, low, high, x):
     # x tüm elemanlardan büyükse
     if arr[high] &lt;= x:
         return high

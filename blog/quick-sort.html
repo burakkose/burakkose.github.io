@@ -138,7 +138,39 @@ en küçük ya da en büyük büyük elemanı olması ile oluşur.</p>
     ve video sonrası anlamak daha kolay olacaktır.
     <iframe src="//www.youtube.com/embed/ywWBy6J5gz8" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 </center></p>
-<p>[gist:id=b53e632cedeb46078f7d]</p>
+<div class="gist">
+    <script src='https://gist.github.com/b53e632cedeb46078f7d.js'></script>
+    <noscript>
+        <pre><code>public static void quickSort(int[] arr, int left, int right) {
+		int pivot = arr[(left + right) / 2];
+		int _left = left;
+		int _right = right;
+		do {
+			while (pivot < arr[_right]) {
+				_right--;
+			}
+			while (pivot > arr[_left]) {
+				_left++;
+			}
+			if (_left <= _right) {
+				if (_left != _right) {
+					int temp = arr[_left];
+					arr[_left] = arr[_right];
+					arr[_right] = temp;
+				}
+				_right--;
+				_left++;
+			}
+		} while (_right >= _left);
+		if (left < _right){
+			quickSort(arr, left, _right);
+		}
+		if (right > _left){
+			quickSort(arr, _left, right);
+		}
+	}</code></pre>
+    </noscript>
+</div>
 <h4 id="35gelistirilmis-hzl-sralamaenhanced-quick-sort" style="text-align: justify;"><span style="color: #ff9900;"><strong>#Geliştirilmiş Hızlı Sıralama(Enhanced Quick Sort)</strong></span></h4>
 <p>Quick sort algoritmasında en kötü durum sonucunun ürettiği performans
 düşüklüğünü göz önüne alınarak algoritmada değişikliğe
@@ -153,7 +185,67 @@ sonundaki elemanlar karşılaştırılarak seçilmesi şeklinde
 düzenlenmiştir(bknz : median of three).Bu değişiklik hızlı sıralama
 algoritmasının karmaşıklığını değiştirmeyecek fakat gerçekleştirilen
 karşılaştırma sayısında azalma olacaktır.</p>
-<p>[gist:id=6db3ad4e3893dc530408]</p>
+<div class="gist">
+    <script src='https://gist.github.com/6db3ad4e3893dc530408.js'></script>
+    <noscript>
+        <pre><code>public static void quickSort(int[] arr, int left, int right) {
+	if (right - left < 10) {
+		insertionSort(arr,left,right);
+	}
+			
+	int pivot;
+		
+	if (arr[right] > arr[left]) {
+		if (arr[(left + right) / 2] > arr[right]) {
+			pivot = arr[right];
+		} else if (arr[(left + right) / 2] > arr[left]) {
+			pivot = arr[(left + right) / 2];
+		} else {
+			pivot = arr[left];
+		}
+	} 
+	
+	else {
+		if (arr[(left + right) / 2] > arr[left]) {
+			pivot = arr[left];
+		} else if (arr[(left + right) / 2] > arr[right]) {
+			pivot = arr[(left + right) / 2];
+		} else {
+			pivot = arr[right];
+		}
+	}
+		
+	int _left = left;
+	int _right = right;
+		
+	do {
+		while (pivot < arr[_right]) {
+			_right--;
+		}
+		while (pivot > arr[_left]) {
+			_left++;
+		}
+		if (_left <= _right) {
+			if (_left != _right) {
+				int temp = arr[_left];
+				arr[_left] = arr[_right];
+				arr[_right] = temp;
+			}
+			_right--;
+			_left++;
+		}
+	} while (_right >= _left);
+	
+	if (left < _right) {
+		quickSort(arr, left, _right);
+	}
+	if (right > _left) {
+		quickSort(arr, _left, right);
+	}
+		
+}</code></pre>
+    </noscript>
+</div>
 <h4 id="35yinelemeli-olmayan-hzl-sralamanon-recursive-quick-sort"><span style="color: #ff9900;">**#Yinelemeli Olmayan Hızlı Sıralama(Non-Recursive Quick Sort)</h4>
 <p>**</span> {style="text-align: justify;"}</p>
 <p>Özyinelemeli(recursion) yaklaşımdan zorunda kalmadığım müddetçe uzak
@@ -164,7 +256,50 @@ sıralama algoritmasında fark edildiği gibi aslında çok önemli iki
 parametre alıyor.Bunlar alt veri kümenin başlangıç ve bitiş
 indisleri.Bunları ayrı bir veri yapısında tutarak şöyle bir çözüm
 üretebiliriz.</p>
-<p>[gist:id=7faa4e70c7c672ee2694]</p>
+<div class="gist">
+    <script src='https://gist.github.com/7faa4e70c7c672ee2694.js'></script>
+    <noscript>
+        <pre><code>public static void quickSort(int[] arr) {
+	int subArray = 0;
+	Stack<Integer> stack = new Stack<Integer>();
+	stack.push(0); // left
+	stack.push(arr.length - 1); // right
+	do {
+		int right = stack.pop();
+		int left = stack.pop();
+		--subArray;
+		do {
+			int _left = left;
+			int _right = right;
+			int pivot = arr[(left + right) / 2];
+			do {
+				while (pivot < arr[_right]) {
+					_right--;
+				}
+				while (pivot > arr[_left]) {
+					_left++;
+				}
+				if (_left <= _right) {
+					if (_left != _right) {
+						int temp = arr[_left];
+						arr[_left] = arr[_right];
+						arr[_right] = temp;
+					}
+					_right--;
+					_left++;
+				}
+			} while (_right >= _left);
+			if (_left < right) {
+				++subArray;
+				stack.push(_left);
+				stack.push(right);
+			}
+			right = _right;
+		} while (left < right);
+	} while (subArray > -1);
+}</code></pre>
+    </noscript>
+</div>
 <p>Yapılan değişiklikler algoritmanın karmaşıklığını etkilemediği için
 çalışma zamanı karmaşıklığı değişmemektedir.</p>
 <p>BURAK KÖSE</p>

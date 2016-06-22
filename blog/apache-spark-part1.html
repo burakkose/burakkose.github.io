@@ -163,7 +163,7 @@ burakkose:blog            </a>
 </blockquote>
 <p>ismini verin.Daha sonra bu kopya dosya içerisindeki "log4j.rootCategory=INFO, console" satırını "log4j.rootCategory=WARN, console" ile değiştirin.Artık INFO loglarını görmeyeceksiniz.</p>
 <p>Devam edelim,interaktif Python Shell açtıktan sonra</p>
-<div class="highlight"><pre>&gt;&gt;&gt; lines = sc.textFile(&quot;README.md&quot;)
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; lines = sc.textFile(&quot;README.md&quot;)
 &gt;&gt;&gt; type(lines)
 &lt;class &#39;pyspark.rdd.RDD&#39;&gt;
 &gt;&gt;&gt; lines.count()
@@ -175,7 +175,7 @@ burakkose:blog            </a>
 
 <p>gibi bir örnek ile test edelim.Yukarıdada göreceğiniz gibi <em>lines</em> adı ile kullandığımız değişkten bir RDD objesidir ve yerel makinemizde bulunan bir text dosyasından oluşturulmuştur.RDD hakkında ileriki yazılarımda daha fazla detay vereceğim.</p>
 <p>Yukarıdaki örnekte birde <em>sc</em> objesi kullandık.Bu obje sayesinde Spark ile iletişim kurulur.</p>
-<div class="highlight"><pre>&gt;&gt;&gt; sc
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; sc
 &lt;pyspark.context.SparkContext object at 0x7f9b3e856e48&gt;
 </pre></div>
 
@@ -184,7 +184,7 @@ burakkose:blog            </a>
 <center>
 <img alt="workflow" src="/images/apache_spark/1/2.png" /></center></p>
 <p>Şimdi de bu uygulamamızda <em>filter</em> kullanarak içerisinde "Python" geçen satırları veren bir örnek yapalım.</p>
-<div class="highlight"><pre>&gt;&gt;&gt; lines = sc.textFile(&quot;README.md&quot;)
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; lines = sc.textFile(&quot;README.md&quot;)
 &gt;&gt;&gt; pythonLines = lines.filter(lambda line : &#39;Python&#39; in line)
 &gt;&gt;&gt; type(pythonLines)
 &lt;class &#39;pyspark.rdd.PipelinedRDD&#39;&gt;
@@ -196,7 +196,7 @@ burakkose:blog            </a>
 
 
 <p>Gibi bir çıktı alırız.Eğer Python'da lambda fonksiyonlara alışık değilseniz ya da kullanmak istemezseniz yukarıda kullandığımız <em>filter()</em> methoduna kendi oluşturduğunuz methodu da aktarabilirsiniz.Örnek;</p>
-<div class="highlight"><pre>&gt;&gt;&gt; def hasPython(line):
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; def hasPython(line):
 ...     return &#39;Python&#39; in line
 ...
 &gt;&gt;&gt; pythonLines = lines.filter(hasPython)
@@ -205,7 +205,7 @@ burakkose:blog            </a>
 
 <p>gibi bir kullanım geçerleyebilirsiniz.</p>
 <p>İnteraktif shell kullanışlı olsa da her zaman kullanamayız.Bazen bağımsız uygulamalar yazmamız gerekmektedir.Yazılan kodları yürütmek için indirdiğimiz Spark klasöründeyken <code>./bin/pyspark benim_script.py</code> komutunu yürütmek zorundayız.Bunun yerine aşağıdaki yolları izleyerek işimizi biraz daha kolaylaştıralım.</p>
-<div class="highlight"><pre>cd ~
+<div class="highlight"><pre><span></span>cd ~
 nano .bashrc
 </pre></div>
 
@@ -215,7 +215,7 @@ nano .bashrc
 <p>export SPARK_HOME= 'Spark dosyası uzantısı'</p>
 <p>export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH</p>
 </blockquote>
-<div class="highlight"><pre>. .bashrc
+<div class="highlight"><pre><span></span>. .bashrc
 </pre></div>
 
 
@@ -228,8 +228,8 @@ yerine direk olarak
 <p>Bundan sonra kod yazarken yapmamız gereken tek şey <em>SparkContext</em> objemizi oluşturmaktır,geri kalan kısımlar aynıdır.</p>
 <p>Yazımın başında Python kullandığımı söylemiştim fakat siz Scala veya Java kullanıyorsanuz bağımsız uygulamalar yazarken Maven kullanmanızı öneririm.Maven kullanımı ile ilgili resmi dökümanlara bakarak yardım alabilirsiniz.</p>
 <p>Yazılan uygulamanın Spark ile iletişim kurabilmesi için Spark paketlerini dahil etmeli ve <em>SparkContext</em> nesnesini yaratmalıyız.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyspark</span> <span class="kn">import</span> <span class="n">SparkConf</span><span class="p">,</span> <span class="n">SparkContext</span>
-<span class="n">conf</span> <span class="o">=</span> <span class="n">SparkConf</span><span class="p">()</span><span class="o">.</span><span class="n">setMaster</span><span class="p">(</span><span class="s">&quot;local&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setAppName</span><span class="p">(</span><span class="s">&quot;My App&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark</span> <span class="kn">import</span> <span class="n">SparkConf</span><span class="p">,</span> <span class="n">SparkContext</span>
+<span class="n">conf</span> <span class="o">=</span> <span class="n">SparkConf</span><span class="p">()</span><span class="o">.</span><span class="n">setMaster</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setAppName</span><span class="p">(</span><span class="s2">&quot;My App&quot;</span><span class="p">)</span>
 <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">conf</span> <span class="o">=</span> <span class="n">conf</span><span class="p">)</span>
 </pre></div>
 
@@ -246,18 +246,18 @@ yerine direk olarak
 <p>Eğer uygulamayı sonlandırmak isterseniz SparkContext objesi üzerinden
 <strong>stop()</strong> methodunu çağırabilir veya alışık olduğumuz <strong>sys.exit()</strong> kullanabilirsiniz.</p>
 <p>Bu kadar kargaşadan sonra sıra "Hello World" uygulamamıza geldi.Bu alanın "Hello World" uygulaması "Word Count" olarak geçer.Basit bir word count uygulaması yazalım.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
 <span class="kn">from</span> <span class="nn">pyspark</span> <span class="kn">import</span> <span class="n">SparkContext</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">appName</span><span class="o">=</span><span class="s">&quot;WordCount&quot;</span><span class="p">)</span>
-    <span class="n">lines</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s">&#39;README.md&#39;</span><span class="p">)</span>
-    <span class="n">counts</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">flatMap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">))</span> \
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">appName</span><span class="o">=</span><span class="s2">&quot;WordCount&quot;</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s1">&#39;README.md&#39;</span><span class="p">)</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">flatMap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span> \
                   <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> \
                   <span class="o">.</span><span class="n">reduceByKey</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
     <span class="n">output</span> <span class="o">=</span> <span class="n">counts</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">: </span><span class="si">%i</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span>
 
     <span class="n">sc</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 </pre></div>

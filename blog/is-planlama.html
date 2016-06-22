@@ -112,7 +112,7 @@ burakkose:blog            </a>
                 </div>
                 <p>İş planlanması ile ilgili olan bir problem. Girdi olarak son teslim tarihine ve kazanç bilgilerine sahip olan işler veriliyor. En büyük kazancı nasıl elde edebileceğimizi bulmamız gerekiyor.</p>
 <p>Örnek olarak ;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span>
   <span class="n">JobID</span>    <span class="n">Son</span> <span class="n">Tarih</span>     <span class="n">Kazanç</span>
     <span class="n">a</span>        <span class="mi">4</span>            <span class="mi">20</span>   
     <span class="n">b</span>        <span class="mi">1</span>            <span class="mi">10</span>
@@ -144,7 +144,7 @@ burakkose:blog            </a>
 </li>
 </ol>
 <p>Çözüm aşağıdaki gibi olacaktır.</p>
-<div class="highlight"><pre>def print_job_scheduling(jobs):
+<div class="highlight"><pre><span></span>def print_job_scheduling(jobs):
     jobs.sort(key=lambda x: x[2], reverse=True)
     result, slot = [None] * len(jobs), [False] * len(jobs)
     for job in jobs:

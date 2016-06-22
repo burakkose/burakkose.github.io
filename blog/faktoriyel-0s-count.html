@@ -112,7 +112,7 @@ burakkose:blog            </a>
                 </div>
                 <p>Verilen sayının faktoriyelinde sonda bulunan sıfırların sayısını bulmamız gerekiyor.</p>
 <p>Örneğin;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">Output</span><span class="o">:</span> <span class="mi">1</span>
 <span class="mi">5</span><span class="o">!</span> <span class="o">=</span> <span class="mi">20</span>
 
@@ -127,7 +127,7 @@ burakkose:blog            </a>
 
 <p>En basit hali ile çözüm, sayının faktoriyelini hesaplamak ve sondaki sıfıların sayısını saymak. Masraflı ve büyük sayılar için çalışmayacak bir yöntem.</p>
 <p>Matematikten faydalanarak şu şekilde çözebiliriz. Sayının sonunda 0 oluşabilmesi için en az bir adet 2 ve bir adet 5 gerekmektedir. Dolayısı ile sayı içerisindeki 2lerin ve 5lerin sayısını sayarsak çözüme ulaşabiliriz.</p>
-<div class="highlight"><pre>n = 5: Bir adet 5 ve üç adet 2 bulunmaktadır (2 * 2 * 2 * 3 * 5). Dolayısıyla 0ların sayısı 1&#39;dir.
+<div class="highlight"><pre><span></span>n = 5: Bir adet 5 ve üç adet 2 bulunmaktadır (2 * 2 * 2 * 3 * 5). Dolayısıyla 0ların sayısı 1&#39;dir.
 
 n = 11: İki adet 5 ve üç adet 2 bulunmaktadır. (2^8 * 3^4 * 5^2 * 7). Dolayısıyla 0ların sayısı 2&#39;dir.
 </pre></div>
@@ -135,7 +135,7 @@ n = 11: İki adet 5 ve üç adet 2 bulunmaktadır. (2^8 * 3^4 * 5^2 * 7). Dolay�
 
 <p>Sayı içerisindeki 2lerin sayısı es geçebiliriz zaten her seferinde elimizde fazladan 2 olacak. Sadece 5lerin sayısını saymak yeterlidir. Dikkat etmemiz gereken başka bir durum bulunmaktadır. Örneğin 28! sayısı için 25 sayısından gelen fazladan bir 5 durumu vardır. Aynı durum 125 yani 5'in üsleri içinde geçerlidir.</p>
 <p><code>n! için sondaki sıfır sayısı = floor(n/5) + floor(n/25) + floor(n/125) + ....</code></p>
-<div class="highlight"><pre>def count_zeros(n):
+<div class="highlight"><pre><span></span>def count_zeros(n):
     result = 0
     i = 5
     while n // i &gt;= 1:

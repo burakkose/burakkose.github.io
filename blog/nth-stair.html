@@ -113,7 +113,7 @@ burakkose:blog            </a>
                 <p>N adet basamağa sahip bir merdivende, en alt noktadan üst noktaya her seferinde en fazla bir veya iki adım atarak kaç farklı şekilde ulaşabileceğimizi bulacağız.</p>
 <p><img alt="basamak" src="/images/DynamicProgramming/stairs.gif" /> Örneğin yadaki resim için 3 adet çözüm vardır.</p>
 <p>Daha fazla örnek;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">Output</span><span class="o">:</span> <span class="mi">1</span>
 <span class="n">Sadece</span> <span class="mi">1</span> <span class="n">adımda</span> <span class="n">ulaşılır</span>
 
@@ -128,7 +128,7 @@ burakkose:blog            </a>
 
 
 <p>Basit olarak rekürsif olarak çözebilir. <code>yol(n) = yol(n-1) + yol(n-2)</code> . Aslında yandaki formulun <a href="../blog/fibonacci">fibonacci</a> formulu olduğu çok belli.</p>
-<div class="highlight"><pre>def recursion(n):
+<div class="highlight"><pre><span></span>def recursion(n):
     if n &lt;= 1:
         return n
     return recursion(n - 1) + recursion(n - 2)
@@ -147,7 +147,7 @@ if __name__ == &#39;__main__&#39;:
 <h4 id="problemin-genellestirilmis-hali">Problemin genelleştirilmiş hali</h4>
 <p>Örneğin kişinin m adıma kadar hakkı olsun. m=4 için kişi her bir anda 1, 2, 3 veya 4 adım atabilir.
 <code>yol(n, m) = yol(n-1, m) + yol(n-2, m) + ... yol(n-m, m)</code></p>
-<div class="highlight"><pre>def calculate(n, m):
+<div class="highlight"><pre><span></span>def calculate(n, m):
     if n &lt;= 1:
         return n
     res = 0

@@ -112,7 +112,7 @@ burakkose:blog            </a>
                 </div>
                 <p>Bir dizi ve <code>k</code> sayısı veriliyor(k &lt; len(dizi)). Cevap olarak dizi içerisinde ki k. küçük veya büyük elemanın bulunması hedefleniyor.</p>
 <p>Örneğin;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="o">}</span>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="o">}</span>
        <span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">Output</span><span class="o">:</span> <span class="mi">7</span>
 
@@ -127,7 +127,7 @@ burakkose:blog            </a>
 <h3 id="cozum-2-min-heap-heapselect">Çözüm 2 (Min Heap – HeapSelect)</h3>
 <p>Bu problemi <code>O(nlogn)</code> zaman karma1şıklığından daha iyi bir şekilde çözebiliriz. Kullanacağımız algoritma, heap veri yapısı yardımı ile sonuca ulaşacaktır.</p>
 <p>Çözüm aşağıdaki gibidir.</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="n">MinHeap:</span>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">MinHeap:</span>
 
     <span class="n">def</span> <span class="n">__init__</span>(<span class="k">self</span>, <span class="n">arr</span>):
         <span class="k">self</span>.<span class="n">harr</span> = <span class="n">arr</span>
@@ -183,7 +183,7 @@ burakkose:blog            </a>
 <p>Bu algoritmanın karmaşıklığı <code>O(n+klogn)</code> olacakır.</p>
 <h3 id="cozum-3-max-heap">Çözüm 3 (Max-Heap)</h3>
 <p>Çözüm 2'deki gibi, bu sefer max-heap ile problemi çözebiliriz.Karmaşıklık <code>O(k + (n-k)*logk)</code> olacaktır.</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="n">MaxHeap:</span>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">MaxHeap:</span>
 
     <span class="n">def</span> <span class="n">__init__</span>(<span class="k">self</span>, <span class="n">arr</span>):
         <span class="k">self</span>.<span class="n">harr</span> = <span class="n">arr</span>
@@ -238,7 +238,7 @@ burakkose:blog            </a>
 
 <h3 id="cozum-4-quickselect">Çözüm 4 (QuickSelect)</h3>
 <p>Bu çözüm, çözüm 1 de bahsedilen yöntemin optimize edilmiş halini yansıtmaktadır.Quick sort algoritmasının modifiye edilmesi ile elde edilmiştir. Pivot eleman seçeceğiz, bunu doğru pozisyona yerleştireceğiz ve etrafını parçalayacaız. En kötü durumda karmaşıklık <code>O(n^2)</code>, fakat ortalama durumda <code>O(n)</code> olacaktır.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">inf</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">inf</span>
 
 
 <span class="k">def</span> <span class="nf">kth_smallest</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
@@ -264,7 +264,7 @@ burakkose:blog            </a>
     <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">r</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">i</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">26</span><span class="p">]</span>
     <span class="k">print</span><span class="p">(</span><span class="n">kth_smallest</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </pre></div>

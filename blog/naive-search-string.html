@@ -114,20 +114,20 @@ burakkose:blog            </a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>Text işlemlerinde, bir dizgi içerisinde dizgi aramadaki en basit çözümü inceleyeceğiz.</p>
-<div class="highlight"><pre>txt[] =  &quot;THIS IS A TEST TEXT&quot;
+<div class="highlight"><pre><span></span>txt[] =  &quot;THIS IS A TEST TEXT&quot;
 pat[] = &quot;TEST&quot;
 Output: 10
 </pre></div>
 
 
-<div class="highlight"><pre>txt[] =  &quot;AABAACAADAABAAABAA&quot;
+<div class="highlight"><pre><span></span>txt[] =  &quot;AABAACAADAABAAABAA&quot;
 pat[] = &quot;AABA&quot;
 Output: 0,9,13
 </pre></div>
 
 
 <p>Çözüm aşağıdaki gibi olacaktır.</p>
-<div class="highlight"><pre>def search(text, pattern):
+<div class="highlight"><pre><span></span>def search(text, pattern):
     m, n = len(pattern), len(text)
     for i in range(n - m + 1):
         for j in range(m):
@@ -144,20 +144,20 @@ if __name__ == &#39;__main__&#39;:
 
 
 <h3 id="en-iyi-durum-nedir">En iyi durum nedir?</h3>
-<div class="highlight"><pre>txt[]  = &quot;AABCCAADDEE&quot;
+<div class="highlight"><pre><span></span>txt[]  = &quot;AABCCAADDEE&quot;
 pat[] = &quot;FAA&quot;
 </pre></div>
 
 
 <p>Desenin ilk karakteri arana text içerisinde bulunmadığı zamandır ve karmaşıklık <code>O(n)</code> olur.</p>
 <h3 id="en-kotu-durum-nedir">En kötü durum nedir?</h3>
-<div class="highlight"><pre>txt[] = &quot;AAAAAAAAAAAAAAAAAA&quot;
+<div class="highlight"><pre><span></span>txt[] = &quot;AAAAAAAAAAAAAAAAAA&quot;
 pat[] = &quot;AAAAA&quot;
 </pre></div>
 
 
 <p>Yani tüm karakterler aynı olduğunda ve</p>
-<div class="highlight"><pre>txt[] = &quot;AAAAAAAAAAAAAAAAAB&quot;
+<div class="highlight"><pre><span></span>txt[] = &quot;AAAAAAAAAAAAAAAAAB&quot;
 pat[] = &quot;AAAAB&quot;
 </pre></div>
 

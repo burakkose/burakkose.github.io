@@ -112,7 +112,7 @@ burakkose:blog            </a>
                 </div>
                 <p>Ufak bir işlem sonrası sıralanmış dizinin bazı elemanlarının yerleri karıştırılıyor. Örneğin <code>i.</code> pozisyonda olması gereken eleman <code>i-1</code> ya da <code>i+1</code> pozisyonunda bulunuyor. Hedef olarak verilen sayının dizi içerisindeki pozisyonunun bulunması amaçlanıyor.</p>
 <p>Örneğin;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">70</span><span class="o">},</span> <span class="n">key</span> <span class="o">=</span> <span class="mi">40</span>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">70</span><span class="o">},</span> <span class="n">key</span> <span class="o">=</span> <span class="mi">40</span>
 <span class="n">Output</span><span class="o">:</span> <span class="mi">2</span>
 
 <span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">70</span><span class="o">},</span> <span class="n">key</span> <span class="o">=</span> <span class="mi">90</span>
@@ -124,7 +124,7 @@ burakkose:blog            </a>
 <p>Bu çözümde ise sıralı diziler üzerinde uygulanan algoritmalardan olan <code>binary search</code> algoritmasının biraz daha modifiye edilmiş halini kullanacağız.</p>
 <p>Fikir olarak şuna dayanmaktadır; elimizdeki değeri ortandaki üç eleman ile karşılaştıracağız. Geri mantık <code>binary search</code> algoritması gibidir.</p>
 <p>Çözüm aşağıdadır.</p>
-<div class="highlight"><pre>def mod_binary_search(arr, l, r, x):
+<div class="highlight"><pre><span></span>def mod_binary_search(arr, l, r, x):
     &#39;&#39;&#39;Modifiye edilmiş binary search&#39;&#39;&#39;
     if r &gt;= l:
         mid = l + (r - l) // 2

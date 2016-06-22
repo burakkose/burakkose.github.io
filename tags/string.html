@@ -76,7 +76,7 @@ burakkose:blog            </a>
                 <div class="summary"><p>Suffix dizisi, verilmiş olarak verilen stringe ait tüm suffixlerin alfabetik olarak sıralanmış halidir. Suffix array eğer elinizde bir suffix tree varsa, bu ağaç üzerinde DFS algoritmasını işletilmesi ile elde edilebilir.</p>
 <p>Suffix array veri yapısının, suffix tree'den avantajları, geliştirilmiş bellek performansı ve keşleme özelliğidir.</p>
 <p>Önreğin;</p>
-<div class="highlight"><pre>&quot;banana&quot; için.
+<div class="highlight"><pre><span></span>&quot;banana&quot; için.
 
 0 banana                          5 ...</pre></div>
                     <a class="btn btn-default btn-xs" href="../blog/suffix-array">more ...</a>
@@ -86,20 +86,20 @@ burakkose:blog            </a>
             <article>
                 <h2><a href="../blog/naive-search-string">En basit hali ile text arama işlemi - String Algoritmaları</a></h2>
                 <div class="summary"><p>Text işlemlerinde, bir dizgi içerisinde dizgi aramadaki en basit çözümü inceleyeceğiz.</p>
-<div class="highlight"><pre>txt[] =  &quot;THIS IS A TEST TEXT&quot;
+<div class="highlight"><pre><span></span>txt[] =  &quot;THIS IS A TEST TEXT&quot;
 pat[] = &quot;TEST&quot;
 Output: 10
 </pre></div>
 
 
-<div class="highlight"><pre>txt[] =  &quot;AABAACAADAABAAABAA&quot;
+<div class="highlight"><pre><span></span>txt[] =  &quot;AABAACAADAABAAABAA&quot;
 pat[] = &quot;AABA&quot;
 Output: 0,9,13
 </pre></div>
 
 
 <p>Çözüm aşağıdaki gibi olacaktır.</p>
-<div class="highlight"><pre>def search(text, pattern):
+<div class="highlight"><pre><span></span>def search(text, pattern):
     m, n = len(pattern), len(text)
     for i in range(n - m + 1 ...</pre></div>
                     <a class="btn btn-default btn-xs" href="../blog/naive-search-string">more ...</a>
@@ -110,14 +110,14 @@ Output: 0,9,13
                 <h2><a href="../blog/kmp">KMP Algoritmasi - String Algoritmaları</a></h2>
                 <div class="summary"><p>Bir diğer string arama algoritmalarından olan <code>KMP</code> algoritmasına bakacağız.</p>
 <p>Örnek olarak;</p>
-<div class="highlight"><pre>txt =  &quot;THIS IS A TEST TEXT&quot;
+<div class="highlight"><pre><span></span>txt =  &quot;THIS IS A TEST TEXT&quot;
 pat = &quot;TEST&quot;
 Output : 10
 </pre></div>
 
 
 <p>ve</p>
-<div class="highlight"><pre>txt =  &quot;AABAACAADAABAAABAA&quot;
+<div class="highlight"><pre><span></span>txt =  &quot;AABAACAADAABAAABAA&quot;
 pat = &quot;AABA&quot;
 Output : 0, 9, 13
 </pre></div>

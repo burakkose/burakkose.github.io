@@ -112,7 +112,7 @@ burakkose:blog            </a>
                 </div>
                 <p>Hoşuma giden problem türlerinden olan yakın ikili sorularından biri. Bu problemde girdi olarak verilen iki tane sıralanmış dizi ve bir hedef numarası bulunuyor ve dizilerden seçilen hangi iki elemanın toplamının hedef elemana en yakın sayı olacağını bulmamız gerekiyor.</p>
 <p>Örnek olarak;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span>  <span class="n">ar1</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">};</span>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span>  <span class="n">ar1</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">};</span>
         <span class="n">ar2</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">40</span><span class="o">};</span>
         <span class="n">x</span> <span class="o">=</span> <span class="mi">32</span>      
 <span class="n">Output</span><span class="o">:</span>  <span class="mi">1</span> <span class="n">and</span> <span class="mi">30</span>
@@ -138,7 +138,7 @@ burakkose:blog            </a>
 <li>r--</li>
 </ol>
 <p>Çözüm aşağıdaki gibi olacaktır.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">inf</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">inf</span>
 
 
 <span class="k">def</span> <span class="nf">print_closest</span><span class="p">(</span><span class="n">ar1</span><span class="p">,</span> <span class="n">ar2</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
@@ -155,9 +155,9 @@ burakkose:blog            </a>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">l</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;({} - {})&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ar1</span><span class="p">[</span><span class="n">res_l</span><span class="p">],</span> <span class="n">ar2</span><span class="p">[</span><span class="n">res_r</span><span class="p">]))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;({} - {})&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ar1</span><span class="p">[</span><span class="n">res_l</span><span class="p">],</span> <span class="n">ar2</span><span class="p">[</span><span class="n">res_r</span><span class="p">]))</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">ar1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
     <span class="n">ar2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">38</span>

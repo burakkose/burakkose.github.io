@@ -111,7 +111,7 @@ burakkose:blog            </a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>Üs alma işlemi kullanılan programlama dilinin standart olarak verdiği işlemler ile gayet kolay olarak yapılabilen bir işlemdir.En basit hali ile çözüm şu şekildedir.</p>
-<div class="highlight"><pre>def brute(num, x):
+<div class="highlight"><pre><span></span>def brute(num, x):
     result = 1
     for i in range(x):
         result *= num
@@ -120,7 +120,7 @@ burakkose:blog            </a>
 
 
 <p>Bu çözüm iteratif olarak yazılmış ve <code>O(n)</code> karmaşıklığına sahip hoş olmayan bir çözümdür. Şimdi bu çözümü <code>Divide and Conquer</code> mantığına uygun bir çözüm ile yazalım.</p>
-<div class="highlight"><pre>def div_conq(num, x):
+<div class="highlight"><pre><span></span>def div_conq(num, x):
     if x == 0:
         return 1
     elif x % 2 == 0:
@@ -131,7 +131,7 @@ burakkose:blog            </a>
 
 
 <p>Çözümü divide and conquer mantığına göre çözsekte karmaşıklıkta hala değişiklik olmadı ve zaman karmaşıklığımız <code>O(n)</code>. Biraz dikkat ederseniz gereksiz tekrarlar olduğunu fark edebilirsiniz. Bunları önlemek için aşağıdaki gibi bir yol izleyebiliriz.</p>
-<div class="highlight"><pre>def div_conq(num, x):
+<div class="highlight"><pre><span></span>def div_conq(num, x):
     if x == 0:
         return 1
     temp = div_conq(num, x / 2)
@@ -143,7 +143,7 @@ burakkose:blog            </a>
 
 
 <p>Artık karmaşıklığımız <code>O(logn)</code> olmuştur. Fakat yazdığımız kod negatif sayısal için çalışmayacaktır. Ufak bir ekleme ile şu hale getirebilriz.</p>
-<div class="highlight"><pre>def div_conq(num, x):
+<div class="highlight"><pre><span></span>def div_conq(num, x):
     if x == 0:
         return 1
     temp = div_conq(num, x / 2)

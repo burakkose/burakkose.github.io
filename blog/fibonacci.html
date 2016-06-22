@@ -117,7 +117,7 @@ burakkose:blog            </a>
 <h3 id="metot-1-recursion">Metot 1 ( recursion )</h3>
 <p>Yukarıda verilmiş olan matematik ifadesinin direkt olarak uygulanmış halidir. İşe yarar ama çok fazla maliyetlidir.</p>
 <p><code>T(n) = T(n-1) + T(n-2)</code> karmaşıklık analizi çözüldüğünde karşımıza <code>O(2^n)</code> çıkar. Gerçekten maliyetli bir çözüm!</p>
-<div class="highlight"><pre>def recursion(n):
+<div class="highlight"><pre><span></span>def recursion(n):
     if n &lt;= 1:
         return n
     return recursion(n - 1) + recursion(n - 2)
@@ -130,7 +130,7 @@ if __name__ == &#39;__main__&#39;:
 
 <h3 id="metot-2-dynamic-programming">Metot 2 (Dynamic Programming)</h3>
 <p>Metot 1'deki öz yinelemeli çözümde aynı değerleri defalarca hesapladıımızı görmüşsünüzdür. Bu işlemi önlemek amaçlı dinamik programlama yaklaşımına bakacağız.</p>
-<div class="highlight"><pre>def dynamic(n):
+<div class="highlight"><pre><span></span>def dynamic(n):
     fib_list = [0, 1]
     for i in range(2, n + 1):
         fib_list.append(fib_list[i - 1] + fib_list[i - 2])
@@ -145,7 +145,7 @@ if __name__ == &#39;__main__&#39;:
 <p>Bu çözümün zaman karmaşıklığı <code>O(n)</code> ve yer karmaşıklığı <code>O(n)</code> olmaktadır.</p>
 <h3 id="metot-3-metot-2-icin-yer-duzenlemesi">Metot 3 (Metot 2 için yer düzenlemesi)</h3>
 <p>Metot 2'de yapılan çözüm yer karmaşıklığına sahiptir. Yani ekstra bellek kullanımı gerektiren bir çözümdür. Bu çözümü aynı proramlama paradigması ile yerden ödün vermeyerek şu şekilde çözebiliriz.</p>
-<div class="highlight"><pre>def space_dynamic(n):
+<div class="highlight"><pre><span></span>def space_dynamic(n):
     a, b = 0, 1
     if n == 0:
         return a
@@ -164,7 +164,7 @@ if __name__ == &#39;__main__&#39;:
 <p><code>M = [[1,1],[1,0]]</code></p>
 <p>n. fibonacci sayısını istiyorsak bu matrisi kendisi ile n kere çarpmamız ve (0,0) elemanını almamız gerekmektedir. Kısacası pow(M,n) işlemi yapmamız gerekmektedir.</p>
 <p><img alt="Matris" src="/images/MathematicalAlgorithm/fibonaccimatrix.png" /></p>
-<div class="highlight"><pre>def matrix(n):
+<div class="highlight"><pre><span></span>def matrix(n):
     F = [[1, 1], [1, 0]]
     if not n:
         return 0
@@ -198,7 +198,7 @@ if __name__ == &#39;__main__&#39;:
 <p>Zaman karmaşıklığı <code>O(n)</code> ve yer karmaşıklığı <code>O(1)</code> olur.</p>
 <h3 id="metot-5-metot-4-iyilestirmesi">Metot 5 (Metot 4 iyileştirmesi)</h3>
 <p>Bu adım ile artık n. fibonacci sayısını bulma işlemini <code>O(logn)</code> karmaşıklıkta çözebileceğiz.</p>
-<div class="highlight"><pre>def matrix_opt(n):
+<div class="highlight"><pre><span></span>def matrix_opt(n):
     F = [[1, 1], [1, 0]]
     if not n:
         return 0

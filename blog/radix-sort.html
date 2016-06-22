@@ -472,7 +472,57 @@ diyorsanız.</p>
 tabanındadır.Dolayısı ile<br />
 log(10,252) + 1 = 3,401 olur ve bunu int çevirirsek = 3 çıkar.Şimdi bu
 algoritmamızın örnek kodlarına gelelim.  </p>
-<p>[gist:id=7160796469da0dc175b0]</p>
+<div class="gist">
+    <script src='https://gist.github.com/7160796469da0dc175b0.js'></script>
+    <noscript>
+        <pre><code>from math import log
+
+def getEmptyList(size): 
+    # Boş bir liste döndürür
+    return [ [] for i in range(size) ]
+    
+def getDigit(num, base, digit_num):
+    # Hanelere göre değeri seçer
+    # Örnek 123 sayısının ilk hanesi = 3
+    return (num // base ** digit_num) % base
+    
+def maxWithAbs(p_list):
+    # Maksimum sayıyı işaret farkı olmadan döndürür
+    return max(abs(dig) for dig in p_list)  
+    
+def mergeList(p_list):
+    # Parametre olarak aldığı listeyi birlştirir
+    new_list = []
+    for sub in p_list:
+        new_list.extend(sub)
+    return new_list
+    
+def split(s_list , base , digitNum):
+    temp_list = getEmptyList(base)
+    for number in s_list:
+        temp_list[getDigit(number, base, digitNum)].append(number)
+    return temp_list
+
+def splitBySign(p_list):
+    # işaretli sayıları gruplar
+    buffer = [[], []]
+    for num in p_list:
+        if num < 0:
+            buffer[0].append(num)
+        else:
+            buffer[1].append(num)
+    return buffer
+
+def radixSort(_list,base):
+    digitNum = int(log(maxWithAbs(_list),base) + 1)
+    for dig in range(digitNum):#İşaretlere bakmaksızın sıralıyor
+        _list = mergeList(split(_list, base, dig))
+    return mergeList(splitBySign(_list))#işaretleri dikkate alıyor ve düzenliyor
+
+liste = [123,113,55,11,56,7,1,-1,2]
+print(radixSort(liste, 10))</code></pre>
+    </noscript>
+</div>
 <p><span style="color: #ff9900;"><strong>Basamaklı Yer Değiştirme
 Sıralaması(Radix Exchange Sort)</strong></span></p>
 <p>Şimdi direkt yerleştirmeli sıralamanın düzenlemiş hali olan Basamaklı
@@ -487,7 +537,56 @@ kullanılmıştır.</p>
 işlem yapılmasına gerek yoktur.Algoritmanın kodunu verirken biraz
 modifiye ettiğimden söz etmeliyim.Ufak değişiklikler ile negatif sayılar
 içinde işleyebilmesi için düzenledim.</p>
-<p>[gist:id=4f95b6ad2890d02759e7]</p>
+<div class="gist">
+    <script src='https://gist.github.com/4f95b6ad2890d02759e7.js'></script>
+    <noscript>
+        <pre><code>from math import log
+
+def swap(n1,n2):
+    return n2 , n1
+
+def getDigit(num, digit_num):
+    return (num >> digit_num) & 0x01
+
+def splitBySign(p_list):
+    # işaretli sayıları gruplar
+    buffer = [[], []]
+    for num in p_list:
+        if num < 0:
+            buffer[0].append(num)
+        else:
+            buffer[1].append(num)
+    return buffer 
+
+def exchange(liste,down,up,digit):
+    if up > down and digit >= 0:
+        _down , _up = down , up
+        while(_up > _down):
+            while(getDigit(liste[_down], digit) == 0 and _down < _up):
+                _down += 1
+            while(getDigit(liste[_up], digit) == 1 and _down < _up):
+                _up -= 1
+            liste[_down] , liste[_up] = swap(liste[_down], liste[_up])
+        if(getDigit(liste[up], digit) == 0):
+            _up += 1
+        exchange(liste,down,_up -1,digit -1)
+        exchange(liste,_down,up,digit-1)     
+        
+def RadixExchangeSort(p_list):
+    temp_buffer = splitBySign(p_list) #sayıları işaretine göre gruplandırdık
+    negative_list , possitive_list = temp_buffer[0] , temp_buffer[1]
+    if len(negative_list) > 0:#Eğer negatif sayı varsa
+        exchange(negative_list,0,len(negative_list)-1,int(log(abs(min(negative_list)),2) + 1))
+    if len(possitive_list) > 0:#Eğer pozitif sayı varsa
+        exchange(possitive_list,0,len(possitive_list)-1,int(log(max(possitive_list),2) + 1))
+    return negative_list + possitive_list
+
+#Deneme
+liste = [31,30,29,-10,3,1,6,8,-123,-1233,-999]   
+print(RadixExchangeSort(liste))
+            </code></pre>
+    </noscript>
+</div>
 <p>BURAK KÖSE</p>
             </div>
             <!-- /.entry-content -->

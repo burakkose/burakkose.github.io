@@ -181,7 +181,27 @@ animasyon anlamaya yardımcı olacaktır.</p>
 fakat bazı basit müdahaleler ile biraz daha efektif hale
 getirilebilir.Bu konuda yazılarımı sıralama algoritmalarını temel olarak
 inceledikten sonra yayınlayacağım bir yazıdan ulaşabilirsiniz.</p>
-<p>[gist:id=e26eaa1f57a84afa5273]</p>
+<div class="gist">
+    <script src='https://gist.github.com/e26eaa1f57a84afa5273.js'></script>
+    <noscript>
+        <pre><code>public void bubbleSort(int[] arr)
+  {
+    int temp;
+    for(int i=1; i<arr.length; i++)
+    {
+      for(int j=0; j<arr.length-i; j++)
+      {
+        if(arr[j] > arr[j+1])
+        {
+          temp=arr[j];
+          arr[j]=arr[j+1];
+          arr[j+1]=temp;
+        }
+      }
+    }
+  }</code></pre>
+    </noscript>
+</div>
 <p>Obama ve Eric Schdimit konuşması için :  </p>
 <iframe src="//www.youtube.com/embed/k4RRi_ntQc8" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 

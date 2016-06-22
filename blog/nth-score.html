@@ -112,7 +112,7 @@ burakkose:blog            </a>
                 </div>
                 <p>3, 5 ve 10 puan almanın mümkün olduğu ve hedef puana bu puan gruplarını kullanarak kaç farklı şekilde ulaşılabileceğini bulacağız.</p>
 <p>Örnek;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">Output</span><span class="o">:</span> <span class="mi">4</span>
 <span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">10</span><span class="o">)</span>
 <span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">)</span>
@@ -127,7 +127,7 @@ burakkose:blog            </a>
 
 
 <p>Çözüm mantığı gayet basittir. n+1 boyutunda bir dizi yaratılır ve her puanlama için döngüler ile tüm çözüm sayıları tutulur. Zaman ve yer karmaşıklığı 0(n) olacaktır.</p>
-<div class="highlight"><pre>def adjust(l, score, n):
+<div class="highlight"><pre><span></span>def adjust(l, score, n):
     for i in range(score, n + 1):
         l[i] += l[i - score]
 
@@ -149,7 +149,7 @@ if __name__ == &#39;__main__&#39;:
 
 
 <p>Cevabı doğru bulduk fakat (10, 5, 5), (5, 5, 10) ve (5, 10, 5) durumları tek bir durum olarak sayılmıştır. Peki bu durumlarıda farklı birer yol olarak saymak istersek yukarıdaki kodu biraz değiştirmek gerekecek.</p>
-<div class="highlight"><pre>def count_new(n):
+<div class="highlight"><pre><span></span>def count_new(n):
     result = [0] * (n + 1)
     result[0] = 1  # 0 puan için
 

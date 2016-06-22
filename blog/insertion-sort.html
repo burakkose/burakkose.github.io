@@ -138,7 +138,24 @@ Karşılaştırma sayısı : n(n-1)/2</p>
 </blockquote>
 </blockquote>
 <p>ve bu algoritmayı aşağıdaki şekilde tanımlayabiliriz.</p>
-<p>[gist:id=8ad4a6c60d2cc51fe8d4]</p>
+<div class="gist">
+    <script src='https://gist.github.com/8ad4a6c60d2cc51fe8d4.js'></script>
+    <noscript>
+        <pre><code>public void insertionSort(int[] arr){
+  fo(int i = 1 ; i < arr.length ; i++){
+    for(int j = i ; j > 0 ; j--){
+      if(arr[j] < arr[j-1]){
+        int temp = arr[j];
+        arr[j] = arr[j-1];
+        arr[j-1] = temp;
+      }else{
+        break;
+      }
+    }
+  }
+}</code></pre>
+    </noscript>
+</div>
 <iframe src="//www.youtube.com/embed/ROalU379l3U" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 <h4 id="35direkt-yerlestirmeli-sralama-straight-insertion-sort" style="text-align: justify;"><span style="color: #ff9900;"><strong>#Direkt Yerleştirmeli Sıralama (Straight Insertion Sort)</strong></span></h4>
@@ -197,7 +214,36 @@ sonra tekrar kaydırma işlemi yapılarak işlem tamamlanır.</p>
 Karşılaştırma sayısı : n(logn - nloge) (yaklaşık olarak)</p>
 </blockquote>
 </blockquote>
-<p>[gist:id=6a568b504a36dedbc397]</p>
+<div class="gist">
+    <script src='https://gist.github.com/6a568b504a36dedbc397.js'></script>
+    <noscript>
+        <pre><code>public void insertionSort(int[] arr){
+  
+    for(int i = 1 ; i < arr.length ; i++){
+      
+      int control = arr[i];
+      int down = 0;
+      int up = i;
+      
+      while(down < up){
+        int mid = (down + up) / 2;
+        if(control < arr[mid]){
+          up = mid;
+        }else{
+          down = mid + 1 ;
+        }
+      }
+      
+      for(int j = i ; j > down ; --j){
+        int temp = arr[j];
+        arr[j] = arr[j-1];
+        arr[j-1] = temp;
+      }
+      
+   }
+} </code></pre>
+    </noscript>
+</div>
 <p>BURAK KÖSE</p>
             </div>
             <!-- /.entry-content -->

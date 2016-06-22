@@ -115,14 +115,14 @@ burakkose:blog            </a>
                 </div>
                 <p>Bir diğer string arama algoritmalarından olan <code>KMP</code> algoritmasına bakacağız.</p>
 <p>Örnek olarak;</p>
-<div class="highlight"><pre>txt =  &quot;THIS IS A TEST TEXT&quot;
+<div class="highlight"><pre><span></span>txt =  &quot;THIS IS A TEST TEXT&quot;
 pat = &quot;TEST&quot;
 Output : 10
 </pre></div>
 
 
 <p>ve</p>
-<div class="highlight"><pre>txt =  &quot;AABAACAADAABAAABAA&quot;
+<div class="highlight"><pre><span></span>txt =  &quot;AABAACAADAABAAABAA&quot;
 pat = &quot;AABA&quot;
 Output : 0, 9, 13
 </pre></div>
@@ -132,7 +132,7 @@ Output : 0, 9, 13
 <h3 id="kmp-knuth-morris-pratt">KMP (Knuth Morris Pratt)</h3>
 <p>Kısaca yapılan iş şu şekilde yürümektedir. Ne zaman bir eşleşmeme duruöu olursa, elimizde daha önce elde ettiğimiz bilgileri kullanarak, deseni kaydırma ve benzetme işlemi yaparız. Dolayısı ile gereksiz karşılaştırmadan kaçtığımız için zaman karmaşıklığından kazanmış oluruz.</p>
 <p>LPS için aşağıdaki örnelere bakın.</p>
-<div class="highlight"><pre> “AABAACAABAA”, lps = [0, 1, 0, 1, 2, 0, 1, 2, 3, 4, 5]
+<div class="highlight"><pre><span></span> “AABAACAABAA”, lps = [0, 1, 0, 1, 2, 0, 1, 2, 3, 4, 5]
  “ABCDE”, lps = [0, 0, 0, 0, 0]
  “AAAAA”, lps = [0, 1, 2, 3, 4]
  “AAABAAA”, lps = [0, 1, 2, 0, 1, 2, 3]
@@ -141,7 +141,7 @@ Output : 0, 9, 13
 
 
 <p>İşleyiş aşağıdaki kod ile daha iyi anlaşılacaktır.</p>
-<div class="highlight"><pre> def KMP_search(text, pattern):
+<div class="highlight"><pre><span></span> def KMP_search(text, pattern):
      lps = compute_lps_array(pattern)
      m, n, j = len(pattern), len(text), 0
      i = 0  # text indeksi

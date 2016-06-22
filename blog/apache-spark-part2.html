@@ -144,14 +144,14 @@ burakkose:blog            </a>
 <p>Yürütülen her bir transformation işlemi gerçekten bir action ile karşılaşana kadar gerçekleştirilmez.Buna <code>"Lazy Evaluation"</code> denir. "Lazy Evaluation" terimine daha önce foksiyonel bir programlama dili uğraşanlar aşinadır fakat terimi kısaca açıklamak gerekirse bir işlemin mecbur kalınana kadar yürütülmediği bir yaklaşımdır.</p>
 <p>Bir örnek gösterelim, elimizde bir log dosyası olsun ve biz içerisinde "error" geçen logları elde etmek isteyelim.Yapmamız gereken</p>
 <p><em>Örnek : filter()</em></p>
-<div class="highlight"><pre>input = sc.textFile(&quot;log.txt&quot;)
+<div class="highlight"><pre><span></span>input = sc.textFile(&quot;log.txt&quot;)
 error = input.filter(lambda x: &quot;error&quot; in x)
 </pre></div>
 
 
 <p>şeklinde olacaktır.<strong>error</strong>'un yeni bir RDD olduğuna dikkat edin.</p>
 <p><em>Örnek : union()</em></p>
-<div class="highlight"><pre>errorsRDD = inputRDD.filter(lambda x: &quot;error&quot; in x)
+<div class="highlight"><pre><span></span>errorsRDD = inputRDD.filter(lambda x: &quot;error&quot; in x)
 warningsRDD = inputRDD.filter(lambda x: &quot;warning&quot; in x)
 badLinesRDD = errorsRDD.union(warningsRDD)
 </pre></div>
@@ -162,7 +162,7 @@ badLinesRDD = errorsRDD.union(warningsRDD)
 <p>İki çok genel transformation işlemi vardır, <strong>map</strong> ve <strong>filter</strong>. Bunların işlevleri aşağıdaki görseldeki gibi açıklanabilir.</p>
 <p><center><img alt="2" src="/images/apache_spark/2/2.png" /></center></p>
 <p><em>Örnek : map()</em></p>
-<div class="highlight"><pre>&gt;&gt;&gt; nums = sc.parallelize([1, 2, 3, 4])
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; nums = sc.parallelize([1, 2, 3, 4])
 &gt;&gt;&gt; squared = nums.map(lambda x: x * x).collect()
 &gt;&gt;&gt; squared
 [1, 4, 9, 16]
@@ -172,7 +172,7 @@ badLinesRDD = errorsRDD.union(warningsRDD)
 <p>gibi verilen parametredeki sayıların karesini alan bir örnek yazabiliriz.</p>
 <p>Bazen <strong>map</strong> işleminin tersine her bir giriş ifadesine karşın birden fazla çıktı üretmek isteriz.Bu tip durumlarda kullanılan operasyon <strong>flatMap()</strong>'dir. Aşağıdaki örnek girdi olarak verilen metni basitçe kelimelerine ayırır.</p>
 <p><em>Örnek : flatMap()</em></p>
-<div class="highlight"><pre>&gt;&gt;&gt; lines = sc.parallelize([&quot;hello world&quot;, &quot;hi&quot;])
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; lines = sc.parallelize([&quot;hello world&quot;, &quot;hi&quot;])
 &gt;&gt;&gt; words = lines.flatMap(lambda line: line.split(&quot; &quot;))
 &gt;&gt;&gt; words.first()
 &#39;hello&#39;
@@ -192,7 +192,7 @@ badLinesRDD = errorsRDD.union(warningsRDD)
 <h3 id="eylemleractions">Eylemler(Actions)</h3>
 <p>RDD oluşturmayı, var olan bir RDD'den yeni bir RDD yaratmayı transformation bölümünde gördük.Şimdi sıra veriler ile oynamada. Yapacağımız şey yukarıdaki örnekte elde ettiğimiz <strong>badLinesRDD</strong> içerisindeki '5' log satırını görüntülemek olsun.</p>
 <p><em>Örnek : take()</em></p>
-<div class="highlight"><pre>print(badLinesRDD.count(),&quot; lines&quot;)
+<div class="highlight"><pre><span></span>print(badLinesRDD.count(),&quot; lines&quot;)
 print(&quot;İşte beş örnek&quot;)
 for line in badLinesRDD.take(5):
     print(line)
@@ -203,7 +203,7 @@ for line in badLinesRDD.take(5):
 <p>Sanırım en çok kullanılan action <strong>reduce</strong>'dur. Kullanımı aşağıdaki gibidir.</p>
 <p><code>sum = rdd.reduce(lambda x, y: x + y)</code></p>
 <p>veya Python'da operator modülünü kullanabiliriz.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
 <span class="nb">sum</span> <span class="o">=</span> <span class="n">rdd</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
 </pre></div>
 
@@ -279,15 +279,15 @@ for line in badLinesRDD.take(5):
 <h3 id="onbelleklemecaching">Önbellekleme(Caching)</h3>
 <p>Spark RDD'lerinin "lazily evaluated" olduğundan bahsetmiştik. Bazen uygulamalarımızda bir RDD'yi birden fazla kez kullanmamız gerekebilir. Eğer bunu doğrudan yapıyor olsaydık, bizim her action isteğimizde, Spark bu RDD'yi ve bağımlılıklarını tekrar tekrar hesaplamak zorunda kalacaktı. Dolayısıyla iteratif algoritmaları kullanmamız gerektiğinde çok masraflı olacaktır. Bu konunun önemi çok fazladır, yazdığınız bir uygulama sorunsuz çalışıyor gibi gözükebilir fakat anlam veremediğiniz bir şekilde yavaş çalışıyorsa ilk olarak önbellekme konusunu incelemenizi tavsiye ederim. Bir örnek yapalım ve ne demek istediğimize bakalım.</p>
 <p><em>Örnek : Çift hesaplamalı</em></p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
 <span class="kn">from</span> <span class="nn">pyspark</span> <span class="kn">import</span> <span class="n">SparkContext</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">appName</span><span class="o">=</span><span class="s">&#39;myname&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">appName</span><span class="o">=</span><span class="s1">&#39;myname&#39;</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> \
         <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">collect</span><span class="p">()))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">collect</span><span class="p">()))</span>
 </pre></div>
 
 
@@ -348,16 +348,16 @@ for line in badLinesRDD.take(5):
 </tbody>
 </table>
 <p><em>Örnek : Persist kullanımı</em></p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
 <span class="kn">from</span> <span class="nn">pyspark</span> <span class="kn">import</span> <span class="n">SparkContext</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">appName</span><span class="o">=</span><span class="s">&#39;myname&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">appName</span><span class="o">=</span><span class="s1">&#39;myname&#39;</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> \
         <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
     <span class="n">data</span><span class="o">.</span><span class="n">persist</span><span class="p">(</span><span class="n">StorageLevel</span><span class="o">.</span><span class="n">DISK_ONLY</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">collect</span><span class="p">()))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">collect</span><span class="p">()))</span>
 </pre></div>
 
 

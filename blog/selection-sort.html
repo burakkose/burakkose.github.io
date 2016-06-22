@@ -133,7 +133,24 @@ tamamlanır.Aşağıdaki animasyon ile daha iyi anlayabiliriz.</p>
 <p><center>
     <iframe width="560" height="315" src="//www.youtube.com/embed/Ns4TPTC8whw" frameborder="0" allowfullscreen></iframe>
 </center></p>
-<p>[gist:id=f90e31967b4d07aa8601]</p>
+<div class="gist">
+    <script src='https://gist.github.com/f90e31967b4d07aa8601.js'></script>
+    <noscript>
+        <pre><code>public void selectionSort(int[] arr){
+  for(int i = 0 ; i < arr.length - 1 ; i++){
+    int minPos = i;
+    for(int j = i+1 ; j < arr.length ; j++){
+      if(arr[j] < arr[minPos]){
+        min = j;  
+      }
+    }
+    int temp = arr[i];
+    arr[i] = arr[minPos];
+    arr[minPos] = temp;
+  }
+} </code></pre>
+    </noscript>
+</div>
 <p>BURAK KÖSE</p>
             </div>
             <!-- /.entry-content -->

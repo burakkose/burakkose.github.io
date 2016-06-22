@@ -112,7 +112,7 @@ burakkose:blog            </a>
                 </div>
                 <p>Üs alma işlemi problemlerine farklı bir yaklaşım sunan bu problemde, çarpma(<code>*</code>) ve bölme(<code>/</code>) işlemi kullanmadan üs alma işlemine bakacağız.</p>
 <p>Örneğin;</p>
-<div class="highlight"><pre>5^6 işlemi için;
+<div class="highlight"><pre><span></span>5^6 işlemi için;
 result = 0
 1.) 5 kere 5 ekle (5^2) = 25
 2.) 5 kere 25 ekle (5^3) = 125
@@ -123,7 +123,7 @@ result = 0
 
 
 <h3 id="ic-ice-dongu-kullanarak">İç içe döngü kullanarak</h3>
-<div class="highlight"><pre>def nested_pow(a, b):
+<div class="highlight"><pre><span></span>def nested_pow(a, b):
     if b == 0:
         return 1
     result, increment = a, a
@@ -136,7 +136,7 @@ result = 0
 
 
 <h3 id="recursive-cozum">Recursive çözüm</h3>
-<div class="highlight"><pre>def recursion_pow(a, b):
+<div class="highlight"><pre><span></span>def recursion_pow(a, b):
     if b != 0:
         return multiply(a, recursion_pow(a, b - 1))
     else:
@@ -151,7 +151,7 @@ def multiply(x, y):
 </pre></div>
 
 
-<div class="highlight"><pre>if __name__ == &#39;__main__&#39;:
+<div class="highlight"><pre><span></span>if __name__ == &#39;__main__&#39;:
     print(nested_pow(5, 6))
     print(recursion_pow(5, 3))
 </pre></div>
