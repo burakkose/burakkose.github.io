@@ -9,7 +9,7 @@
 
 
 
-<link rel="canonical" href="../blog/apache-spark-part2">
+<link rel="canonical" href="../blog/apache-spark-part2/">
 
         <meta name="author" content="Burak" />
         <meta name="keywords" content="bigdata,datasciece,spark,python" />
@@ -18,7 +18,7 @@
         <meta property="og:site_name" content="burakkose:blog" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Apache Spark - Part 2 : Resilient Distributed Datasets"/>
-        <meta property="og:url" content="../blog/apache-spark-part2"/>
+        <meta property="og:url" content="../blog/apache-spark-part2/"/>
         <meta property="og:description" content="Bir önceki yazımda Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD(&#34;resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız. RDD&#39;ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java&#39;nın sahip ..."/>
         <meta property="article:published_time" content="2015-10-23" />
             <meta property="article:section" content="Big Data" />
@@ -58,7 +58,7 @@ burakkose:blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="../yazilar">
+                         <li><a href="../yazilar/">
                              Yazılar
                           </a></li>
             </ul>
@@ -83,7 +83,7 @@ burakkose:blog            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="../blog/apache-spark-part2"
+                    <a href="../blog/apache-spark-part2/"
                        rel="bookmark"
                        title="Permalink to Apache Spark - Part 2 : Resilient Distributed Datasets">
                         Apache Spark - Part 2 : Resilient Distributed Datasets
@@ -106,19 +106,19 @@ burakkose:blog            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="../tags/bigdata">bigdata</a>
+	<a href="../tags/bigdata/">bigdata</a>
         /
-	<a href="../tags/datasciece">datasciece</a>
+	<a href="../tags/datasciece/">datasciece</a>
         /
-	<a href="../tags/spark">spark</a>
+	<a href="../tags/spark/">spark</a>
         /
-	<a href="../tags/python">python</a>
+	<a href="../tags/python/">python</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p><a href="../blog/apache-spark-part1">Bir önceki yazımda</a> Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD("resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız.</p>
+                <p><a href="../blog/apache-spark-part1/">Bir önceki yazımda</a> Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD("resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız.</p>
 <p>RDD'ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java'nın sahip olduğu tüm obje türlerini içerebilmekle beraber sizin de tanımladığınız sınıfları içerebilir.</p>
-<p><a href="../blog/apache-spark-part1">Önceki yazımda</a>; örneğimizde <code>lines = sc.textFile("README.md")</code> gibi bir kod kullandık. Bu kullanım ile aslında Python'da bir string RDD'si yaratmış olduk.</p>
+<p><a href="../blog/apache-spark-part1/">Önceki yazımda</a>; örneğimizde <code>lines = sc.textFile("README.md")</code> gibi bir kod kullandık. Bu kullanım ile aslında Python'da bir string RDD'si yaratmış olduk.</p>
 <p>Oluşturulan bir RDD yaratıldıktan sonra iki çeşit operasyonla kullanılabilir(bkz:transformations veya actions). Transformation işlemleri ile bir önceki RDD'den yeni bir RDD yaratılmasını sağlar.Örneğin bir önceki yazıda kullandığımız örneğe bakalım.</p>
 <p><code>pythonLines = lines.filter(lambda line: "Python" in line)</code></p>
 <p>Burada bir önceki RDD'yi(<strong>'lines'</strong>) kullanarak yeni bir RDD(<strong>'pythonLines'</strong>) oluşturuyoruz.</p>
@@ -377,7 +377,7 @@ for line in badLinesRDD.take(5):
             var disqus_shortname = 'koseburak'; // required: replace example with your forum shortname
 
                     var disqus_identifier = 'apache-spark-part2';
-                var disqus_url = '../blog/apache-spark-part2';
+                var disqus_url = '../blog/apache-spark-part2/';
 
             var disqus_config = function () {
                 this.language = "tr";
@@ -441,105 +441,105 @@ for line in badLinesRDD.take(5):
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="../tags"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+            <li class="list-group-item"><a href="../tags/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group list-inline tagcloud" id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="../tags/algorithm">
+                        <a href="../tags/algorithm/">
                             algorithm
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="../tags/archlinux">
+                        <a href="../tags/archlinux/">
                             archlinux
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="../tags/bigdata">
+                        <a href="../tags/bigdata/">
                             bigdata
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="../tags/bioinformatic">
+                        <a href="../tags/bioinformatic/">
                             bioinformatic
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="../tags/bit">
+                        <a href="../tags/bit/">
                             bit
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="../tags/datasciece">
+                        <a href="../tags/datasciece/">
                             datasciece
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="../tags/divide-and-conquer">
+                        <a href="../tags/divide-and-conquer/">
                             divide and conquer
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="../tags/dynamic-programming">
+                        <a href="../tags/dynamic-programming/">
                             dynamic programming
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="../tags/graph-theory">
+                        <a href="../tags/graph-theory/">
                             graph theory
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="../tags/greedy">
+                        <a href="../tags/greedy/">
                             greedy
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="../tags/mathematical">
+                        <a href="../tags/mathematical/">
                             mathematical
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="../tags/number-theory">
+                        <a href="../tags/number-theory/">
                             number theory
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="../tags/operating-systems">
+                        <a href="../tags/operating-systems/">
                             operating systems
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="../tags/python">
+                        <a href="../tags/python/">
                             python
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="../tags/random">
+                        <a href="../tags/random/">
                             random
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="../tags/scheduling">
+                        <a href="../tags/scheduling/">
                             scheduling
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="../tags/searching">
+                        <a href="../tags/searching/">
                             searching
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="../tags/sorting">
+                        <a href="../tags/sorting/">
                             sorting
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="../tags/spark">
+                        <a href="../tags/spark/">
                             spark
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="../tags/string">
+                        <a href="../tags/string/">
                             string
                         </a>
                     </li>
