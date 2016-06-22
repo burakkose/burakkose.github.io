@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>burakkose:blog</title>
+    <title>Archives - burakkose:blog</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
 
 
 
-<link rel="canonical" href=".">
+
         <meta name="author" content="Burak Köse" />
 
     <!-- Open Graph tags -->
@@ -66,186 +66,183 @@ burakkose:blog            </a>
     </div>
 </div> <!-- /.navbar -->
 <!-- Banner -->
-<style>
-	#banner{
-	    background-image:url("./images/banner.jpg");
-	}
-</style>
-
-<div id="banner">
-	<div class="container">
-		<div class="copy">
-				<p class="intro">The way to succeed is to double your failure rate. Failure is the opportunity to begin again more intelligently.<br>
-- Henry Ford, Ford Motor Company Founder</p>
-		</div>
-	</div>
-</div><!-- End Banner -->
+<!-- End Banner -->
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-            <article>
-                <h2><a href="./blog/apache-spark-part2">Apache Spark - Part 2 : Resilient Distributed Datasets</a></h2>
-                <div class="summary"><p><a href="./blog/apache-spark-part1">Bir önceki yazımda</a> Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD("resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız.</p>
-<p>RDD'ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java'nın sahip ...</p>
-                    <a class="btn btn-default btn-xs" href="./blog/apache-spark-part2">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/lis">En uzun artan altdizi(LIS) - Dinamik Programlama</a></h2>
-                <div class="summary"><p>Bir dizi içerisinde en uzun artan altdiziyi bulmayı amaçlayan bir problemdir. Örneğin</p>
-<div class="highlight"><pre>Input:
-    {10, 22, 9, 33, 21, 50, 41, 60, 80}
-Output:
-    6{10, 22, 33, 50, 60, 80}
-</pre></div>
-
-
-<p><a href="./blog/lcs">LCS</a> algoritmasına benzer bir yol izleyeceğiz. Kod anlaşılır durumda, çözüm aşağıdadır.</p>
-<div class="highlight"><pre>def lis(arr):
-    lis = [1] * len(arr)
-
-    for i ...</pre></div>
-                    <a class="btn btn-default btn-xs" href="./blog/lis">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/lcs">En uzun ortak altdizi(LCS) - Dinamik Programlama</a></h2>
-                <div class="summary"><p>Bilgisayar bilimlerinde önemli bir yere sahip olan bu problemde, verilen iki dizgide de ortak olarak bulunan ve aynı yönde sıralanmış dizgiler bütünü elde edilmeye çalışılmaktadır.</p>
-<p>Örneğin;</p>
-<div class="highlight"><pre> “ABCDGH” ve “AEDFHR” için “ADH”
- “AGGTAB” ve “GXTXAYB” için “GTAB”
-</pre></div>
-
-
-<p>Dosyalar arasındaki farkları, değişiklikleri elde etmede ve özellikle bioinformatik alanında sıkça karşılaşılan bir çözümdür ...</p>
-                    <a class="btn btn-default btn-xs" href="./blog/lcs">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/sieve-of-eratosthenes">Sieve of Eratosthenes - Matematik Problemi</a></h2>
-                <div class="summary"><p>Verilen bir <code>n</code> sayısı var ve bu sayıya kadar olan tüm asal sayıların elde edilmesi için sunulmuş en efektif çözümdür <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">(ref: Wiki)</a>.</p>
-<p><img alt="gif" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif" /></p>
-<p>Algoritma şu şekilde çalışır.</p>
-<ol>
-<li>2'den n'e kadar bir liste yaratılır. (2,3,4,5,6...n)</li>
-<li>p = 2 yapılarak ilk asal sayı 2 ilan edilir.</li>
-<li>2p ...</li></ol>
-                    <a class="btn btn-default btn-xs" href="./blog/sieve-of-eratosthenes">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/faktoriyel-0s-count">Sayının faktoriyelinde sonda bulunan 0'ların sayısı - Matematik Problemi</a></h2>
-                <div class="summary"><p>Verilen sayının faktoriyelinde sonda bulunan sıfırların sayısını bulmamız gerekiyor.</p>
-<p>Örneğin;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">1</span>
-<span class="mi">5</span><span class="o">!</span> <span class="o">=</span> <span class="mi">20</span>
-
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">4</span>
-<span class="mi">20</span><span class="o">!</span> <span class="o">=</span> <span class="mi">2432902008176640000</span>
-
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">24</span>
-</pre></div>
-
-
-<p>En basit hali ile çözüm, sayının faktoriyelini hesaplamak ve sondaki sıfıların sayısını saymak. Masraflı ve büyük sayılar için çalışmayacak bir yöntem ...</p>
-                    <a class="btn btn-default btn-xs" href="./blog/faktoriyel-0s-count">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/0-1-50">Hileli parayı hilesiz yapmak - Matematik Problemi</a></h2>
-                <div class="summary"><p>Verilen bir fonksiyon yazı tura işlemini %60 yazı %40 tura gelecek şekilde gerçekleştiriyor. Bu verilen fonksiyonu kullanarak bu işlemi nasıl hilesiz yapabiliriz?</p>
-<p>Paranın %60 olasılıkla 0, %40 olasılık ile 1 döndürdüğünü biliyoruz. Çözüm olarak bu fonksiyonu iki kere çağıracağız. Eğer sonuçlar (1,0) veya (0,1) ise problem yok, direk ...</p>
-                    <a class="btn btn-default btn-xs" href="./blog/0-1-50">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/nth-score">Hedef puana kaç farklı şekilde ulaşılır? - Dinamik Programlama</a></h2>
-                <div class="summary"><p>3, 5 ve 10 puan almanın mümkün olduğu ve hedef puana bu puan gruplarını kullanarak kaç farklı şekilde ulaşılabileceğini bulacağız.</p>
-<p>Örnek;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">4</span>
-<span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">10</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
-
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">13</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">2</span>
-<span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">3 ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="./blog/nth-score">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/nth-stair">N. basamağa kaç adımda ulaşılabilir? - Dinamik Programlama</a></h2>
-                <div class="summary"><p>N adet basamağa sahip bir merdivende, en alt noktadan üst noktaya her seferinde en fazla bir veya iki adım atarak kaç farklı şekilde ulaşabileceğimizi bulacağız.</p>
-<p><img alt="basamak" src="/images/DynamicProgramming/stairs.gif" /> Örneğin yadaki resim için 3 adet çözüm vardır.</p>
-<p>Daha fazla örnek;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">1</span>
-<span class="n">Sadece</span> <span class="mi">1</span> <span class="n">adımda</span> <span class="n">ulaşılır</span>
-
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">2 ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="./blog/nth-stair">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/fibonacci">Fibonacci sayısı oluşturma - Matematik Problemi</a></h2>
-                <div class="summary"><p>Fibonacci sayılarını oluşturmanın birden fazla yöntemi vardır.</p>
-<p><code>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 141, ……..</code></p>
-<p><code>Fn = Fn-1 + Fn-2</code></p>
-<p><code>F0 = 0 and F1 = 1.</code></p>
-<h3 id="metot-1-recursion">Metot 1 ( recursion )</h3>
-<p>Yukarıda verilmiş olan matematik ifadesinin direkt olarak uygulanmış halidir. İşe yarar ama çok fazla maliyetlidir.</p>
-<p><code>T(n) = T(n-1 ...</code></p>
-                    <a class="btn btn-default btn-xs" href="./blog/fibonacci">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/search-common-element-three">Sıralı olarak verilmiş üç diziden ortak elemanları bulma - Arama Algoritması</a></h2>
-                <div class="summary"><p>Artan sırada verilmiş üç dizi içerisinde bulunan ortak elemanı bulmamıza yarayan algoritmaya bakacağız.</p>
-<p>Örneğin</p>
-<div class="highlight"><pre>ar1[] = {1, 5, 10, 20, 40, 80}
-ar2[] = {6, 7, 20, 80, 100}
-ar3[] = {3, 4, 15, 20, 30, 70, 80, 120}
-Output: 20, 80
-
-ar1[] = {1, 5, 5}
-ar2[] = {3, 4, 5, 5, 10}
-ar3 ...</pre></div>
-                    <a class="btn btn-default btn-xs" href="./blog/search-common-element-three">more ...</a>
-                </div>
-            </article>
-            <hr/>
-
-        <ul class="pagination">
-                <li class="prev disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a
-                            href="./index.html">1</a></li>
-                    <li class=""><a
-                            href="./index2.html">2</a></li>
-                    <li class=""><a
-                            href="./index3.html">3</a></li>
-                    <li class=""><a
-                            href="./index4.html">4</a></li>
-                    <li class=""><a
-                            href="./index5.html">5</a></li>
-                <li class="next"><a
-                        href="./index2.html">&raquo;</a></li>
-        </ul>
+    <section id="content">
+        <h1>Archives for burakkose:blog</h1>
+        <div id="archives">
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-23T23:00:00+03:00">Fri 23 October 2015</time></span>
+                    <a href="./blog/apache-spark-part2">Apache Spark - Part 2 : Resilient Distributed Datasets</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-23T21:00:00+03:00">Fri 23 October 2015</time></span>
+                    <a href="./blog/lis">En uzun artan altdizi(LIS) - Dinamik Programlama</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-20T18:00:00+03:00">Tue 20 October 2015</time></span>
+                    <a href="./blog/lcs">En uzun ortak altdizi(LCS) - Dinamik Programlama</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-20T16:00:00+03:00">Tue 20 October 2015</time></span>
+                    <a href="./blog/sieve-of-eratosthenes">Sieve of Eratosthenes - Matematik Problemi</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-20T14:00:00+03:00">Tue 20 October 2015</time></span>
+                    <a href="./blog/faktoriyel-0s-count">Sayının faktoriyelinde sonda bulunan 0'ların sayısı - Matematik Problemi</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-20T12:00:00+03:00">Tue 20 October 2015</time></span>
+                    <a href="./blog/0-1-50">Hileli parayı hilesiz yapmak - Matematik Problemi</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-19T23:00:00+03:00">Mon 19 October 2015</time></span>
+                    <a href="./blog/nth-score">Hedef puana kaç farklı şekilde ulaşılır? - Dinamik Programlama</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-19T23:00:00+03:00">Mon 19 October 2015</time></span>
+                    <a href="./blog/nth-stair">N. basamağa kaç adımda ulaşılabilir? - Dinamik Programlama</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-18T18:00:00+03:00">Sun 18 October 2015</time></span>
+                    <a href="./blog/fibonacci">Fibonacci sayısı oluşturma - Matematik Problemi</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-18T18:00:00+03:00">Sun 18 October 2015</time></span>
+                    <a href="./blog/search-common-element-three">Sıralı olarak verilmiş üç diziden ortak elemanları bulma - Arama Algoritması</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-18T18:00:00+03:00">Sun 18 October 2015</time></span>
+                    <a href="./blog/suffix-array">Suffix Array - String Algoritmaları</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-17T18:00:00+03:00">Sat 17 October 2015</time></span>
+                    <a href="./blog/find-closest-pair-sorted">Sıralı iki dizi içerisinde seçilen ikili toplamının hedef sayıya en yakın olması - Arama Algoritması</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-15T18:00:00+03:00">Thu 15 October 2015</time></span>
+                    <a href="./blog/carp-yedi">Bit işlemleri yardımıyla 7 ile çarpma işlemi - Matematik Problemi</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-14T18:00:00+03:00">Wed 14 October 2015</time></span>
+                    <a href="./blog/prim-mst">Prim Algoritması - Greedy Yaklaşımı</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-14T18:00:00+03:00">Wed 14 October 2015</time></span>
+                    <a href="./blog/stream-ortalama">Veri akışının aritmetik ortalaması - Matematik Problemi</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-13T18:00:00+03:00">Tue 13 October 2015</time></span>
+                    <a href="./blog/bozuk-para">Bozuk para problemi - Greedy Yaklaşımı</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-12T18:00:00+03:00">Mon 12 October 2015</time></span>
+                    <a href="./blog/fibo-kontrol">Sayı fibonacci sayısı mı? - Matematik Problemi</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-12T18:00:00+03:00">Mon 12 October 2015</time></span>
+                    <a href="./blog/pow-without">Çarpma ve bölme işlemi kullanmadan üs alma - Matematik Problemi</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-11T18:00:00+03:00">Sun 11 October 2015</time></span>
+                    <a href="./blog/kuruskal-mst">Kruskal Algoritması - Greedy Yaklaşımı</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-11T18:00:00+03:00">Sun 11 October 2015</time></span>
+                    <a href="./blog/naive-search-string">En basit hali ile text arama işlemi - String Algoritmaları</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-11T12:00:00+03:00">Sun 11 October 2015</time></span>
+                    <a href="./blog/is-planlama">İş planlama problemi - Greedy Yaklaşımı</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-11T10:00:00+03:00">Sun 11 October 2015</time></span>
+                    <a href="./blog/etkinlik-secim-problemi">Etkinlik paylaşım problemi - Greedy Yaklaşımı</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-11T08:00:00+03:00">Sun 11 October 2015</time></span>
+                    <a href="./blog/pow-daq">Üs alma işlemi (a^x) - Divide and Conquer</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-10T18:00:00+03:00">Sat 10 October 2015</time></span>
+                    <a href="./blog/almost-sorted-search">Neredeyse sıralı dizi içerisinde arama - Arama Algoritması</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-08T18:00:00+03:00">Thu 08 October 2015</time></span>
+                    <a href="./blog/next-num">Girilen sayıdan bir sonraki büyük sayıyı bulma - Matematik Problemi</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-07T18:00:00+03:00">Wed 07 October 2015</time></span>
+                    <a href="./blog/kmp">KMP Algoritmasi - String Algoritmaları</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-06T18:00:00+03:00">Tue 06 October 2015</time></span>
+                    <a href="./blog/search-k-closest">Sıralı dizi içerisinde hedef sayıya en yakın k sayı - Arama Algoritması</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-05T18:00:00+03:00">Mon 05 October 2015</time></span>
+                    <a href="./blog/which-sorting-min-memory">Hangi sıralama algoritması belleğe en az sayıda yazma yapar?</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-04T18:00:00+03:00">Sun 04 October 2015</time></span>
+                    <a href="./blog/search-k-largest-or-smalest">K. küçük veya büyük sayısı bulmak - Part 1 - Arama Algoritması</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-03T18:00:00+03:00">Sat 03 October 2015</time></span>
+                    <a href="./blog/stability-sorting">Sıralama algoritmalarında kararlılık nedir?</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-10-03T18:00:00+03:00">Sat 03 October 2015</time></span>
+                    <a href="./blog/worstcase-quicksort">Quick sort için en kötü durum nedir?</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2015-06-21T22:00:00+03:00">Sun 21 June 2015</time></span>
+                    <a href="./blog/apache-spark-part1">Apache Spark - Part 1 : Tanıtım</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2014-12-05T05:57:00+02:00">Fri 05 December 2014</time></span>
+                    <a href="./blog/rastgele-sayi">Rastgele Sayı Üretmek</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2014-12-04T00:08:00+02:00">Thu 04 December 2014</time></span>
+                    <a href="./blog/suffix-tree">Suffix Tree - String Algoritmaları</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2014-12-03T01:53:00+02:00">Wed 03 December 2014</time></span>
+                    <a href="./blog/radix-sort">Radix Sort - Sıralama Algoritmaları</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2014-11-27T12:00:00+02:00">Thu 27 November 2014</time></span>
+                    <a href="./blog/quick-sort">Quick Sort - Sıralama Algoritmaları</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2014-11-26T12:00:00+02:00">Wed 26 November 2014</time></span>
+                    <a href="./blog/sjf">İlk iş kısa süreliler (Shortest Job First)</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2014-11-25T12:00:00+02:00">Tue 25 November 2014</time></span>
+                    <a href="./blog/selection-sort">Selection Sort - Sıralama Algoritmaları</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2014-11-24T16:00:00+02:00">Mon 24 November 2014</time></span>
+                    <a href="./blog/insertion-sort">Insertion Sort - Sıralama Algoritmaları</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2014-11-24T01:05:00+02:00">Mon 24 November 2014</time></span>
+                    <a href="./blog/first-come-first-serve">İlk gelen işi kapar (First Come First Serve)</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2014-11-23T14:19:00+02:00">Sun 23 November 2014</time></span>
+                    <a href="./blog/bubble-sort">Bubble Sort - Sıralama Algoritmaları</a>
+                </p>
+                <p>
+                    <span class="categories-timestamp"><time datetime="2014-11-12T18:45:00+02:00">Wed 12 November 2014</time></span>
+                    <a href="./blog/arch-linux-kurulumu">Arch Linux Nasıl Kurulur</a>
+                </p>
+        </div>
+    </section>
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>

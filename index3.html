@@ -84,167 +84,169 @@ burakkose:blog            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a href="./blog/apache-spark-part2">Apache Spark - Part 2 : Resilient Distributed Datasets</a></h2>
-                <div class="summary"><p><a href="./blog/apache-spark-part1">Bir önceki yazımda</a> Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD("resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız.</p>
-<p>RDD'ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java'nın sahip ...</p>
-                    <a class="btn btn-default btn-xs" href="./blog/apache-spark-part2">more ...</a>
+                <h2><a href="./blog/is-planlama">İş planlama problemi - Greedy Yaklaşımı</a></h2>
+                <div class="summary"><p>İş planlanması ile ilgili olan bir problem. Girdi olarak son teslim tarihine ve kazanç bilgilerine sahip olan işler veriliyor. En büyük kazancı nasıl elde edebileceğimizi bulmamız gerekiyor.</p>
+<p>Örnek olarak ;</p>
+<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span>
+  <span class="n">JobID</span>    <span class="n">Son</span> <span class="n">Tarih</span>     <span class="n">Kazanç</span>
+    <span class="n">a</span>        <span class="mi">4</span>            <span class="mi">20</span>   
+    <span class="n">b</span>        <span class="mi">1</span>            <span class="mi">10</span>
+    <span class="n">c</span>        <span class="mi">1</span>            <span class="mi">40</span>  
+    <span class="n">d</span>        <span class="mi">1</span>            <span class="mi">30</span>
+<span class="n">Output</span><span class="o">:</span>
+        <span class="n">c</span><span class="o">,</span> <span class="n">a</span>   
+
+
+<span class="n">Input ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="./blog/is-planlama">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="./blog/lis">En uzun artan altdizi(LIS) - Dinamik Programlama</a></h2>
-                <div class="summary"><p>Bir dizi içerisinde en uzun artan altdiziyi bulmayı amaçlayan bir problemdir. Örneğin</p>
-<div class="highlight"><pre>Input:
-    {10, 22, 9, 33, 21, 50, 41, 60, 80}
-Output:
-    6{10, 22, 33, 50, 60, 80}
+                <h2><a href="./blog/etkinlik-secim-problemi">Etkinlik paylaşım problemi - Greedy Yaklaşımı</a></h2>
+                <div class="summary"><p>Etkinlik paylaşım problemi klasik bir açgözlü(greedy) yaklaşımı ile çözülen bir problemdir.Greedy kısaca parça parça çözüme ulaşılan ve her bir aşamada o anki en optimum seçeneği seçemedir.</p>
+<p>Eğer bir problemi Greedy yaklaşımı ile çözebiliyorsak muhtemelen o problemin çözümü diğer çözüm yöntemlerine göre en optimum çözüm olacaktır fakat her durumda ...</p>
+                    <a class="btn btn-default btn-xs" href="./blog/etkinlik-secim-problemi">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="./blog/pow-daq">Üs alma işlemi (a^x) - Divide and Conquer</a></h2>
+                <div class="summary"><p>Üs alma işlemi kullanılan programlama dilinin standart olarak verdiği işlemler ile gayet kolay olarak yapılabilen bir işlemdir.En basit hali ile çözüm şu şekildedir.</p>
+<div class="highlight"><pre>def brute(num, x):
+    result = 1
+    for i in range(x):
+        result *= num
+    return result
 </pre></div>
 
 
-<p><a href="./blog/lcs">LCS</a> algoritmasına benzer bir yol izleyeceğiz. Kod anlaşılır durumda, çözüm aşağıdadır.</p>
-<div class="highlight"><pre>def lis(arr):
-    lis = [1] * len(arr)
-
-    for i ...</pre></div>
-                    <a class="btn btn-default btn-xs" href="./blog/lis">more ...</a>
+<p>Bu çözüm iteratif olarak yazılmış ve <code>O(n)</code> karmaşıklığına sahip hoş ...</p>
+                    <a class="btn btn-default btn-xs" href="./blog/pow-daq">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="./blog/lcs">En uzun ortak altdizi(LCS) - Dinamik Programlama</a></h2>
-                <div class="summary"><p>Bilgisayar bilimlerinde önemli bir yere sahip olan bu problemde, verilen iki dizgide de ortak olarak bulunan ve aynı yönde sıralanmış dizgiler bütünü elde edilmeye çalışılmaktadır.</p>
+                <h2><a href="./blog/almost-sorted-search">Neredeyse sıralı dizi içerisinde arama - Arama Algoritması</a></h2>
+                <div class="summary"><p>Ufak bir işlem sonrası sıralanmış dizinin bazı elemanlarının yerleri karıştırılıyor. Örneğin <code>i.</code> pozisyonda olması gereken eleman <code>i-1</code> ya da <code>i+1</code> pozisyonunda bulunuyor. Hedef olarak verilen sayının dizi içerisindeki pozisyonunun bulunması amaçlanıyor.</p>
 <p>Örneğin;</p>
-<div class="highlight"><pre> “ABCDGH” ve “AEDFHR” için “ADH”
- “AGGTAB” ve “GXTXAYB” için “GTAB”
-</pre></div>
-
-
-<p>Dosyalar arasındaki farkları, değişiklikleri elde etmede ve özellikle bioinformatik alanında sıkça karşılaşılan bir çözümdür ...</p>
-                    <a class="btn btn-default btn-xs" href="./blog/lcs">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/sieve-of-eratosthenes">Sieve of Eratosthenes - Matematik Problemi</a></h2>
-                <div class="summary"><p>Verilen bir <code>n</code> sayısı var ve bu sayıya kadar olan tüm asal sayıların elde edilmesi için sunulmuş en efektif çözümdür <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">(ref: Wiki)</a>.</p>
-<p><img alt="gif" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif" /></p>
-<p>Algoritma şu şekilde çalışır.</p>
-<ol>
-<li>2'den n'e kadar bir liste yaratılır. (2,3,4,5,6...n)</li>
-<li>p = 2 yapılarak ilk asal sayı 2 ilan edilir.</li>
-<li>2p ...</li></ol>
-                    <a class="btn btn-default btn-xs" href="./blog/sieve-of-eratosthenes">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/faktoriyel-0s-count">Sayının faktoriyelinde sonda bulunan 0'ların sayısı - Matematik Problemi</a></h2>
-                <div class="summary"><p>Verilen sayının faktoriyelinde sonda bulunan sıfırların sayısını bulmamız gerekiyor.</p>
-<p>Örneğin;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">1</span>
-<span class="mi">5</span><span class="o">!</span> <span class="o">=</span> <span class="mi">20</span>
-
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">4</span>
-<span class="mi">20</span><span class="o">!</span> <span class="o">=</span> <span class="mi">2432902008176640000</span>
-
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">24</span>
-</pre></div>
-
-
-<p>En basit hali ile çözüm, sayının faktoriyelini hesaplamak ve sondaki sıfıların sayısını saymak. Masraflı ve büyük sayılar için çalışmayacak bir yöntem ...</p>
-                    <a class="btn btn-default btn-xs" href="./blog/faktoriyel-0s-count">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/0-1-50">Hileli parayı hilesiz yapmak - Matematik Problemi</a></h2>
-                <div class="summary"><p>Verilen bir fonksiyon yazı tura işlemini %60 yazı %40 tura gelecek şekilde gerçekleştiriyor. Bu verilen fonksiyonu kullanarak bu işlemi nasıl hilesiz yapabiliriz?</p>
-<p>Paranın %60 olasılıkla 0, %40 olasılık ile 1 döndürdüğünü biliyoruz. Çözüm olarak bu fonksiyonu iki kere çağıracağız. Eğer sonuçlar (1,0) veya (0,1) ise problem yok, direk ...</p>
-                    <a class="btn btn-default btn-xs" href="./blog/0-1-50">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/nth-score">Hedef puana kaç farklı şekilde ulaşılır? - Dinamik Programlama</a></h2>
-                <div class="summary"><p>3, 5 ve 10 puan almanın mümkün olduğu ve hedef puana bu puan gruplarını kullanarak kaç farklı şekilde ulaşılabileceğini bulacağız.</p>
-<p>Örnek;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">4</span>
-<span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">10</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
-
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">13</span>
+<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">70</span><span class="o">},</span> <span class="n">key</span> <span class="o">=</span> <span class="mi">40</span>
 <span class="n">Output</span><span class="o">:</span> <span class="mi">2</span>
-<span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">3 ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="./blog/nth-score">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/nth-stair">N. basamağa kaç adımda ulaşılabilir? - Dinamik Programlama</a></h2>
-                <div class="summary"><p>N adet basamağa sahip bir merdivende, en alt noktadan üst noktaya her seferinde en fazla bir veya iki adım atarak kaç farklı şekilde ulaşabileceğimizi bulacağız.</p>
-<p><img alt="basamak" src="/images/DynamicProgramming/stairs.gif" /> Örneğin yadaki resim için 3 adet çözüm vardır.</p>
-<p>Daha fazla örnek;</p>
-<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">1</span>
-<span class="n">Sadece</span> <span class="mi">1</span> <span class="n">adımda</span> <span class="n">ulaşılır</span>
 
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">2 ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="./blog/nth-stair">more ...</a>
+<span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3 ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="./blog/almost-sorted-search">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="./blog/fibonacci">Fibonacci sayısı oluşturma - Matematik Problemi</a></h2>
-                <div class="summary"><p>Fibonacci sayılarını oluşturmanın birden fazla yöntemi vardır.</p>
-<p><code>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 141, ……..</code></p>
-<p><code>Fn = Fn-1 + Fn-2</code></p>
-<p><code>F0 = 0 and F1 = 1.</code></p>
-<h3 id="metot-1-recursion">Metot 1 ( recursion )</h3>
-<p>Yukarıda verilmiş olan matematik ifadesinin direkt olarak uygulanmış halidir. İşe yarar ama çok fazla maliyetlidir.</p>
-<p><code>T(n) = T(n-1 ...</code></p>
-                    <a class="btn btn-default btn-xs" href="./blog/fibonacci">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./blog/search-common-element-three">Sıralı olarak verilmiş üç diziden ortak elemanları bulma - Arama Algoritması</a></h2>
-                <div class="summary"><p>Artan sırada verilmiş üç dizi içerisinde bulunan ortak elemanı bulmamıza yarayan algoritmaya bakacağız.</p>
-<p>Örneğin</p>
-<div class="highlight"><pre>ar1[] = {1, 5, 10, 20, 40, 80}
-ar2[] = {6, 7, 20, 80, 100}
-ar3[] = {3, 4, 15, 20, 30, 70, 80, 120}
-Output: 20, 80
+                <h2><a href="./blog/next-num">Girilen sayıdan bir sonraki büyük sayıyı bulma - Matematik Problemi</a></h2>
+                <div class="summary"><p>String olarak verilen sayının bir sonraki büyük saıyı ekrana bastıran, eğer şartlar uygun değilse imkansız yazan problemi inceleyeceğiz.</p>
+<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span>  <span class="n">n</span> <span class="o">=</span> <span class="s2">&quot;218765&quot;</span>
+<span class="n">Output</span><span class="o">:</span> <span class="s2">&quot;251678&quot;</span>
 
-ar1[] = {1, 5, 5}
-ar2[] = {3, 4, 5, 5, 10}
-ar3 ...</pre></div>
-                    <a class="btn btn-default btn-xs" href="./blog/search-common-element-three">more ...</a>
+<span class="n">Input</span><span class="o">:</span>  <span class="n">n</span> <span class="o">=</span> <span class="s2">&quot;1234&quot;</span>
+<span class="n">Output</span><span class="o">:</span> <span class="s2">&quot;1243&quot;</span>
+
+<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="s2">&quot;4321&quot;</span>
+<span class="n">Output</span><span class="o">:</span> <span class="s2">&quot;Imkansız&quot;</span>
+
+<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="s2">&quot;534976&quot;</span>
+<span class="n">Output</span><span class="o">:</span> <span class="s2">&quot;536479&quot;</span>
+</pre></div>
+
+
+<p>Çözüm için;</p>
+<ol>
+<li>Eğer tüm sayılar azalan sırada ise 'Imkansız' basılır.</li>
+<li>Eğer tüm ...</li></ol>
+                    <a class="btn btn-default btn-xs" href="./blog/next-num">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="./blog/kmp">KMP Algoritmasi - String Algoritmaları</a></h2>
+                <div class="summary"><p>Bir diğer string arama algoritmalarından olan <code>KMP</code> algoritmasına bakacağız.</p>
+<p>Örnek olarak;</p>
+<div class="highlight"><pre>txt =  &quot;THIS IS A TEST TEXT&quot;
+pat = &quot;TEST&quot;
+Output : 10
+</pre></div>
+
+
+<p>ve</p>
+<div class="highlight"><pre>txt =  &quot;AABAACAADAABAAABAA&quot;
+pat = &quot;AABA&quot;
+Output : 0, 9, 13
+</pre></div>
+
+
+<p>Bir önceki <a href="./blog/naive-search-string">yazıda</a> en kaba hali ile bir text içerisinde nasıl başka bir text aramasının yapılacağını incelemiştik. O algoritma <code>O ...</code></p>
+                    <a class="btn btn-default btn-xs" href="./blog/kmp">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="./blog/search-k-closest">Sıralı dizi içerisinde hedef sayıya en yakın k sayı - Arama Algoritması</a></h2>
+                <div class="summary"><p>Sıralı olarak verilen bir dizi içerisinde, hedef olarak belirtilen sayıya en yakın(eşit değil) k tane elemanı elde etmeye yarayan problemdir.</p>
+<p>Problemin basit olarak çözümü, k tane elemanın bulunması için diziyi lineer olarak aramaktan geçer.</p>
+<ol>
+<li>İlk elemandan başlayarak geçit alanına kadar gel(Geçit alanı: Sonraki elemanın büyük, üzerinde bulunan elemanın ...</li></ol>
+                    <a class="btn btn-default btn-xs" href="./blog/search-k-closest">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="./blog/which-sorting-min-memory">Hangi sıralama algoritması belleğe en az sayıda yazma yapar?</a></h2>
+                <div class="summary"><p>Hafızaya yazma işlemini azaltmak, büyük veri kümeeleri üzerinde uğraşmanın maliyetli olduğu EEPROMs ve ya flash gibi platformlar için kazançlıdır.</p>
+<p>Sıralama algoritmaları arasında <code>Selection Sort</code> agoritmasının en az sayıda yazma işlemi yaptığını(<code>O(n)</code>) biliyoruz. Fakat <code>Cycle Sort</code> neredeyse her zaman <code>Selection Sort</code> algoritmasına göre daha az sayıda yazma işlemi yapar ...</p>
+                    <a class="btn btn-default btn-xs" href="./blog/which-sorting-min-memory">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="./blog/search-k-largest-or-smalest">K. küçük veya büyük sayısı bulmak - Part 1 - Arama Algoritması</a></h2>
+                <div class="summary"><p>Bir dizi ve <code>k</code> sayısı veriliyor(k &lt; len(dizi)). Cevap olarak dizi içerisinde ki k. küçük veya büyük elemanın bulunması hedefleniyor.</p>
+<p>Örneğin;</p>
+<div class="highlight"><pre><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="o">}</span>
+       <span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">Output</span><span class="o">:</span> <span class="mi">7</span>
+
+<span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="o">}</span>
+       <span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">Output</span><span class="o">:</span> <span class="mi">10</span>
+</pre></div>
+
+
+<h3 id="cozum-1-basit-cozum">Çözüm 1 (Basit Çözüm ...</h3>
+                    <a class="btn btn-default btn-xs" href="./blog/search-k-largest-or-smalest">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="./blog/stability-sorting">Sıralama algoritmalarında kararlılık nedir?</a></h2>
+                <div class="summary"><p>Sıralama algoritmalarında bazen kararlılık ile ilgili bir takım bilgiler görürüz.Kısaca açıklamak gerekirse, sırarısz bir dizide aynı değerlere sahip elemanların dizilişi, dizi sıralandığında da korunuyorsa algoritma kararlıdır.</p>
+<p>Kararlı özelliğine sahip algoritmalar; Insertion sort, Merge sort, Bubble sort. Kararsız olanlar; Heap sort, Quick sort.</p>
+<p>Ancak verilen kararlı olmayan aloritmalar kolayca kararlı ...</p>
+                    <a class="btn btn-default btn-xs" href="./blog/stability-sorting">more ...</a>
                 </div>
             </article>
             <hr/>
 
         <ul class="pagination">
-                <li class="prev disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a
+                <li class="prev"><a href="./index2.html">&laquo;</a>
+                </li>
+                    <li class=""><a
                             href="./index.html">1</a></li>
                     <li class=""><a
                             href="./index2.html">2</a></li>
-                    <li class=""><a
+                    <li class="active"><a
                             href="./index3.html">3</a></li>
                     <li class=""><a
                             href="./index4.html">4</a></li>
                     <li class=""><a
                             href="./index5.html">5</a></li>
                 <li class="next"><a
-                        href="./index2.html">&raquo;</a></li>
+                        href="./index4.html">&raquo;</a></li>
         </ul>
         </div>
         <div class="col-sm-3" id="sidebar">
