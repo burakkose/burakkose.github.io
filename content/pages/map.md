@@ -65,3 +65,7 @@ Title: Yazılar
 ## İşletim Sistemleri
 * [İlk gelen işi kapar (First Come First Serve)]({filename}../posts/first-come-first-serve.md)
 * [İlk iş kısa süreliler (Shortest Job First)]({filename}../posts/sjf.md)
+
+## Fonksiyonel Programlama
+* [ADT]({filename}../posts/Functional Programming/adt.md)
+* [Type Class]({filename}../posts/Functional Programming/typeclass.md)
