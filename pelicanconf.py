@@ -63,7 +63,7 @@ DISPLAY_TAGS_ON_SIDEBAR = True
 MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid']
 THEME = 'theme/pelican-bootstrap3'
 
-BOOTSTRAP_THEME = 'simplex'
+BOOTSTRAP_THEME = 'yeti'
 
 BOOTSTRAP_NAVBAR_INVERSE = True
 
