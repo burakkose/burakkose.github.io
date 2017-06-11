@@ -28,6 +28,8 @@
     <link href="http://koseburak.net/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="http://koseburak.net/theme/css/style.css" type="text/css"/>
 
+        <link href="http://koseburak.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="burakkose:blog ATOM Feed"/>
 
 
 
@@ -49,13 +51,10 @@ burakkose:blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://koseburak.net/yazilar/">
-                             Yazılar
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
-                <form class="navbar-search" action="/search.html">
+                <form class="navbar-search" action="/search">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
@@ -84,6 +83,34 @@ burakkose:blog            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="http://koseburak.net/blog/search-k-largest-or-smalest/">K. küçük veya büyük sayısı bulmak - Part 1 - Arama Algoritması</a></h2>
+                <div class="summary"><p>Bir dizi ve <code>k</code> sayısı veriliyor(k &lt; len(dizi)). Cevap olarak dizi içerisinde ki k. küçük veya büyük elemanın bulunması hedefleniyor.</p>
+<p>Örneğin;</p>
+<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="o">}</span>
+       <span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">Output</span><span class="o">:</span> <span class="mi">7</span>
+
+<span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="o">}</span>
+       <span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">Output</span><span class="o">:</span> <span class="mi">10</span>
+</pre></div>
+
+
+<h3>Çözüm 1 (Basit Çözüm …</h3>
+                    <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/search-k-largest-or-smalest/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="http://koseburak.net/blog/stability-sorting/">Sıralama algoritmalarında kararlılık nedir?</a></h2>
+                <div class="summary"><p>Sıralama algoritmalarında bazen kararlılık ile ilgili bir takım bilgiler görürüz.Kısaca açıklamak gerekirse, sırarısz bir dizide aynı değerlere sahip elemanların dizilişi, dizi sıralandığında da korunuyorsa algoritma kararlıdır.</p>
+<p>Kararlı özelliğine sahip algoritmalar; Insertion sort, Merge sort, Bubble sort. Kararsız olanlar; Heap sort, Quick sort.</p>
+<p>Ancak verilen kararlı olmayan aloritmalar kolayca kararlı …</p>
+                    <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/stability-sorting/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://koseburak.net/blog/worstcase-quicksort/">Quick sort için en kötü durum nedir?</a></h2>
                 <div class="summary"><p>Quick sort ortalama zamanda çalıştığında en verimli çalışan ve en çok kullanılan algoritmalardan biridir. Pivot seçiminin ne kadar önemli olduğunu algoritmayı incelediğinizde göreceksiniz.</p>
 <p>En kötü duruma sebebiyet veren şartlar aşağıdadır.</p>
@@ -100,7 +127,7 @@ burakkose:blog            </a>
                 <h2><a href="http://koseburak.net/blog/apache-spark-part1/">Apache Spark - Part 1 : Tanıtım</a></h2>
                 <div class="summary"><p>Apache Spark,büyük veri işleme amacı ile oluşturulmuş bir Apache projesidir.Scala dili ile yazılmış JVM üzerinde çalışan ve Python, Java, Scala kullanımına olanak sağlayan, "in-memory" yani veriyi bellek içerisinde işleme özelliği ile ön plana çıkan bir projedir.</p>
 <p>Eğer isterseniz kaynak kodları görüntülemek için aşağıdaki adrese göz atabilirsiniz.</p>
-<p><a href="https://github.com/apache/spark">https://github ...</a></p>
+<p><a href="https://github.com/apache/spark">https://github …</a></p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/apache-spark-part1/">more ...</a>
                 </div>
             </article>
@@ -113,7 +140,7 @@ ve çişitli hesaplamarda kullanırız rastgele sayıları.Günlük hayatta
 rastgele kavramı insalar için keyfi olarak kullanılır.Aklınızdan bir
 sayı tutup söylersiniz bu bir rastgele işlemidir.Peki gerçekten
 böylemidir,bilgisayarlar için de durum bu mudur?</p>
-<p>Hep verilen ...</p>
+<p>Hep verilen …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/rastgele-sayi/">more ...</a>
                 </div>
             </article>
@@ -124,7 +151,7 @@ böylemidir,bilgisayarlar için de durum bu mudur?</p>
 yapısı bir dizgi model(pattern) eşleştirme algoritmasıdır.Örneğin
 elinizde uzun bir dizgi olsun ve siz bu dizgi içinde alt dizgiler aramak
 ve hatta bu dizgilerden kaç adet bulunduğunu öğrenmek istiyorsunuz.İşte
-bu veri yapısı bu işlemleri kolaylaştırmak ile birlikte gayet ...</p>
+bu veri yapısı bu işlemleri kolaylaştırmak ile birlikte gayet hızlı …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/suffix-tree/">more ...</a>
                 </div>
             </article>
@@ -137,7 +164,7 @@ hanelerine göre sıralanır.En değersiz olan haneden en değerli haneye
 doğru sıralama işlemi yapılır.</p>
 <p>Sıralanacak verilerin tamsayı olduğu durumlarda kullanılan bu algoritma
 işlenirken ilk olarak sıralanacak olan veri kümesindeki elemanların en
-büyük ...</p>
+büyük elemanının …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/radix-sort/">more ...</a>
                 </div>
             </article>
@@ -149,7 +176,7 @@ tercih edilen sıralama algoritmasıdır.1960 yılında C. A. R. Hoare
 tarafından ortaya atılmıştır.Bu algoritma yaklaşım bakımından "parçala
 ve çözümle" ilkesine göre çalışmaktadır.</p>
 <p>Bu yaklaşım şu şekilde açıklanabilir.Eldeki problem çok daha ufak
-problemciklere ayrılır ve bütün bu problemcikler ...</p>
+problemciklere ayrılır ve bütün bu problemcikler …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/quick-sort/">more ...</a>
                 </div>
             </article>
@@ -161,7 +188,7 @@ algoritmasından bahsetmiştim.Asıl ismi "shortest next CPU burst
 algorithm" olarak geçen ve yine bir cpu zamanlama algoritması olan
 Shortest Job First(SJF) yani en kısa iş ilk algoritmasını inceleyelim.</p>
 <p>Bu algoritmada belli bir sırada bekleyen işlerden önce kısa olanların
-işlenmesi amaçlanmıştır.Eğer ...</p>
+işlenmesi amaçlanmıştır.Eğer …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/sjf/">more ...</a>
                 </div>
             </article>
@@ -174,35 +201,8 @@ sıralama şeklinde kullanılır.Geliştirilen uygulamalarda seçmeli sıralama
 kullanmak için düzgün bir analiz yapılması gerekir.Yer değiştirme
 sayısındaki sabitlik dolayısı ile büyük sayıda verinin bulunduğu uzun
 dosyalarda lineer zamanda sıralama yapılabilir.</p>
-<p>Temel olarak işleyiş şu ...</p>
+<p>Temel olarak işleyiş şu şekilde …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/selection-sort/">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://koseburak.net/blog/insertion-sort/">Insertion Sort - Sıralama Algoritmaları</a></h2>
-                <div class="summary"><p>Uygulaması kolay olan bu algoritmayı büyük diziler yerine daha küçük
-dizilerde kullanıldığında ve özellikle gelen veri kümesinin zaten
-sıralanmış veya sıralanmış haline çok yakın olduğunda kullanılır.</p>
-<p>Kararlı bir algoritma olmasıyla birlikle çalışma anında ek bir bellek
-ihtiyacı duymayan bu algoritma Türkçe'da yerleştirmeli sıralama ,
-eklemeli sıralama ve sokma sıralaması olarak ...</p>
-                    <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/insertion-sort/">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://koseburak.net/blog/first-come-first-serve/">İlk gelen işi kapar (First Come First Serve)</a></h2>
-                <div class="summary"><p>Kısaca FCFS algoritması.İsim benzerliği ve aslında çalışma mantığı
-bakımında kuyruk(queue) veri yapısına çok benzer(FIFO).Bilgisayar
-alanında özellikle işletim sistemlerinde bir çok alanda kullanılan bir
-algoritmadır.Bu algoritmik yaklaşımda bir sıraya ilk girenin işi ilk
-halledilmektedir.</p>
-<!--more-->
-
-<p>Bu şu şekilde açıklanabilir.Mahallenizde bir berber bulunmaktadır fakat
-ne yazık ki ...</p></!--more-->
-                    <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/first-come-first-serve/">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -240,6 +240,7 @@ ne yazık ki ...</p></!--more-->
                 <li class="list-group-item"><a href="skype:ksv7r41?chat"><i class="fa fa-skype fa-lg"></i> skype</a></li>
                 <li class="list-group-item"><a href="https://play.spotify.com/user/11138384529"><i class="fa fa-spotify fa-lg"></i> spotify</a></li>
                 <li class="list-group-item"><a href="https://www.quora.com/Burak-K%C3%B6se-1"><i class="fa fa-quora-square fa-lg"></i> quora</a></li>
+                <li class="list-group-item"><a href="http://koseburak.net//feeds/all.atom.xml"><i class="fa fa-rss-square fa-lg"></i> rss</a></li>
               </ul>
             </li>
 
@@ -257,6 +258,11 @@ ne yazık ki ...</p></!--more-->
                         </a>
                     </li>
                     <li class="list-group-item">
+                        <a href="http://koseburak.net/category/fonksiyonel-programlama.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Fonksiyonel Programlama
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://koseburak.net/category/linux.html">
                             <i class="fa fa-folder-open fa-lg"></i> Linux
                         </a>
@@ -269,11 +275,6 @@ ne yazık ki ...</p></!--more-->
                     <li class="list-group-item tag-1">
                         <a href="http://koseburak.net/tags/algorithm/">
                             algorithm
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/archlinux/">
-                            archlinux
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -307,6 +308,11 @@ ne yazık ki ...</p></!--more-->
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/fp/">
+                            fp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
                         <a href="http://koseburak.net/tags/graph-theory/">
                             graph theory
                         </a>
@@ -319,11 +325,6 @@ ne yazık ki ...</p></!--more-->
                     <li class="list-group-item tag-2">
                         <a href="http://koseburak.net/tags/mathematical/">
                             mathematical
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/number-theory/">
-                            number theory
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -339,6 +340,11 @@ ne yazık ki ...</p></!--more-->
                     <li class="list-group-item tag-4">
                         <a href="http://koseburak.net/tags/random/">
                             random
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/scala/">
+                            scala
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -379,7 +385,7 @@ ne yazık ki ...</p></!--more-->
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2015 Burak Köse
+         <div class="col-xs-10">&copy; 2017 Burak Köse
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>

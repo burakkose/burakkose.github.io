@@ -9,17 +9,17 @@
 
 
 
-<link rel="canonical" href="http://koseburak.net/blog/apache-spark-part2">
+<link rel="canonical" href="http://koseburak.net/blog/apache-spark-part2/">
 
         <meta name="author" content="Burak" />
         <meta name="keywords" content="bigdata,datasciece,spark,python" />
-        <meta name="description" content="Bir önceki yazımda Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD(&#34;resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız. RDD&#39;ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java&#39;nın sahip ..." />
+        <meta name="description" content="Bir önceki yazımda Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD(&#34;resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız. RDD&#39;ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java&#39;nın sahip olduğu tüm …" />
 
         <meta property="og:site_name" content="burakkose:blog" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Apache Spark - Part 2 : Resilient Distributed Datasets"/>
-        <meta property="og:url" content="http://koseburak.net/blog/apache-spark-part2"/>
-        <meta property="og:description" content="Bir önceki yazımda Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD(&#34;resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız. RDD&#39;ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java&#39;nın sahip ..."/>
+        <meta property="og:url" content="http://koseburak.net/blog/apache-spark-part2/"/>
+        <meta property="og:description" content="Bir önceki yazımda Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD(&#34;resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız. RDD&#39;ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java&#39;nın sahip olduğu tüm …"/>
         <meta property="article:published_time" content="2015-10-23" />
             <meta property="article:section" content="Big Data" />
             <meta property="article:tag" content="bigdata" />
@@ -30,7 +30,7 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://koseburak.net/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+        <link rel="stylesheet" href="http://koseburak.net/theme/css/bootstrap.simplex.min.css" type="text/css"/>
     <link href="http://koseburak.net/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="http://koseburak.net/theme/css/pygments/trac.css" rel="stylesheet">
@@ -58,9 +58,6 @@ burakkose:blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://koseburak.net/yazilar">
-                             Yazılar
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
@@ -83,7 +80,7 @@ burakkose:blog            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://koseburak.net/blog/apache-spark-part2"
+                    <a href="http://koseburak.net/blog/apache-spark-part2/"
                        rel="bookmark"
                        title="Permalink to Apache Spark - Part 2 : Resilient Distributed Datasets">
                         Apache Spark - Part 2 : Resilient Distributed Datasets
@@ -106,25 +103,25 @@ burakkose:blog            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="http://koseburak.net/tags/bigdata">bigdata</a>
+	<a href="http://koseburak.net/tags/bigdata/">bigdata</a>
         /
-	<a href="http://koseburak.net/tags/datasciece">datasciece</a>
+	<a href="http://koseburak.net/tags/datasciece/">datasciece</a>
         /
-	<a href="http://koseburak.net/tags/spark">spark</a>
+	<a href="http://koseburak.net/tags/spark/">spark</a>
         /
-	<a href="http://koseburak.net/tags/python">python</a>
+	<a href="http://koseburak.net/tags/python/">python</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p><a href="http://koseburak.net/blog/apache-spark-part1">Bir önceki yazımda</a> Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD("resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız.</p>
+                <p><a href="http://koseburak.net/blog/apache-spark-part1/">Bir önceki yazımda</a> Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD("resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız.</p>
 <p>RDD'ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java'nın sahip olduğu tüm obje türlerini içerebilmekle beraber sizin de tanımladığınız sınıfları içerebilir.</p>
-<p><a href="http://koseburak.net/blog/apache-spark-part1">Önceki yazımda</a>; örneğimizde <code>lines = sc.textFile("README.md")</code> gibi bir kod kullandık. Bu kullanım ile aslında Python'da bir string RDD'si yaratmış olduk.</p>
+<p><a href="http://koseburak.net/blog/apache-spark-part1/">Önceki yazımda</a>; örneğimizde <code>lines = sc.textFile("README.md")</code> gibi bir kod kullandık. Bu kullanım ile aslında Python'da bir string RDD'si yaratmış olduk.</p>
 <p>Oluşturulan bir RDD yaratıldıktan sonra iki çeşit operasyonla kullanılabilir(bkz:transformations veya actions). Transformation işlemleri ile bir önceki RDD'den yeni bir RDD yaratılmasını sağlar.Örneğin bir önceki yazıda kullandığımız örneğe bakalım.</p>
 <p><code>pythonLines = lines.filter(lambda line: "Python" in line)</code></p>
 <p>Burada bir önceki RDD'yi(<strong>'lines'</strong>) kullanarak yeni bir RDD(<strong>'pythonLines'</strong>) oluşturuyoruz.</p>
 <p>Action ise sahip olduğumuz RDD üzerinde hesaplama türü işlemler yapmaktır. Örneğin;</p>
 <p><code>pythonLines.first()</code></p>
-<h4 id="cache-veya-persist">Cache veya Persist</h4>
+<h4>Cache veya Persist</h4>
 <p>Eğer elinizdeki bir RDD'yi birçok kez kullanacaksak ve performansdan kazanmak istiyorsak, Spark'a bunu <code>RDD.persist()</code> şeklinde bildirerek, memory'i kullanarak daha fazla performans elde edebilirsiniz(cache(), persist() ile aynı işlevi görür).Yazının devamında bu konuyu işliyor olacağız fakat kullanımı aşağıdaki gibidir.</p>
 <p><code>pythonLines.persist</code></p>
 <p>Özetlemek gerekirse her Spark uygulaması aşağıdaki gibi bir yol izler.</p>
@@ -134,13 +131,13 @@ burakkose:blog            </a>
 <li>Eğer birden fazla işlem yapacaksan Spark'a persist işlemini bildir.</li>
 <li>Elindeki veriyi işle.(Action aşaması)</li>
 </ol>
-<h3 id="rdd-olusturmak">RDD oluşturmak</h3>
-<h4 id="1var-olan-bir-koleksiyondan">1.Var olan bir koleksiyondan</h4>
+<h3>RDD oluşturmak</h3>
+<h4>1.Var olan bir koleksiyondan</h4>
 <p><code>lines = sc.parallelize(["burak", "kose", "arch" , "linux"])</code></p>
 <p>Protatip ve test işlemleri yaparken uygun olan bir yöntemdir fakat gerçek zamanlı uyglamalarda çok da kullanışlı değildir, çünkü tek bir makinenin hafızasında büyük bir veri olması gerekmektedir ve dolayısı ile çoğu zaman böyle bir kaynak mümkün değildir.</p>
-<h4 id="2harici-depolamadan">2.Harici depolamadan</h4>
+<h4>2.Harici depolamadan</h4>
 <p><code>data = sc.textFile("file-path")</code> şeklinde kullanımdır.</p>
-<h3 id="donusumlertransformations">Dönüşümler(Transformations)</h3>
+<h3>Dönüşümler(Transformations)</h3>
 <p>Yürütülen her bir transformation işlemi gerçekten bir action ile karşılaşana kadar gerçekleştirilmez.Buna <code>"Lazy Evaluation"</code> denir. "Lazy Evaluation" terimine daha önce foksiyonel bir programlama dili uğraşanlar aşinadır fakat terimi kısaca açıklamak gerekirse bir işlemin mecbur kalınana kadar yürütülmediği bir yaklaşımdır.</p>
 <p>Bir örnek gösterelim, elimizde bir log dosyası olsun ve biz içerisinde "error" geçen logları elde etmek isteyelim.Yapmamız gereken</p>
 <p><em>Örnek : filter()</em></p>
@@ -158,9 +155,9 @@ badLinesRDD = errorsRDD.union(warningsRDD)
 
 
 <p>Yapılan işleri aşağıdaki gibi bir görsel ile özetleyebiliriz.</p>
-<p><center><img alt="1" src="/images/apache_spark/2/1.png" /></center></p>
+<p><center><img alt="1" src="/images/apache_spark/2/1.png"></center></p>
 <p>İki çok genel transformation işlemi vardır, <strong>map</strong> ve <strong>filter</strong>. Bunların işlevleri aşağıdaki görseldeki gibi açıklanabilir.</p>
-<p><center><img alt="2" src="/images/apache_spark/2/2.png" /></center></p>
+<p><center><img alt="2" src="/images/apache_spark/2/2.png"></center></p>
 <p><em>Örnek : map()</em></p>
 <div class="highlight"><pre><span></span>&gt;&gt;&gt; nums = sc.parallelize([1, 2, 3, 4])
 &gt;&gt;&gt; squared = nums.map(lambda x: x * x).collect()
@@ -180,16 +177,16 @@ badLinesRDD = errorsRDD.union(warningsRDD)
 
 
 <p>Aşağıdaki görselde aynı işlemin <strong>map</strong> ve <strong>flatMap</strong> arasındaki farkı özetlenmektedir.</p>
-<p><center><img alt="3" src="/images/apache_spark/2/3.png" /></center></p>
+<p><center><img alt="3" src="/images/apache_spark/2/3.png"></center></p>
 <p>Transformation işlemlerini incelemeye devam edelim.</p>
-<p><center><img alt="4" src="/images/apache_spark/2/4.png" /></center></p>
+<p><center><img alt="4" src="/images/apache_spark/2/4.png"></center></p>
 <p>Yukarıdaki görseli açıklamak istersek kısaca,
 - <strong>distinct</strong> işlemi ile tekrar eden kayıtları atarak geriye eşsiz kayıtlardan oluşan bir RDD elde edebiliriz.
 - <strong>union</strong> işlemine daha önce değinmiştik.İki RDD'yi birleştirme işlevini görür fakat elemanların tekrarı ile ilgilenmediğine dikkat edin.
 - <strong>intersection</strong> işlemi iki RDD arasındaki ortak elemanları elde etmemizi sağlar.
 - <strong>subtract</strong> ile fonksiyona parametre olarak verilen RDD'deki elemamanlar dışındaki verileri elde ederiz.</p>
 <p>Bunların dışında iki RDD arasında kartezyen çarpım da elde edebiliriz. Bunun için <code>RDD1.cartesian(RDD2)</code> uygulamamız yeterlidir.</p>
-<h3 id="eylemleractions">Eylemler(Actions)</h3>
+<h3>Eylemler(Actions)</h3>
 <p>RDD oluşturmayı, var olan bir RDD'den yeni bir RDD yaratmayı transformation bölümünde gördük.Şimdi sıra veriler ile oynamada. Yapacağımız şey yukarıdaki örnekte elde ettiğimiz <strong>badLinesRDD</strong> içerisindeki '5' log satırını görüntülemek olsun.</p>
 <p><em>Örnek : take()</em></p>
 <div class="highlight"><pre><span></span>print(badLinesRDD.count(),&quot; lines&quot;)
@@ -276,13 +273,13 @@ for line in badLinesRDD.take(5):
 </tr>
 </tbody>
 </table>
-<h3 id="onbelleklemecaching">Önbellekleme(Caching)</h3>
+<h3>Önbellekleme(Caching)</h3>
 <p>Spark RDD'lerinin "lazily evaluated" olduğundan bahsetmiştik. Bazen uygulamalarımızda bir RDD'yi birden fazla kez kullanmamız gerekebilir. Eğer bunu doğrudan yapıyor olsaydık, bizim her action isteğimizde, Spark bu RDD'yi ve bağımlılıklarını tekrar tekrar hesaplamak zorunda kalacaktı. Dolayısıyla iteratif algoritmaları kullanmamız gerektiğinde çok masraflı olacaktır. Bu konunun önemi çok fazladır, yazdığınız bir uygulama sorunsuz çalışıyor gibi gözükebilir fakat anlam veremediğiniz bir şekilde yavaş çalışıyorsa ilk olarak önbellekme konusunu incelemenizi tavsiye ederim. Bir örnek yapalım ve ne demek istediğimize bakalım.</p>
 <p><em>Örnek : Çift hesaplamalı</em></p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
 <span class="kn">from</span> <span class="nn">pyspark</span> <span class="kn">import</span> <span class="n">SparkContext</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">appName</span><span class="o">=</span><span class="s1">&#39;myname&#39;</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> \
         <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
@@ -351,7 +348,7 @@ for line in badLinesRDD.take(5):
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
 <span class="kn">from</span> <span class="nn">pyspark</span> <span class="kn">import</span> <span class="n">SparkContext</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">(</span><span class="n">appName</span><span class="o">=</span><span class="s1">&#39;myname&#39;</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> \
         <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
@@ -377,7 +374,7 @@ for line in badLinesRDD.take(5):
             var disqus_shortname = 'koseburak'; // required: replace example with your forum shortname
 
                     var disqus_identifier = 'apache-spark-part2';
-                var disqus_url = 'http://koseburak.net/blog/apache-spark-part2';
+                var disqus_url = 'http://koseburak.net/blog/apache-spark-part2/';
 
             var disqus_config = function () {
                 this.language = "tr";
@@ -434,6 +431,11 @@ for line in badLinesRDD.take(5):
                         </a>
                     </li>
                     <li class="list-group-item">
+                        <a href="http://koseburak.net/category/fonksiyonel-programlama.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Fonksiyonel Programlama
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://koseburak.net/category/linux.html">
                             <i class="fa fa-folder-open fa-lg"></i> Linux
                         </a>
@@ -441,105 +443,105 @@ for line in badLinesRDD.take(5):
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="http://koseburak.net/tags"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+            <li class="list-group-item"><a href="http://koseburak.net/tags/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group list-inline tagcloud" id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="http://koseburak.net/tags/algorithm">
+                        <a href="http://koseburak.net/tags/algorithm/">
                             algorithm
                         </a>
                     </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/archlinux">
-                            archlinux
-                        </a>
-                    </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/bigdata">
+                        <a href="http://koseburak.net/tags/bigdata/">
                             bigdata
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/bioinformatic">
+                        <a href="http://koseburak.net/tags/bioinformatic/">
                             bioinformatic
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/bit">
+                        <a href="http://koseburak.net/tags/bit/">
                             bit
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/datasciece">
+                        <a href="http://koseburak.net/tags/datasciece/">
                             datasciece
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/divide-and-conquer">
+                        <a href="http://koseburak.net/tags/divide-and-conquer/">
                             divide and conquer
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/dynamic-programming">
+                        <a href="http://koseburak.net/tags/dynamic-programming/">
                             dynamic programming
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/graph-theory">
+                        <a href="http://koseburak.net/tags/fp/">
+                            fp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/graph-theory/">
                             graph theory
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/greedy">
+                        <a href="http://koseburak.net/tags/greedy/">
                             greedy
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/mathematical">
+                        <a href="http://koseburak.net/tags/mathematical/">
                             mathematical
                         </a>
                     </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/number-theory">
-                            number theory
-                        </a>
-                    </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/operating-systems">
+                        <a href="http://koseburak.net/tags/operating-systems/">
                             operating systems
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/python">
+                        <a href="http://koseburak.net/tags/python/">
                             python
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/random">
+                        <a href="http://koseburak.net/tags/random/">
                             random
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/scheduling">
+                        <a href="http://koseburak.net/tags/scala/">
+                            scala
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/scheduling/">
                             scheduling
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/searching">
+                        <a href="http://koseburak.net/tags/searching/">
                             searching
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/sorting">
+                        <a href="http://koseburak.net/tags/sorting/">
                             sorting
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/spark">
+                        <a href="http://koseburak.net/tags/spark/">
                             spark
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/string">
+                        <a href="http://koseburak.net/tags/string/">
                             string
                         </a>
                     </li>
@@ -556,7 +558,7 @@ for line in badLinesRDD.take(5):
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2015 Burak Köse
+         <div class="col-xs-10">&copy; 2017 Burak Köse
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>

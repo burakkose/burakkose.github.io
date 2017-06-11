@@ -29,6 +29,8 @@
     <link href="http://koseburak.net/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="http://koseburak.net/theme/css/style.css" type="text/css"/>
 
+        <link href="http://koseburak.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="burakkose:blog ATOM Feed"/>
 
 
 
@@ -50,13 +52,10 @@ burakkose:blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://koseburak.net/yazilar/">
-                             Yazılar
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
-                <form class="navbar-search" action="/search.html">
+                <form class="navbar-search" action="/search">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
@@ -76,7 +75,7 @@ burakkose:blog            </a>
                 <div class="summary"><p>Hoşuma giden problem türlerinden olan yakın ikili sorularından biri. Bu problemde girdi olarak verilen iki tane sıralanmış dizi ve bir hedef numarası bulunuyor ve dizilerden seçilen hangi iki elemanın toplamının hedef elemana en yakın sayı olacağını bulmamız gerekiyor.</p>
 <p>Örnek olarak;</p>
 <div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span>  <span class="n">ar1</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">};</span>
-        <span class="n">ar2</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30 ...</span></pre></div>
+        <span class="n">ar2</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30 …</span></pre></div>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/find-closest-pair-sorted/">more ...</a>
                 </div>
             </article>
@@ -102,7 +101,7 @@ burakkose:blog            </a>
 <ol>
 <li>Ağaca eklenmiş tüm düğümleri tutacak bir küme oluştur(<code>mst_set</code>).</li>
 <li>Başlangıçta tüm düğümlere sonsuz değeri verin sadece içlerinden bir tanesini seçmek için 0 değeri verin.</li>
-<li>Eğer <code>1.</code> adımda ...</li></ol>
+<li>Eğer <code>1.</code> adımda …</li></ol>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/prim-mst/">more ...</a>
                 </div>
             </article>
@@ -115,7 +114,7 @@ burakkose:blog            </a>
 10 geldiğinde ortalama 10.00
 20 geldiğinde ortalama 15.00
 30 geldiğinde ortalama 20.00
-40 ...</pre></div>
+40 …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/stream-ortalama/">more ...</a>
                 </div>
             </article>
@@ -130,7 +129,7 @@ burakkose:blog            </a>
 
 <span class="n">Input</span><span class="o">:</span> <span class="n">V</span> <span class="o">=</span> <span class="mi">121</span> <span class="n">TL</span>
 <span class="n">Output</span><span class="o">:</span> <span class="mi">3</span>
-<span class="mi">100</span> <span class="n">TL</span> <span class="o">+</span> <span class="mi">20</span> <span class="n">TL ...</span></pre></div>
+<span class="mi">100</span> <span class="n">TL</span> <span class="o">+</span> <span class="mi">20</span> <span class="n">TL …</span></pre></div>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/bozuk-para/">more ...</a>
                 </div>
             </article>
@@ -140,7 +139,7 @@ burakkose:blog            </a>
                 <div class="summary"><p>Verilen sayının fibonacci sayısı olup olmadığını anlamanın basit bir yolu var.</p>
 <p>İsterseniz sırayla kendi sayınıza kadar fibonacci sayılarını oluşturup kontrol ederek gidebilirsiniz. Tabi aşırı maliyetli bir çözüm olur, ya da matematikten faydalanırsınız.</p>
 <p>Bu çözüme tam kare çözümü denmektedir. Kontrol için aşağıdaki eşitliği kullancağız.</p>
-<p><code>(5*n^2 + 4) veya (5*n ...</code></p>
+<p><code>(5*n^2 + 4) veya (5*n …</code></p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/fibo-kontrol/">more ...</a>
                 </div>
             </article>
@@ -153,7 +152,7 @@ burakkose:blog            </a>
 result = 0
 1.) 5 kere 5 ekle (5^2) = 25
 2.) 5 kere 25 ekle (5^3) = 125
-3.) 5 kere 125 ekle (5^4) = 625 ...</pre></div>
+3.) 5 kere 125 ekle (5^4) = 625 …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/pow-without/">more ...</a>
                 </div>
             </article>
@@ -164,7 +163,7 @@ result = 0
 <p>Aşağıda kabaca algoritmanın çalışmasını anlayabilirsiniz.</p>
 <ol>
 <li>Tüm kenarları maliyetlerine göre küçükten büyüğe doğru sıralay</li>
-<li>En düşük maliyetli ...</li></ol>
+<li>En düşük maliyetli …</li></ol>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/kuruskal-mst/">more ...</a>
                 </div>
             </article>
@@ -187,7 +186,7 @@ Output: 0,9,13
 <p>Çözüm aşağıdaki gibi olacaktır.</p>
 <div class="highlight"><pre><span></span>def search(text, pattern):
     m, n = len(pattern), len(text)
-    for i in range(n - m + 1 ...</pre></div>
+    for i in range(n - m + 1 …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/naive-search-string/">more ...</a>
                 </div>
             </article>
@@ -206,7 +205,7 @@ Output: 0,9,13
         <span class="n">c</span><span class="o">,</span> <span class="n">a</span>   
 
 
-<span class="n">Input ...</span></pre></div>
+<span class="n">Input …</span></pre></div>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/is-planlama/">more ...</a>
                 </div>
             </article>
@@ -243,6 +242,7 @@ Output: 0,9,13
                 <li class="list-group-item"><a href="skype:ksv7r41?chat"><i class="fa fa-skype fa-lg"></i> skype</a></li>
                 <li class="list-group-item"><a href="https://play.spotify.com/user/11138384529"><i class="fa fa-spotify fa-lg"></i> spotify</a></li>
                 <li class="list-group-item"><a href="https://www.quora.com/Burak-K%C3%B6se-1"><i class="fa fa-quora-square fa-lg"></i> quora</a></li>
+                <li class="list-group-item"><a href="http://koseburak.net//feeds/all.atom.xml"><i class="fa fa-rss-square fa-lg"></i> rss</a></li>
               </ul>
             </li>
 
@@ -260,6 +260,11 @@ Output: 0,9,13
                         </a>
                     </li>
                     <li class="list-group-item">
+                        <a href="http://koseburak.net/category/fonksiyonel-programlama.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Fonksiyonel Programlama
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://koseburak.net/category/linux.html">
                             <i class="fa fa-folder-open fa-lg"></i> Linux
                         </a>
@@ -272,11 +277,6 @@ Output: 0,9,13
                     <li class="list-group-item tag-1">
                         <a href="http://koseburak.net/tags/algorithm/">
                             algorithm
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/archlinux/">
-                            archlinux
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -310,6 +310,11 @@ Output: 0,9,13
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/fp/">
+                            fp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
                         <a href="http://koseburak.net/tags/graph-theory/">
                             graph theory
                         </a>
@@ -322,11 +327,6 @@ Output: 0,9,13
                     <li class="list-group-item tag-2">
                         <a href="http://koseburak.net/tags/mathematical/">
                             mathematical
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/number-theory/">
-                            number theory
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -342,6 +342,11 @@ Output: 0,9,13
                     <li class="list-group-item tag-4">
                         <a href="http://koseburak.net/tags/random/">
                             random
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/scala/">
+                            scala
                         </a>
                     </li>
                     <li class="list-group-item tag-3">

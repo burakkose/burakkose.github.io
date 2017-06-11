@@ -28,6 +28,8 @@
     <link href="http://koseburak.net/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="http://koseburak.net/theme/css/style.css" type="text/css"/>
 
+        <link href="http://koseburak.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="burakkose:blog ATOM Feed"/>
 
 
 
@@ -49,13 +51,10 @@ burakkose:blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://koseburak.net/yazilar/">
-                             Yazılar
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
-                <form class="navbar-search" action="/search.html">
+                <form class="navbar-search" action="/search">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
@@ -84,6 +83,40 @@ burakkose:blog            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="http://koseburak.net/blog/kuruskal-mst/">Kruskal Algoritması - Greedy Yaklaşımı</a></h2>
+                <div class="summary"><p>En küçük yol ağacı problemine(minimum spanning tree) üretilmiş bir çözümdür. En basit graf algoritmalarından biridir. Greedy yaklaşımı ile çözüme ulaşılır. Amaç bir graf içerisinde tüm düğümleri kapsayan minimum maliyete sahip ağacı elde etmektir.</p>
+<p>Aşağıda kabaca algoritmanın çalışmasını anlayabilirsiniz.</p>
+<ol>
+<li>Tüm kenarları maliyetlerine göre küçükten büyüğe doğru sıralay</li>
+<li>En düşük maliyetli …</li></ol>
+                    <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/kuruskal-mst/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="http://koseburak.net/blog/naive-search-string/">En basit hali ile text arama işlemi - String Algoritmaları</a></h2>
+                <div class="summary"><p>Text işlemlerinde, bir dizgi içerisinde dizgi aramadaki en basit çözümü inceleyeceğiz.</p>
+<div class="highlight"><pre><span></span>txt[] =  &quot;THIS IS A TEST TEXT&quot;
+pat[] = &quot;TEST&quot;
+Output: 10
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>txt[] =  &quot;AABAACAADAABAAABAA&quot;
+pat[] = &quot;AABA&quot;
+Output: 0,9,13
+</pre></div>
+
+
+<p>Çözüm aşağıdaki gibi olacaktır.</p>
+<div class="highlight"><pre><span></span>def search(text, pattern):
+    m, n = len(pattern), len(text)
+    for i in range(n - m + 1 …</pre></div>
+                    <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/naive-search-string/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://koseburak.net/blog/is-planlama/">İş planlama problemi - Greedy Yaklaşımı</a></h2>
                 <div class="summary"><p>İş planlanması ile ilgili olan bir problem. Girdi olarak son teslim tarihine ve kazanç bilgilerine sahip olan işler veriliyor. En büyük kazancı nasıl elde edebileceğimizi bulmamız gerekiyor.</p>
 <p>Örnek olarak ;</p>
@@ -97,7 +130,7 @@ burakkose:blog            </a>
         <span class="n">c</span><span class="o">,</span> <span class="n">a</span>   
 
 
-<span class="n">Input ...</span></pre></div>
+<span class="n">Input …</span></pre></div>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/is-planlama/">more ...</a>
                 </div>
             </article>
@@ -105,7 +138,7 @@ burakkose:blog            </a>
             <article>
                 <h2><a href="http://koseburak.net/blog/etkinlik-secim-problemi/">Etkinlik paylaşım problemi - Greedy Yaklaşımı</a></h2>
                 <div class="summary"><p>Etkinlik paylaşım problemi klasik bir açgözlü(greedy) yaklaşımı ile çözülen bir problemdir.Greedy kısaca parça parça çözüme ulaşılan ve her bir aşamada o anki en optimum seçeneği seçemedir.</p>
-<p>Eğer bir problemi Greedy yaklaşımı ile çözebiliyorsak muhtemelen o problemin çözümü diğer çözüm yöntemlerine göre en optimum çözüm olacaktır fakat her durumda ...</p>
+<p>Eğer bir problemi Greedy yaklaşımı ile çözebiliyorsak muhtemelen o problemin çözümü diğer çözüm yöntemlerine göre en optimum çözüm olacaktır fakat her durumda …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/etkinlik-secim-problemi/">more ...</a>
                 </div>
             </article>
@@ -121,7 +154,7 @@ burakkose:blog            </a>
 </pre></div>
 
 
-<p>Bu çözüm iteratif olarak yazılmış ve <code>O(n)</code> karmaşıklığına sahip hoş ...</p>
+<p>Bu çözüm iteratif olarak yazılmış ve <code>O(n)</code> karmaşıklığına sahip hoş …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/pow-daq/">more ...</a>
                 </div>
             </article>
@@ -133,7 +166,7 @@ burakkose:blog            </a>
 <div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">70</span><span class="o">},</span> <span class="n">key</span> <span class="o">=</span> <span class="mi">40</span>
 <span class="n">Output</span><span class="o">:</span> <span class="mi">2</span>
 
-<span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3 ...</span></pre></div>
+<span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span>  <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">3 …</span></pre></div>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/almost-sorted-search/">more ...</a>
                 </div>
             </article>
@@ -158,7 +191,7 @@ burakkose:blog            </a>
 <p>Çözüm için;</p>
 <ol>
 <li>Eğer tüm sayılar azalan sırada ise 'Imkansız' basılır.</li>
-<li>Eğer tüm ...</li></ol>
+<li>Eğer tüm …</li></ol>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/next-num/">more ...</a>
                 </div>
             </article>
@@ -180,7 +213,7 @@ Output : 0, 9, 13
 </pre></div>
 
 
-<p>Bir önceki <a href="http://koseburak.net/blog/naive-search-string/">yazıda</a> en kaba hali ile bir text içerisinde nasıl başka bir text aramasının yapılacağını incelemiştik. O algoritma <code>O ...</code></p>
+<p>Bir önceki <a href="http://koseburak.net/blog/naive-search-string/">yazıda</a> en kaba hali ile bir text içerisinde nasıl başka bir text aramasının yapılacağını incelemiştik. O algoritma <code>O …</code></p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/kmp/">more ...</a>
                 </div>
             </article>
@@ -190,7 +223,7 @@ Output : 0, 9, 13
                 <div class="summary"><p>Sıralı olarak verilen bir dizi içerisinde, hedef olarak belirtilen sayıya en yakın(eşit değil) k tane elemanı elde etmeye yarayan problemdir.</p>
 <p>Problemin basit olarak çözümü, k tane elemanın bulunması için diziyi lineer olarak aramaktan geçer.</p>
 <ol>
-<li>İlk elemandan başlayarak geçit alanına kadar gel(Geçit alanı: Sonraki elemanın büyük, üzerinde bulunan elemanın ...</li></ol>
+<li>İlk elemandan başlayarak geçit alanına kadar gel(Geçit alanı: Sonraki elemanın büyük, üzerinde bulunan elemanın …</li></ol>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/search-k-closest/">more ...</a>
                 </div>
             </article>
@@ -198,36 +231,8 @@ Output : 0, 9, 13
             <article>
                 <h2><a href="http://koseburak.net/blog/which-sorting-min-memory/">Hangi sıralama algoritması belleğe en az sayıda yazma yapar?</a></h2>
                 <div class="summary"><p>Hafızaya yazma işlemini azaltmak, büyük veri kümeeleri üzerinde uğraşmanın maliyetli olduğu EEPROMs ve ya flash gibi platformlar için kazançlıdır.</p>
-<p>Sıralama algoritmaları arasında <code>Selection Sort</code> agoritmasının en az sayıda yazma işlemi yaptığını(<code>O(n)</code>) biliyoruz. Fakat <code>Cycle Sort</code> neredeyse her zaman <code>Selection Sort</code> algoritmasına göre daha az sayıda yazma işlemi yapar ...</p>
+<p>Sıralama algoritmaları arasında <code>Selection Sort</code> agoritmasının en az sayıda yazma işlemi yaptığını(<code>O(n)</code>) biliyoruz. Fakat <code>Cycle Sort</code> neredeyse her zaman <code>Selection Sort</code> algoritmasına göre daha az sayıda yazma işlemi yapar …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/which-sorting-min-memory/">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://koseburak.net/blog/search-k-largest-or-smalest/">K. küçük veya büyük sayısı bulmak - Part 1 - Arama Algoritması</a></h2>
-                <div class="summary"><p>Bir dizi ve <code>k</code> sayısı veriliyor(k &lt; len(dizi)). Cevap olarak dizi içerisinde ki k. küçük veya büyük elemanın bulunması hedefleniyor.</p>
-<p>Örneğin;</p>
-<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="o">}</span>
-       <span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">7</span>
-
-<span class="n">Input</span><span class="o">:</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="o">}</span>
-       <span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">10</span>
-</pre></div>
-
-
-<h3 id="cozum-1-basit-cozum">Çözüm 1 (Basit Çözüm ...</h3>
-                    <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/search-k-largest-or-smalest/">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://koseburak.net/blog/stability-sorting/">Sıralama algoritmalarında kararlılık nedir?</a></h2>
-                <div class="summary"><p>Sıralama algoritmalarında bazen kararlılık ile ilgili bir takım bilgiler görürüz.Kısaca açıklamak gerekirse, sırarısz bir dizide aynı değerlere sahip elemanların dizilişi, dizi sıralandığında da korunuyorsa algoritma kararlıdır.</p>
-<p>Kararlı özelliğine sahip algoritmalar; Insertion sort, Merge sort, Bubble sort. Kararsız olanlar; Heap sort, Quick sort.</p>
-<p>Ancak verilen kararlı olmayan aloritmalar kolayca kararlı ...</p>
-                    <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/stability-sorting/">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -265,6 +270,7 @@ Output : 0, 9, 13
                 <li class="list-group-item"><a href="skype:ksv7r41?chat"><i class="fa fa-skype fa-lg"></i> skype</a></li>
                 <li class="list-group-item"><a href="https://play.spotify.com/user/11138384529"><i class="fa fa-spotify fa-lg"></i> spotify</a></li>
                 <li class="list-group-item"><a href="https://www.quora.com/Burak-K%C3%B6se-1"><i class="fa fa-quora-square fa-lg"></i> quora</a></li>
+                <li class="list-group-item"><a href="http://koseburak.net//feeds/all.atom.xml"><i class="fa fa-rss-square fa-lg"></i> rss</a></li>
               </ul>
             </li>
 
@@ -282,6 +288,11 @@ Output : 0, 9, 13
                         </a>
                     </li>
                     <li class="list-group-item">
+                        <a href="http://koseburak.net/category/fonksiyonel-programlama.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Fonksiyonel Programlama
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://koseburak.net/category/linux.html">
                             <i class="fa fa-folder-open fa-lg"></i> Linux
                         </a>
@@ -294,11 +305,6 @@ Output : 0, 9, 13
                     <li class="list-group-item tag-1">
                         <a href="http://koseburak.net/tags/algorithm/">
                             algorithm
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/archlinux/">
-                            archlinux
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -332,6 +338,11 @@ Output : 0, 9, 13
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/fp/">
+                            fp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
                         <a href="http://koseburak.net/tags/graph-theory/">
                             graph theory
                         </a>
@@ -344,11 +355,6 @@ Output : 0, 9, 13
                     <li class="list-group-item tag-2">
                         <a href="http://koseburak.net/tags/mathematical/">
                             mathematical
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/number-theory/">
-                            number theory
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -364,6 +370,11 @@ Output : 0, 9, 13
                     <li class="list-group-item tag-4">
                         <a href="http://koseburak.net/tags/random/">
                             random
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/scala/">
+                            scala
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -404,7 +415,7 @@ Output : 0, 9, 13
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2015 Burak Köse
+         <div class="col-xs-10">&copy; 2017 Burak Köse
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>

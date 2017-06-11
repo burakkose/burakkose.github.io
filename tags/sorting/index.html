@@ -29,6 +29,8 @@
     <link href="http://koseburak.net/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="http://koseburak.net/theme/css/style.css" type="text/css"/>
 
+        <link href="http://koseburak.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="burakkose:blog ATOM Feed"/>
 
 
 
@@ -50,13 +52,10 @@ burakkose:blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://koseburak.net/yazilar/">
-                             Yazılar
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
-                <form class="navbar-search" action="/search.html">
+                <form class="navbar-search" action="/search">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
@@ -74,7 +73,7 @@ burakkose:blog            </a>
             <article>
                 <h2><a href="http://koseburak.net/blog/which-sorting-min-memory/">Hangi sıralama algoritması belleğe en az sayıda yazma yapar?</a></h2>
                 <div class="summary"><p>Hafızaya yazma işlemini azaltmak, büyük veri kümeeleri üzerinde uğraşmanın maliyetli olduğu EEPROMs ve ya flash gibi platformlar için kazançlıdır.</p>
-<p>Sıralama algoritmaları arasında <code>Selection Sort</code> agoritmasının en az sayıda yazma işlemi yaptığını(<code>O(n)</code>) biliyoruz. Fakat <code>Cycle Sort</code> neredeyse her zaman <code>Selection Sort</code> algoritmasına göre daha az sayıda yazma işlemi yapar ...</p>
+<p>Sıralama algoritmaları arasında <code>Selection Sort</code> agoritmasının en az sayıda yazma işlemi yaptığını(<code>O(n)</code>) biliyoruz. Fakat <code>Cycle Sort</code> neredeyse her zaman <code>Selection Sort</code> algoritmasına göre daha az sayıda yazma işlemi yapar …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/which-sorting-min-memory/">more ...</a>
                 </div>
             </article>
@@ -83,7 +82,7 @@ burakkose:blog            </a>
                 <h2><a href="http://koseburak.net/blog/stability-sorting/">Sıralama algoritmalarında kararlılık nedir?</a></h2>
                 <div class="summary"><p>Sıralama algoritmalarında bazen kararlılık ile ilgili bir takım bilgiler görürüz.Kısaca açıklamak gerekirse, sırarısz bir dizide aynı değerlere sahip elemanların dizilişi, dizi sıralandığında da korunuyorsa algoritma kararlıdır.</p>
 <p>Kararlı özelliğine sahip algoritmalar; Insertion sort, Merge sort, Bubble sort. Kararsız olanlar; Heap sort, Quick sort.</p>
-<p>Ancak verilen kararlı olmayan aloritmalar kolayca kararlı ...</p>
+<p>Ancak verilen kararlı olmayan aloritmalar kolayca kararlı …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/stability-sorting/">more ...</a>
                 </div>
             </article>
@@ -109,7 +108,7 @@ hanelerine göre sıralanır.En değersiz olan haneden en değerli haneye
 doğru sıralama işlemi yapılır.</p>
 <p>Sıralanacak verilerin tamsayı olduğu durumlarda kullanılan bu algoritma
 işlenirken ilk olarak sıralanacak olan veri kümesindeki elemanların en
-büyük ...</p>
+büyük elemanının …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/radix-sort/">more ...</a>
                 </div>
             </article>
@@ -121,7 +120,7 @@ tercih edilen sıralama algoritmasıdır.1960 yılında C. A. R. Hoare
 tarafından ortaya atılmıştır.Bu algoritma yaklaşım bakımından "parçala
 ve çözümle" ilkesine göre çalışmaktadır.</p>
 <p>Bu yaklaşım şu şekilde açıklanabilir.Eldeki problem çok daha ufak
-problemciklere ayrılır ve bütün bu problemcikler ...</p>
+problemciklere ayrılır ve bütün bu problemcikler …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/quick-sort/">more ...</a>
                 </div>
             </article>
@@ -134,7 +133,7 @@ sıralama şeklinde kullanılır.Geliştirilen uygulamalarda seçmeli sıralama
 kullanmak için düzgün bir analiz yapılması gerekir.Yer değiştirme
 sayısındaki sabitlik dolayısı ile büyük sayıda verinin bulunduğu uzun
 dosyalarda lineer zamanda sıralama yapılabilir.</p>
-<p>Temel olarak işleyiş şu ...</p>
+<p>Temel olarak işleyiş şu şekilde …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/selection-sort/">more ...</a>
                 </div>
             </article>
@@ -146,7 +145,7 @@ dizilerde kullanıldığında ve özellikle gelen veri kümesinin zaten
 sıralanmış veya sıralanmış haline çok yakın olduğunda kullanılır.</p>
 <p>Kararlı bir algoritma olmasıyla birlikle çalışma anında ek bir bellek
 ihtiyacı duymayan bu algoritma Türkçe'da yerleştirmeli sıralama ,
-eklemeli sıralama ve sokma sıralaması olarak ...</p>
+eklemeli sıralama ve sokma sıralaması olarak adlandırılabilir …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/insertion-sort/">more ...</a>
                 </div>
             </article>
@@ -158,7 +157,7 @@ olarak bubble sort ile başlamayı düşünürken bundan bir süre önce
 izlediğim bir video aklıma geldi.</p>
 <p>Bu videoda Barack Obama'nın başkan seçilmeden önce Google'da yaptığı bir
 konuşma geçiyor. Google CEO'su Eric Schmidt ile yaptığı sohbette
-Obama'ya bir milyon adet ...</p>
+Obama'ya bir milyon adet 32-bit integer sayıyı sıralamak …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/bubble-sort/">more ...</a>
                 </div>
             </article>
@@ -181,6 +180,7 @@ Obama'ya bir milyon adet ...</p>
                 <li class="list-group-item"><a href="skype:ksv7r41?chat"><i class="fa fa-skype fa-lg"></i> skype</a></li>
                 <li class="list-group-item"><a href="https://play.spotify.com/user/11138384529"><i class="fa fa-spotify fa-lg"></i> spotify</a></li>
                 <li class="list-group-item"><a href="https://www.quora.com/Burak-K%C3%B6se-1"><i class="fa fa-quora-square fa-lg"></i> quora</a></li>
+                <li class="list-group-item"><a href="http://koseburak.net//feeds/all.atom.xml"><i class="fa fa-rss-square fa-lg"></i> rss</a></li>
               </ul>
             </li>
 
@@ -198,6 +198,11 @@ Obama'ya bir milyon adet ...</p>
                         </a>
                     </li>
                     <li class="list-group-item">
+                        <a href="http://koseburak.net/category/fonksiyonel-programlama.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Fonksiyonel Programlama
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://koseburak.net/category/linux.html">
                             <i class="fa fa-folder-open fa-lg"></i> Linux
                         </a>
@@ -210,11 +215,6 @@ Obama'ya bir milyon adet ...</p>
                     <li class="list-group-item tag-1">
                         <a href="http://koseburak.net/tags/algorithm/">
                             algorithm
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/archlinux/">
-                            archlinux
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -248,6 +248,11 @@ Obama'ya bir milyon adet ...</p>
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/fp/">
+                            fp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
                         <a href="http://koseburak.net/tags/graph-theory/">
                             graph theory
                         </a>
@@ -260,11 +265,6 @@ Obama'ya bir milyon adet ...</p>
                     <li class="list-group-item tag-2">
                         <a href="http://koseburak.net/tags/mathematical/">
                             mathematical
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/number-theory/">
-                            number theory
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -280,6 +280,11 @@ Obama'ya bir milyon adet ...</p>
                     <li class="list-group-item tag-4">
                         <a href="http://koseburak.net/tags/random/">
                             random
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/scala/">
+                            scala
                         </a>
                     </li>
                     <li class="list-group-item tag-3">

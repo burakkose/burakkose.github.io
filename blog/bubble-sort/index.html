@@ -13,13 +13,13 @@
 
         <meta name="author" content="Burak" />
         <meta name="keywords" content="algorithm,sorting" />
-        <meta name="description" content="Algoritma yazılarıma sıralama algoritmaları ile başlamak istedim.İlk olarak bubble sort ile başlamayı düşünürken bundan bir süre önce izlediğim bir video aklıma geldi. Bu videoda Barack Obama&#39;nın başkan seçilmeden önce Google&#39;da yaptığı bir konuşma geçiyor. Google CEO&#39;su Eric Schmidt ile yaptığı sohbette Obama&#39;ya bir milyon adet ..." />
+        <meta name="description" content="Algoritma yazılarıma sıralama algoritmaları ile başlamak istedim.İlk olarak bubble sort ile başlamayı düşünürken bundan bir süre önce izlediğim bir video aklıma geldi. Bu videoda Barack Obama&#39;nın başkan seçilmeden önce Google&#39;da yaptığı bir konuşma geçiyor. Google CEO&#39;su Eric Schmidt ile yaptığı sohbette Obama&#39;ya bir milyon adet 32-bit integer sayıyı sıralamak …" />
 
         <meta property="og:site_name" content="burakkose:blog" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Bubble Sort - Sıralama Algoritmaları"/>
         <meta property="og:url" content="http://koseburak.net/blog/bubble-sort/"/>
-        <meta property="og:description" content="Algoritma yazılarıma sıralama algoritmaları ile başlamak istedim.İlk olarak bubble sort ile başlamayı düşünürken bundan bir süre önce izlediğim bir video aklıma geldi. Bu videoda Barack Obama&#39;nın başkan seçilmeden önce Google&#39;da yaptığı bir konuşma geçiyor. Google CEO&#39;su Eric Schmidt ile yaptığı sohbette Obama&#39;ya bir milyon adet ..."/>
+        <meta property="og:description" content="Algoritma yazılarıma sıralama algoritmaları ile başlamak istedim.İlk olarak bubble sort ile başlamayı düşünürken bundan bir süre önce izlediğim bir video aklıma geldi. Bu videoda Barack Obama&#39;nın başkan seçilmeden önce Google&#39;da yaptığı bir konuşma geçiyor. Google CEO&#39;su Eric Schmidt ile yaptığı sohbette Obama&#39;ya bir milyon adet 32-bit integer sayıyı sıralamak …"/>
         <meta property="article:published_time" content="2014-11-23" />
             <meta property="article:section" content="Algoritma" />
             <meta property="article:tag" content="algorithm" />
@@ -35,6 +35,8 @@
     <link href="http://koseburak.net/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="http://koseburak.net/theme/css/style.css" type="text/css"/>
 
+        <link href="http://koseburak.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="burakkose:blog ATOM Feed"/>
 
 
 
@@ -56,13 +58,10 @@ burakkose:blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://koseburak.net/yazilar/">
-                             Yazılar
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
-                <form class="navbar-search" action="/search.html">
+                <form class="navbar-search" action="/search">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
@@ -135,14 +134,14 @@ bağlı olarak).</p>
 <blockquote>
 <p>En iyi durum : O(n)</p>
 <blockquote>
-<p>-Dizi zaten sıralanmış<br />
--Yer değiştirme sayısı: 0<br />
+<p>-Dizi zaten sıralanmış<br>
+-Yer değiştirme sayısı: 0<br>
 -Karşılaştırma sayısı: n-1</p>
 </blockquote>
 <p>En kötü durum : O(n\^2)</p>
 <blockquote>
-<p>-Dizi tersten sıralı<br />
--Yer değiştirme sayısı: O(n\^2)<br />
+<p>-Dizi tersten sıralı<br>
+-Yer değiştirme sayısı: O(n\^2)<br>
 -Karşılaştırma sayısı: O(n\^2 /2)</p>
 </blockquote>
 <p>Ortalama durum : 0(n\^2)</p>
@@ -175,7 +174,7 @@ yer değiştirilir.Bu işlem dizi sonuna kadar devam eder.</p>
 sayı alıyor bu iki sayıyı küçükten büyüğe sıralanacak şekilde yer
 değitiriliyor ve bu işlem dizi bitene kadar tekrarlanıyor.Alttaki
 animasyon anlamaya yardımcı olacaktır.</p>
-<p><img alt="Bubble-sort-example-300px" src="//upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" />
+<p><img alt="Bubble-sort-example-300px" src="//upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif">
 <em>(Alıntı : wikipedia)</em></p>
 <p>Kabarcık sıralaması çok da verimli olmayan bir sıralama algoritmasıdır
 fakat bazı basit müdahaleler ile biraz daha efektif hale
@@ -261,6 +260,7 @@ inceledikten sonra yayınlayacağım bir yazıdan ulaşabilirsiniz.</p>
                 <li class="list-group-item"><a href="skype:ksv7r41?chat"><i class="fa fa-skype fa-lg"></i> skype</a></li>
                 <li class="list-group-item"><a href="https://play.spotify.com/user/11138384529"><i class="fa fa-spotify fa-lg"></i> spotify</a></li>
                 <li class="list-group-item"><a href="https://www.quora.com/Burak-K%C3%B6se-1"><i class="fa fa-quora-square fa-lg"></i> quora</a></li>
+                <li class="list-group-item"><a href="http://koseburak.net//feeds/all.atom.xml"><i class="fa fa-rss-square fa-lg"></i> rss</a></li>
               </ul>
             </li>
 
@@ -278,6 +278,11 @@ inceledikten sonra yayınlayacağım bir yazıdan ulaşabilirsiniz.</p>
                         </a>
                     </li>
                     <li class="list-group-item">
+                        <a href="http://koseburak.net/category/fonksiyonel-programlama.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Fonksiyonel Programlama
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://koseburak.net/category/linux.html">
                             <i class="fa fa-folder-open fa-lg"></i> Linux
                         </a>
@@ -290,11 +295,6 @@ inceledikten sonra yayınlayacağım bir yazıdan ulaşabilirsiniz.</p>
                     <li class="list-group-item tag-1">
                         <a href="http://koseburak.net/tags/algorithm/">
                             algorithm
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/archlinux/">
-                            archlinux
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -328,6 +328,11 @@ inceledikten sonra yayınlayacağım bir yazıdan ulaşabilirsiniz.</p>
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/fp/">
+                            fp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
                         <a href="http://koseburak.net/tags/graph-theory/">
                             graph theory
                         </a>
@@ -340,11 +345,6 @@ inceledikten sonra yayınlayacağım bir yazıdan ulaşabilirsiniz.</p>
                     <li class="list-group-item tag-2">
                         <a href="http://koseburak.net/tags/mathematical/">
                             mathematical
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/number-theory/">
-                            number theory
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -360,6 +360,11 @@ inceledikten sonra yayınlayacağım bir yazıdan ulaşabilirsiniz.</p>
                     <li class="list-group-item tag-4">
                         <a href="http://koseburak.net/tags/random/">
                             random
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/scala/">
+                            scala
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -400,7 +405,7 @@ inceledikten sonra yayınlayacağım bir yazıdan ulaşabilirsiniz.</p>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2015 Burak Köse
+         <div class="col-xs-10">&copy; 2017 Burak Köse
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>

@@ -29,6 +29,8 @@
     <link href="http://koseburak.net/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="http://koseburak.net/theme/css/style.css" type="text/css"/>
 
+        <link href="http://koseburak.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="burakkose:blog ATOM Feed"/>
 
 
 
@@ -50,13 +52,10 @@ burakkose:blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://koseburak.net/yazilar/">
-                             Yazılar
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
-                <form class="navbar-search" action="/search.html">
+                <form class="navbar-search" action="/search">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
@@ -74,7 +73,7 @@ burakkose:blog            </a>
             <article>
                 <h2><a href="http://koseburak.net/blog/apache-spark-part2/">Apache Spark - Part 2 : Resilient Distributed Datasets</a></h2>
                 <div class="summary"><p><a href="http://koseburak.net/blog/apache-spark-part1/">Bir önceki yazımda</a> Apache Spark kurlumunu ve basit bir kaç örneği incelemiştik. Bu yazıda RDD("resilient distributed dataset) yani esnek dağıtık veri kümelerini inceliyor olacağız.</p>
-<p>RDD'ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java'nın sahip ...</p>
+<p>RDD'ler basitçe değişmez(immutable) dağıtık obje koleksiyonlarıdır ve her biri farklı düğümlerde hesaplanmak üzere çeşitli parçalara bölünmüş şekildedir. Python, Scala veya Java'nın sahip olduğu tüm …</p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/apache-spark-part2/">more ...</a>
                 </div>
             </article>
@@ -83,7 +82,7 @@ burakkose:blog            </a>
                 <h2><a href="http://koseburak.net/blog/apache-spark-part1/">Apache Spark - Part 1 : Tanıtım</a></h2>
                 <div class="summary"><p>Apache Spark,büyük veri işleme amacı ile oluşturulmuş bir Apache projesidir.Scala dili ile yazılmış JVM üzerinde çalışan ve Python, Java, Scala kullanımına olanak sağlayan, "in-memory" yani veriyi bellek içerisinde işleme özelliği ile ön plana çıkan bir projedir.</p>
 <p>Eğer isterseniz kaynak kodları görüntülemek için aşağıdaki adrese göz atabilirsiniz.</p>
-<p><a href="https://github.com/apache/spark">https://github ...</a></p>
+<p><a href="https://github.com/apache/spark">https://github …</a></p>
                     <a class="btn btn-default btn-xs" href="http://koseburak.net/blog/apache-spark-part1/">more ...</a>
                 </div>
             </article>
@@ -106,6 +105,7 @@ burakkose:blog            </a>
                 <li class="list-group-item"><a href="skype:ksv7r41?chat"><i class="fa fa-skype fa-lg"></i> skype</a></li>
                 <li class="list-group-item"><a href="https://play.spotify.com/user/11138384529"><i class="fa fa-spotify fa-lg"></i> spotify</a></li>
                 <li class="list-group-item"><a href="https://www.quora.com/Burak-K%C3%B6se-1"><i class="fa fa-quora-square fa-lg"></i> quora</a></li>
+                <li class="list-group-item"><a href="http://koseburak.net//feeds/all.atom.xml"><i class="fa fa-rss-square fa-lg"></i> rss</a></li>
               </ul>
             </li>
 
@@ -123,6 +123,11 @@ burakkose:blog            </a>
                         </a>
                     </li>
                     <li class="list-group-item">
+                        <a href="http://koseburak.net/category/fonksiyonel-programlama.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Fonksiyonel Programlama
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://koseburak.net/category/linux.html">
                             <i class="fa fa-folder-open fa-lg"></i> Linux
                         </a>
@@ -135,11 +140,6 @@ burakkose:blog            </a>
                     <li class="list-group-item tag-1">
                         <a href="http://koseburak.net/tags/algorithm/">
                             algorithm
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/archlinux/">
-                            archlinux
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -173,6 +173,11 @@ burakkose:blog            </a>
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/fp/">
+                            fp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
                         <a href="http://koseburak.net/tags/graph-theory/">
                             graph theory
                         </a>
@@ -185,11 +190,6 @@ burakkose:blog            </a>
                     <li class="list-group-item tag-2">
                         <a href="http://koseburak.net/tags/mathematical/">
                             mathematical
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/number-theory/">
-                            number theory
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -205,6 +205,11 @@ burakkose:blog            </a>
                     <li class="list-group-item tag-4">
                         <a href="http://koseburak.net/tags/random/">
                             random
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="http://koseburak.net/tags/scala/">
+                            scala
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
