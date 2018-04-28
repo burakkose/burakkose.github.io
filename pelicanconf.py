@@ -7,7 +7,7 @@ AUTHOR = u'Burak Köse'
 SITENAME = u'burakkose:blog'
 SITEURL = 'http://koseburak.net'
 
-TIMEZONE = 'Europe/Istanbul'
+TIMEZONE = 'Europe/Amsterdam'
 
 DEFAULT_LANG = u'tr'
 
@@ -22,7 +22,7 @@ TRANSLATION_FEED_ATOM = None
 #GITHUB_USER = 'burakkose'
 #GITHUB_SKIP_FORK = False
 
-TWITTER_USERNAME = 'burakks41'
+TWITTER_USERNAME = 'burakkose41'
 BANNER_SUBTITLE = """The way to succeed is to double your failure rate. Failure is the opportunity to begin again more intelligently.<br>
 - Henry Ford, Ford Motor Company Founder"""
 #CUSTOM_CSS = 'static/custom.css'
@@ -42,7 +42,7 @@ LINKS = None
 # Social widget
 SOCIAL = (('envelop', 'mailto:burakks41@gmail.com'),
           ('facebook', 'http://facebook.com/burakks41'),
-          ('twitter', 'http://twitter.com/burakks41'),
+          ('twitter', 'http://twitter.com/burakkose41'),
           ('linkedin', 'http://www.linkedin.com/in/burakkose'),
           ('github', 'http://github.com/burakkose'),
           ('youtube', 'https://www.youtube.com/channel/UC6KivSaGWmirxNt2IyHFL0g'),
