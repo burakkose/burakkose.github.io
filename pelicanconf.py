@@ -40,7 +40,7 @@ EXTRA_PATH_METADATA = {
 LINKS = None
 
 # Social widget
-SOCIAL = (('envelop', 'mailto:burakks41@gmail.com'),
+SOCIAL = (('envelope', 'mailto:burakks41@gmail.com'),
           ('facebook', 'http://facebook.com/burakks41'),
           ('twitter', 'http://twitter.com/burakkose41'),
           ('linkedin', 'http://www.linkedin.com/in/burakkose'),
