@@ -9,7 +9,7 @@
 
 
 
-<link rel="canonical" href="http://koseburak.net/blog/kmp/">
+<link rel="canonical" href="https://www.koseburak.net/blog/kmp/">
 
         <meta name="author" content="Burak" />
         <meta name="keywords" content="algorithm,string,searching" />
@@ -18,7 +18,7 @@
         <meta property="og:site_name" content="burakkose:blog" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="KMP Algoritmasi - String Algoritmaları"/>
-        <meta property="og:url" content="http://koseburak.net/blog/kmp/"/>
+        <meta property="og:url" content="https://www.koseburak.net/blog/kmp/"/>
         <meta property="og:description" content="Bir diğer string arama algoritmalarından olan KMP algoritmasına bakacağız. Örnek olarak; txt = &#34;THIS IS A TEST TEXT&#34; pat = &#34;TEST&#34; Output : 10 ve txt = &#34;AABAACAADAABAAABAA&#34; pat = &#34;AABA&#34; Output : 0, 9, 13 Bir önceki yazıda en kaba hali ile bir text içerisinde nasıl başka bir text aramasının yapılacağını incelemiştik. O algoritma O …"/>
         <meta property="article:published_time" content="2015-10-07" />
             <meta property="article:section" content="Algoritma" />
@@ -29,14 +29,14 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://koseburak.net/theme/css/bootstrap.yeti.min.css" type="text/css"/>
-    <link href="http://koseburak.net/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.koseburak.net/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+    <link href="https://www.koseburak.net/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://koseburak.net/theme/css/pygments/trac.css" rel="stylesheet">
-    <link href="http://koseburak.net/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://koseburak.net/theme/css/style.css" type="text/css"/>
+    <link href="https://www.koseburak.net/theme/css/pygments/trac.css" rel="stylesheet">
+    <link href="https://www.koseburak.net/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.koseburak.net/theme/css/style.css" type="text/css"/>
 
-        <link href="http://koseburak.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="https://www.koseburak.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="burakkose:blog ATOM Feed"/>
 
 
@@ -54,7 +54,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://koseburak.net/" class="navbar-brand">
+            <a href="https://www.koseburak.net/" class="navbar-brand">
 burakkose:blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -66,7 +66,7 @@ burakkose:blog            </a>
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
-              <li><a href="http://koseburak.net/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+              <li><a href="https://www.koseburak.net/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -81,7 +81,7 @@ burakkose:blog            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://koseburak.net/blog/kmp/"
+                    <a href="https://www.koseburak.net/blog/kmp/"
                        rel="bookmark"
                        title="Permalink to KMP Algoritmasi - String Algoritmaları">
                         KMP Algoritmasi - String Algoritmaları
@@ -94,21 +94,21 @@ burakkose:blog            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2015-10-07T18:00:00+03:00"> Wed 07 October 2015</time>
+        <i class="fa fa-calendar"></i><time datetime="2015-10-07T18:00:00+02:00"> Wed 07 October 2015</time>
     </span>
 
 
 
         <span class="label label-default">Category</span>
-        <a href="http://koseburak.net/category/algoritma.html">Algoritma</a>
+        <a href="https://www.koseburak.net/category/algoritma.html">Algoritma</a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="http://koseburak.net/tags/algorithm/">algorithm</a>
+	<a href="https://www.koseburak.net/tags/algorithm/">algorithm</a>
         /
-	<a href="http://koseburak.net/tags/string/">string</a>
+	<a href="https://www.koseburak.net/tags/string/">string</a>
         /
-	<a href="http://koseburak.net/tags/searching/">searching</a>
+	<a href="https://www.koseburak.net/tags/searching/">searching</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -127,7 +127,7 @@ Output : 0, 9, 13
 </pre></div>
 
 
-<p>Bir önceki <a href="http://koseburak.net/blog/naive-search-string/">yazıda</a> en kaba hali ile bir text içerisinde nasıl başka bir text aramasının yapılacağını incelemiştik. O algoritma <code>O(m*(n-m+1))</code> karmaşıklığa sahipti. Bu algoritmanın en kötü durumda karmaşıklığı <code>O(n)</code>'dir.</p>
+<p>Bir önceki <a href="https://www.koseburak.net/blog/naive-search-string/">yazıda</a> en kaba hali ile bir text içerisinde nasıl başka bir text aramasının yapılacağını incelemiştik. O algoritma <code>O(m*(n-m+1))</code> karmaşıklığa sahipti. Bu algoritmanın en kötü durumda karmaşıklığı <code>O(n)</code>'dir.</p>
 <h3>KMP (Knuth Morris Pratt)</h3>
 <p>Kısaca yapılan iş şu şekilde yürümektedir. Ne zaman bir eşleşmeme duruöu olursa, elimizde daha önce elde ettiğimiz bilgileri kullanarak, deseni kaydırma ve benzetme işlemi yaparız. Dolayısı ile gereksiz karşılaştırmadan kaçtığımız için zaman karmaşıklığından kazanmış oluruz.</p>
 <p>LPS için aşağıdaki örnelere bakın.</p>
@@ -193,7 +193,7 @@ Output : 0, 9, 13
             var disqus_shortname = 'koseburak'; // required: replace example with your forum shortname
 
                     var disqus_identifier = 'kmp';
-                var disqus_url = 'http://koseburak.net/blog/kmp/';
+                var disqus_url = 'https://www.koseburak.net/blog/kmp/';
 
             var disqus_config = function () {
                 this.language = "tr";
@@ -224,144 +224,144 @@ Output : 0, 9, 13
     <ul class="list-group list-group-flush">
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
               <ul class="list-group" id="social">
-                <li class="list-group-item"><a href="mailto:burakks41@gmail.com"><i class="fa fa-envelop-square fa-lg"></i> envelop</a></li>
+                <li class="list-group-item"><a href="mailto:burakks41@gmail.com"><i class="fa fa-envelope fa-lg"></i> envelope</a></li>
                 <li class="list-group-item"><a href="http://facebook.com/burakks41"><i class="fa fa-facebook-square fa-lg"></i> facebook</a></li>
-                <li class="list-group-item"><a href="http://twitter.com/burakks41"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+                <li class="list-group-item"><a href="http://twitter.com/burakkose41"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
                 <li class="list-group-item"><a href="http://www.linkedin.com/in/burakkose"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
                 <li class="list-group-item"><a href="http://github.com/burakkose"><i class="fa fa-github-square fa-lg"></i> github</a></li>
                 <li class="list-group-item"><a href="https://www.youtube.com/channel/UC6KivSaGWmirxNt2IyHFL0g"><i class="fa fa-youtube-square fa-lg"></i> youtube</a></li>
                 <li class="list-group-item"><a href="skype:ksv7r41?chat"><i class="fa fa-skype fa-lg"></i> skype</a></li>
                 <li class="list-group-item"><a href="https://play.spotify.com/user/11138384529"><i class="fa fa-spotify fa-lg"></i> spotify</a></li>
-                <li class="list-group-item"><a href="https://www.quora.com/Burak-K%C3%B6se-1"><i class="fa fa-quora-square fa-lg"></i> quora</a></li>
-                <li class="list-group-item"><a href="http://koseburak.net//feeds/all.atom.xml"><i class="fa fa-rss-square fa-lg"></i> rss</a></li>
+                <li class="list-group-item"><a href="https://www.quora.com/Burak-K%C3%B6se-1"><i class="fa fa-quora fa-lg"></i> quora</a></li>
+                <li class="list-group-item"><a href="https://www.koseburak.net/feeds/all.atom.xml"><i class="fa fa-rss-square fa-lg"></i> rss</a></li>
               </ul>
             </li>
 
 
-            <li class="list-group-item"><a href="http://koseburak.net/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+            <li class="list-group-item"><a href="https://www.koseburak.net/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
                 <ul class="list-group" id="categories">
                     <li class="list-group-item">
-                        <a href="http://koseburak.net/category/algoritma.html">
+                        <a href="https://www.koseburak.net/category/algoritma.html">
                             <i class="fa fa-folder-open fa-lg"></i> Algoritma
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://koseburak.net/category/big-data.html">
+                        <a href="https://www.koseburak.net/category/big-data.html">
                             <i class="fa fa-folder-open fa-lg"></i> Big Data
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://koseburak.net/category/fonksiyonel-programlama.html">
+                        <a href="https://www.koseburak.net/category/fonksiyonel-programlama.html">
                             <i class="fa fa-folder-open fa-lg"></i> Fonksiyonel Programlama
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://koseburak.net/category/linux.html">
+                        <a href="https://www.koseburak.net/category/linux.html">
                             <i class="fa fa-folder-open fa-lg"></i> Linux
                         </a>
                     </li>
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="http://koseburak.net/tags/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+            <li class="list-group-item"><a href="https://www.koseburak.net/tags/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group list-inline tagcloud" id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="http://koseburak.net/tags/algorithm/">
+                        <a href="https://www.koseburak.net/tags/algorithm/">
                             algorithm
                         </a>
                     </li>
+                    <li class="list-group-item tag-4">
+                        <a href="https://www.koseburak.net/tags/amazon/">
+                            amazon
+                        </a>
+                    </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/bigdata/">
+                        <a href="https://www.koseburak.net/tags/bigdata/">
                             bigdata
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/bioinformatic/">
+                        <a href="https://www.koseburak.net/tags/bioinformatic/">
                             bioinformatic
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/bit/">
+                        <a href="https://www.koseburak.net/tags/bit/">
                             bit
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/datasciece/">
+                        <a href="https://www.koseburak.net/tags/datasciece/">
                             datasciece
                         </a>
                     </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/divide-and-conquer/">
-                            divide and conquer
-                        </a>
-                    </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/dynamic-programming/">
+                        <a href="https://www.koseburak.net/tags/dynamic-programming/">
                             dynamic programming
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/fp/">
+                        <a href="https://www.koseburak.net/tags/fp/">
                             fp
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/graph-theory/">
+                        <a href="https://www.koseburak.net/tags/graph-theory/">
                             graph theory
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/greedy/">
+                        <a href="https://www.koseburak.net/tags/greedy/">
                             greedy
                         </a>
                     </li>
+                    <li class="list-group-item tag-4">
+                        <a href="https://www.koseburak.net/tags/interview/">
+                            interview
+                        </a>
+                    </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/mathematical/">
+                        <a href="https://www.koseburak.net/tags/mathematical/">
                             mathematical
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/operating-systems/">
+                        <a href="https://www.koseburak.net/tags/operating-systems/">
                             operating systems
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/python/">
+                        <a href="https://www.koseburak.net/tags/python/">
                             python
                         </a>
                     </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://koseburak.net/tags/random/">
-                            random
-                        </a>
-                    </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/scala/">
+                        <a href="https://www.koseburak.net/tags/scala/">
                             scala
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/scheduling/">
+                        <a href="https://www.koseburak.net/tags/scheduling/">
                             scheduling
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/searching/">
+                        <a href="https://www.koseburak.net/tags/searching/">
                             searching
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/sorting/">
+                        <a href="https://www.koseburak.net/tags/sorting/">
                             sorting
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
-                        <a href="http://koseburak.net/tags/spark/">
+                        <a href="https://www.koseburak.net/tags/spark/">
                             spark
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
-                        <a href="http://koseburak.net/tags/string/">
+                        <a href="https://www.koseburak.net/tags/string/">
                             string
                         </a>
                     </li>
@@ -378,7 +378,7 @@ Output : 0, 9, 13
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2017 Burak Köse
+         <div class="col-xs-10">&copy; 2018 Burak Köse
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
@@ -390,15 +390,15 @@ Output : 0, 9, 13
       </div>
    </div>
 </footer>
-<script src="http://koseburak.net/theme/js/jquery.min.js"></script>
+<script src="https://www.koseburak.net/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://koseburak.net/theme/js/bootstrap.min.js"></script>
+<script src="https://www.koseburak.net/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://koseburak.net/theme/js/respond.min.js"></script>
+<script src="https://www.koseburak.net/theme/js/respond.min.js"></script>
 
-    <script src="http://koseburak.net/theme/js/bodypadding.js"></script>
+    <script src="https://www.koseburak.net/theme/js/bodypadding.js"></script>
     <!-- Disqus -->
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
