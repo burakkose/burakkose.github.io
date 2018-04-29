@@ -7,7 +7,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://koseburak.net/'
+SITEURL = 'https://www.koseburak.net'
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 

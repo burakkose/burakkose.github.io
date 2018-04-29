@@ -5,7 +5,7 @@ import os
 
 AUTHOR = u'Burak Köse'
 SITENAME = u'burakkose:blog'
-SITEURL = 'http://koseburak.net'
+SITEURL = 'https://www.koseburak.net'
 
 TIMEZONE = 'Europe/Amsterdam'
 
