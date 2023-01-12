@@ -41,14 +41,10 @@ LINKS = None
 
 # Social widget
 SOCIAL = (('envelope', 'mailto:burakks41@gmail.com'),
-          ('facebook', 'http://facebook.com/burakks41'),
           ('twitter', 'http://twitter.com/burakkose41'),
           ('linkedin', 'http://www.linkedin.com/in/burakkose'),
           ('github', 'http://github.com/burakkose'),
-          ('youtube', 'https://www.youtube.com/channel/UC6KivSaGWmirxNt2IyHFL0g'),
-          ('skype', 'skype:ksv7r41?chat'),
-          ('spotify', 'https://play.spotify.com/user/11138384529'),
-          ('quora', 'https://www.quora.com/Burak-K%C3%B6se-1'),)
+          ('spotify', 'https://play.spotify.com/user/11138384529'))
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 
@@ -77,9 +73,8 @@ BANNER = 'images/banner.jpg'
 CC_LICENSE = "CC-BY-NC-SA"
 
 PLUGIN_PATHS = ['plugins']
-
 PLUGINS = ['just_table', 'tag_cloud', 'tipue_search',
-           'optimize_images', 'pelican_gist']
+           'optimize_images', 'pelican-gist']
 
 DISQUS_SITENAME = 'koseburak'
 GOOGLE_ANALYTICS = 'UA-56751819-1'
