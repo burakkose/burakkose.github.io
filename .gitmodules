@@ -1,0 +1,3 @@
+[submodule "plugins/just_table"]
+	path = plugins/just_table
+	url = git@github.com:burakkose/just_table.git
