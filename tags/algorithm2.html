@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="tr" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>algorithm - burakkose:blog</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <meta name="author" content="Burak Köse" />
+    <meta name="keywords" content="algorithm" />
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="burakkose:blog" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="burakkose:blog"/>
+        <meta property="og:url" content="https://www.koseburak.net"/>
+        <meta property="og:description" content="burakkose:blog"/>
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://www.koseburak.net/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+    <link href="https://www.koseburak.net/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://www.koseburak.net/theme/css/pygments/trac.css" rel="stylesheet">
+    <link href="https://www.koseburak.net/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.koseburak.net/theme/css/style.css" type="text/css"/>
+
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://www.koseburak.net/" class="navbar-brand">
+burakkose:blog            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="/search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+              <li><a href="https://www.koseburak.net/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <article>
+                <h2><a href="https://www.koseburak.net/blog/find-closest-pair-sorted/">Sıralı iki dizi içerisinde seçilen ikili toplamının hedef sayıya en yakın olması - Arama Algoritması</a></h2>
+                <div class="summary"><p>Hoşuma giden problem türlerinden olan yakın ikili sorularından biri. Bu problemde girdi olarak verilen iki tane sıralanmış dizi ve bir hedef numarası bulunuyor ve dizilerden seçilen hangi iki elemanın toplamının hedef elemana en yakın sayı olacağını bulmamız gerekiyor.</p>
+<p>Örnek olarak;</p>
+<div class="highlight"><pre><span></span><code><span class="n">Input</span><span class="o">:</span><span class="w">  </span><span class="n">ar1</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="mi">1</span><span class="o">,</span><span class="w"> </span><span class="mi">4</span><span class="o">,</span><span class="w"> </span><span class="mi">5</span><span class="o">,</span><span class="w"> </span><span class="mi">7</span><span class="o">};</span>
+<span class="w">        </span><span class="n">ar2</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="mi">20</span><span class="o">,</span><span class="w"> </span><span class="mi">30 …</span></code></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/find-closest-pair-sorted/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://www.koseburak.net/blog/carp-yedi/">Bit işlemleri yardımıyla 7 ile çarpma işlemi - Matematik Problemi</a></h2>
+                <div class="summary"><p>Bir sayıyı yedi ile çarpmanın bitwise karşılığı.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="nv">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;__main__&#39;</span>:
+<span class="w">    </span><span class="nv">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nv">print</span><span class="ss">((</span><span class="nv">num</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">3</span><span class="ss">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">num</span><span class="ss">)</span>
+</code></pre></div>
+
+<p>Not: Sadece pozitif sayılar için.</p>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/carp-yedi/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://www.koseburak.net/blog/prim-mst/">Prim Algoritması - Greedy Yaklaşımı</a></h2>
+                <div class="summary"><p>Tıpkı Kruskal algoritmasında olduğu gibi Prim algoritmasında da amaç en kısa yol ağacını bulmaktır ve greedy yaklaşımı ile çözülür.</p>
+<p>Algoritma aşağıdaki şekilde çalışır.</p>
+<ol>
+<li>Ağaca eklenmiş tüm düğümleri tutacak bir küme oluştur(<code>mst_set</code>).</li>
+<li>Başlangıçta tüm düğümlere sonsuz değeri verin sadece içlerinden bir tanesini seçmek için 0 değeri verin.</li>
+<li>Eğer <code>1.</code> adımda …</li></ol>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/prim-mst/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://www.koseburak.net/blog/stream-ortalama/">Veri akışının aritmetik ortalaması - Matematik Problemi</a></h2>
+                <div class="summary"><p>Bu problemde elimize, bir kaynaktan gelen sürekli veriler var yani hep bir sayı akışı var. Bizden her gelen yeni sayı için o anki aritmetik ortalama istenmektedir.</p>
+<p>Örneğin;</p>
+<div class="highlight"><pre><span></span><code>Akış ... 10, 20, 30, 40, 50, 60, …
+10 geldiğinde ortalama 10.00
+20 geldiğinde ortalama 15.00
+30 geldiğinde ortalama 20.00
+40 …</code></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/stream-ortalama/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://www.koseburak.net/blog/bozuk-para/">Bozuk para problemi - Greedy Yaklaşımı</a></h2>
+                <div class="summary"><p>Bize verilen bir miktar para var ve bu miktarı en az sayıda banknot ile karşılamak istiyoruz. Gerçek hayattada sıkça karşılaşılan bir problemi aslında greedy yaklaşımı ile çözüyoruz.</p>
+<p>Örneğin</p>
+<div class="highlight"><pre><span></span><code><span class="n">Input</span><span class="o">:</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">70</span><span class="w"> </span><span class="n">TL</span>
+<span class="n">Output</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="mi">50</span><span class="w"> </span><span class="n">TL</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="n">TL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">70</span><span class="w"> </span><span class="n">TL</span>
+
+<span class="n">Input</span><span class="o">:</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">121</span><span class="w"> </span><span class="n">TL</span>
+<span class="n">Output</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="mi">100</span><span class="w"> </span><span class="n">TL</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="n">TL …</span></code></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/bozuk-para/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://www.koseburak.net/blog/fibo-kontrol/">Sayı fibonacci sayısı mı? - Matematik Problemi</a></h2>
+                <div class="summary"><p>Verilen sayının fibonacci sayısı olup olmadığını anlamanın basit bir yolu var.</p>
+<p>İsterseniz sırayla kendi sayınıza kadar fibonacci sayılarını oluşturup kontrol ederek gidebilirsiniz. Tabi aşırı maliyetli bir çözüm olur, ya da matematikten faydalanırsınız.</p>
+<p>Bu çözüme tam kare çözümü denmektedir. Kontrol için aşağıdaki eşitliği kullancağız.</p>
+<p><code>(5*n^2 + 4) veya (5*n …</code></p>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/fibo-kontrol/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://www.koseburak.net/blog/pow-without/">Çarpma ve bölme işlemi kullanmadan üs alma - Matematik Problemi</a></h2>
+                <div class="summary"><p>Üs alma işlemi problemlerine farklı bir yaklaşım sunan bu problemde, çarpma(<code>*</code>) ve bölme(<code>/</code>) işlemi kullanmadan üs alma işlemine bakacağız.</p>
+<p>Örneğin;</p>
+<div class="highlight"><pre><span></span><code><span class="mf">5</span><span class="o">^</span><span class="mf">6</span><span class="w"> </span><span class="n">işlemi</span><span class="w"> </span><span class="n">için</span><span class="p">;</span>
+<span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span>
+<span class="mf">1.</span><span class="p">)</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="n">kere</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="n">ekle</span><span class="w"> </span><span class="p">(</span><span class="mf">5</span><span class="o">^</span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span>
+<span class="mf">2.</span><span class="p">)</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="n">kere</span><span class="w"> </span><span class="mf">25</span><span class="w"> </span><span class="n">ekle</span><span class="w"> </span><span class="p">(</span><span class="mf">5</span><span class="o">^</span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">125</span>
+<span class="mf">3.</span><span class="p">)</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="n">kere</span><span class="w"> </span><span class="mf">125</span><span class="w"> </span><span class="n">ekle</span><span class="w"> </span><span class="p">(</span><span class="mf">5</span><span class="o">^</span><span class="mf">4</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">625 …</span></code></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/pow-without/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://www.koseburak.net/blog/kuruskal-mst/">Kruskal Algoritması - Greedy Yaklaşımı</a></h2>
+                <div class="summary"><p>En küçük yol ağacı problemine(minimum spanning tree) üretilmiş bir çözümdür. En basit graf algoritmalarından biridir. Greedy yaklaşımı ile çözüme ulaşılır. Amaç bir graf içerisinde tüm düğümleri kapsayan minimum maliyete sahip ağacı elde etmektir.</p>
+<p>Aşağıda kabaca algoritmanın çalışmasını anlayabilirsiniz.</p>
+<ol>
+<li>Tüm kenarları maliyetlerine göre küçükten büyüğe doğru sıralay</li>
+<li>En düşük maliyetli …</li></ol>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/kuruskal-mst/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://www.koseburak.net/blog/naive-search-string/">En basit hali ile text arama işlemi - String Algoritmaları</a></h2>
+                <div class="summary"><p>Text işlemlerinde, bir dizgi içerisinde dizgi aramadaki en basit çözümü inceleyeceğiz.</p>
+<div class="highlight"><pre><span></span><code>txt[] =  &quot;THIS IS A TEST TEXT&quot;
+pat[] = &quot;TEST&quot;
+Output: 10
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>txt[] =  &quot;AABAACAADAABAAABAA&quot;
+pat[] = &quot;AABA&quot;
+Output: 0,9,13
+</code></pre></div>
+
+<p>Çözüm aşağıdaki gibi olacaktır.</p>
+<div class="highlight"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="k">search</span><span class="p">(</span><span class="nc">text</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">pattern</span><span class="p">),</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="nc">text</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1 …</span></code></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/naive-search-string/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="https://www.koseburak.net/blog/is-planlama/">İş planlama problemi - Greedy Yaklaşımı</a></h2>
+                <div class="summary"><p>İş planlanması ile ilgili olan bir problem. Girdi olarak son teslim tarihine ve kazanç bilgilerine sahip olan işler veriliyor. En büyük kazancı nasıl elde edebileceğimizi bulmamız gerekiyor.</p>
+<p>Örnek olarak ;</p>
+<div class="highlight"><pre><span></span><code><span class="n">Input</span><span class="o">:</span>
+<span class="w">  </span><span class="n">JobID</span><span class="w">    </span><span class="n">Son</span><span class="w"> </span><span class="n">Tarih</span><span class="w">     </span><span class="n">Kazanç</span>
+<span class="w">    </span><span class="n">a</span><span class="w">        </span><span class="mi">4</span><span class="w">            </span><span class="mi">20</span><span class="w">   </span>
+<span class="w">    </span><span class="n">b</span><span class="w">        </span><span class="mi">1</span><span class="w">            </span><span class="mi">10</span>
+<span class="w">    </span><span class="n">c</span><span class="w">        </span><span class="mi">1</span><span class="w">            </span><span class="mi">40</span><span class="w">  </span>
+<span class="w">    </span><span class="n">d</span><span class="w">        </span><span class="mi">1</span><span class="w">            </span><span class="mi">30</span>
+<span class="n">Output</span><span class="o">:</span>
+<span class="w">        </span><span class="n">c</span><span class="o">,</span><span class="w"> </span><span class="n">a</span><span class="w">   </span>
+
+
+<span class="n">Input …</span></code></pre></div>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/is-planlama/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
+        <ul class="pagination">
+                <li class="prev"><a href="https://www.koseburak.net/tags/algorithm.html">&laquo;</a>
+                </li>
+                    <li class=""><a
+                            href="https://www.koseburak.net/tags/algorithm/.html">1</a></li>
+                    <li class="active"><a
+                            href="https://www.koseburak.net/tags/algorithm/2.html">2</a></li>
+                    <li class=""><a
+                            href="https://www.koseburak.net/tags/algorithm/3.html">3</a></li>
+                    <li class=""><a
+                            href="https://www.koseburak.net/tags/algorithm/4.html">4</a></li>
+                <li class="next"><a
+                        href="https://www.koseburak.net/tags/algorithm3.html">&raquo;</a></li>
+        </ul>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="mailto:burakks41@gmail.com"><i class="fa fa-envelope fa-lg"></i> envelope</a></li>
+                <li class="list-group-item"><a href="http://twitter.com/burakkose41"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+                <li class="list-group-item"><a href="http://www.linkedin.com/in/burakkose"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+                <li class="list-group-item"><a href="http://github.com/burakkose"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+                <li class="list-group-item"><a href="https://play.spotify.com/user/11138384529"><i class="fa fa-spotify fa-lg"></i> spotify</a></li>
+              </ul>
+            </li>
+
+
+            <li class="list-group-item"><a href="https://www.koseburak.net/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="https://www.koseburak.net/category/algoritma.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Algoritma
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.koseburak.net/category/big-data.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Big Data
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.koseburak.net/category/fonksiyonel-programlama.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Fonksiyonel Programlama
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.koseburak.net/category/interview.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Interview
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.koseburak.net/category/linux.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Linux
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="https://www.koseburak.net/tags/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group list-inline tagcloud" id="tags">
+                    <li class="list-group-item tag-1">
+                        <a href="https://www.koseburak.net/tags/algorithm/">
+                            algorithm
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/bigdata/">
+                            bigdata
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/bioinformatic/">
+                            bioinformatic
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/datasciece/">
+                            datasciece
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="https://www.koseburak.net/tags/dynamic-programming/">
+                            dynamic programming
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/fp/">
+                            fp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="https://www.koseburak.net/tags/google/">
+                            google
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/graph-theory/">
+                            graph theory
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="https://www.koseburak.net/tags/greedy/">
+                            greedy
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/interview/">
+                            interview
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="https://www.koseburak.net/tags/mathematical/">
+                            mathematical
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="https://www.koseburak.net/tags/microsoft/">
+                            microsoft
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/operating-systems/">
+                            operating systems
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/python/">
+                            python
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/scala/">
+                            scala
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/scheduling/">
+                            scheduling
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="https://www.koseburak.net/tags/searching/">
+                            searching
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="https://www.koseburak.net/tags/sorting/">
+                            sorting
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="https://www.koseburak.net/tags/spark/">
+                            spark
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="https://www.koseburak.net/tags/string/">
+                            string
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+    </ul>
+</section>            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2015 Burak Köse
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://www.koseburak.net/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://www.koseburak.net/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://www.koseburak.net/theme/js/respond.min.js"></script>
+
+    <script src="https://www.koseburak.net/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'koseburak'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-56751819-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+</body>
+</html>

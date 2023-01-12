@@ -28,8 +28,6 @@
     <link href="https://www.koseburak.net/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.koseburak.net/theme/css/style.css" type="text/css"/>
 
-        <link href="https://www.koseburak.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="burakkose:blog ATOM Feed"/>
 
 
 
@@ -54,7 +52,7 @@ burakkose:blog            </a>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
-                <form class="navbar-search" action="/search">
+                <form class="navbar-search" action="/search.html">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
@@ -70,10 +68,18 @@ burakkose:blog            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="https://www.koseburak.net/blog/microsoft-google-mulakat/">Microsoft ve Google Mülakat Tecrübem</a></h2>
+                <div class="summary"><p>Son yazımın üzerinden çok uzun zaman geçti. Blog açmamın sebeplerinden biri, geri dönüp bakarak referans almak istediğim konular üzerine not tutmaktı ancak zaman bulamadığımdan artık bir kaç yılda bir yazar oldum.</p>
+<p>Son yazımda, 2018 yılında tecrübe ettiğim <a href="https://www.koseburak.net/blog/amazon-mulakat/">Amazon mülakat sürecimi</a> paylaşmıştım. 4. yılımı tamamladıktan sonra iş değiştirme fikri ile 2022 …</p>
+                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/microsoft-google-mulakat/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://www.koseburak.net/blog/amazon-mulakat/">A'dan Z'ye Amazon Mülakat Tecrübem</a></h2>
                 <div class="summary"><p>Nisan ayında Amazon’un Dublin ofisinde mülakat yaptıktan ve teklif aldıktan sonra, yaşadığım tecrübeyi paylaşma kararı verdim.
 <center>
-<img alt="amazon-logo-300px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Amazon_logo_plain.svg/320px-Amazon_logo_plain.svg.png">
+<img alt="amazon-logo-300px" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
 </center>
 Bir gün merakımdan Amazon’nun kariyer <a href="https://www.amazon.jobs/">sayfasında</a> açık olan ilanlara bakıyordum. O gün gözüme bir pozisyon takıldı, iş ilanında güvenlik alanındaki verilerin analizi için uğraşacak, Scala ve Spark bilen kişi arıyorlardı. Çok sıradan …</p>
                     <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/amazon-mulakat/">more ...</a>
@@ -90,10 +96,9 @@ Bir gün merakımdan Amazon’nun kariyer <a href="https://www.amazon.jobs/">say
             <hr/>
             <article>
                 <h2><a href="https://www.koseburak.net/blog/algebraic-data-types/">Algebraic Data Types nedir? - FP</a></h2>
-                <div class="summary"><p>İsmi bu kadar karmaşık olup da arkasındaki fikir bu kafar basit olan bir yapı olduğunu sanmıyorum. Olay tamamen veriyi modellemektir, davranışlar ile ilgilenilmez. Veri modellenirken mantıksal ve(and) ile veya(or) işleminden yararlanılır. Kısaca örnek vermek gerekirse:</p>
-<div class="highlight"><pre><span></span>sealed trait Şekil
-case class Çember(v: Double) extends Şekil
-case class Üçgen …</pre></div>
+                <div class="summary"><p>İsmi bu kadar karmaşık olup da arkasındaki fikir bu kadar basit olan bir yapı olduğunu sanmıyorum. Olay tamamen veriyi modellemektir, davranışlar ile ilgilenilmez. Veri modellenirken mantıksal ve(and) ile veya(or) işleminden yararlanılır. Kısaca örnek vermek gerekirse:</p>
+<div class="highlight"><pre><span></span><code><span class="n">sealed</span><span class="w"> </span><span class="n">trait</span><span class="w"> </span><span class="err">Ş</span><span class="n">ekil</span>
+<span class="n">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="err">Ç</span><span class="n">ember</span><span class="p">(</span><span class="n">v</span><span class="p">:</span><span class="w"> </span><span class="n">Double</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="err">Ş</span><span class="n">ekil …</span></code></pre></div>
                     <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/algebraic-data-types/">more ...</a>
                 </div>
             </article>
@@ -109,18 +114,17 @@ case class Üçgen …</pre></div>
             <article>
                 <h2><a href="https://www.koseburak.net/blog/lis/">En uzun artan altdizi(LIS) - Dinamik Programlama</a></h2>
                 <div class="summary"><p>Bir dizi içerisinde en uzun artan altdiziyi bulmayı amaçlayan bir problemdir. Örneğin</p>
-<div class="highlight"><pre><span></span>Input:
+<div class="highlight"><pre><span></span><code>Input:
     {10, 22, 9, 33, 21, 50, 41, 60, 80}
 Output:
     6{10, 22, 33, 50, 60, 80}
-</pre></div>
-
+</code></pre></div>
 
 <p><a href="https://www.koseburak.net/blog/lcs/">LCS</a> algoritmasına benzer bir yol izleyeceğiz. Kod anlaşılır durumda, çözüm aşağıdadır.</p>
-<div class="highlight"><pre><span></span>def lis(arr):
-    lis = [1] * len(arr)
+<div class="highlight"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">lis</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="n">lis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 
-    for i …</pre></div>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i …</span></code></pre></div>
                     <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/lis/">more ...</a>
                 </div>
             </article>
@@ -129,10 +133,9 @@ Output:
                 <h2><a href="https://www.koseburak.net/blog/lcs/">En uzun ortak altdizi(LCS) - Dinamik Programlama</a></h2>
                 <div class="summary"><p>Bilgisayar bilimlerinde önemli bir yere sahip olan bu problemde, verilen iki dizgide de ortak olarak bulunan ve aynı yönde sıralanmış dizgiler bütünü elde edilmeye çalışılmaktadır.</p>
 <p>Örneğin;</p>
-<div class="highlight"><pre><span></span> “ABCDGH” ve “AEDFHR” için “ADH”
+<div class="highlight"><pre><span></span><code> “ABCDGH” ve “AEDFHR” için “ADH”
  “AGGTAB” ve “GXTXAYB” için “GTAB”
-</pre></div>
-
+</code></pre></div>
 
 <p>Dosyalar arasındaki farkları, değişiklikleri elde etmede ve özellikle bioinformatik alanında sıkça karşılaşılan bir çözümdür …</p>
                     <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/lcs/">more ...</a>
@@ -156,18 +159,17 @@ Output:
                 <h2><a href="https://www.koseburak.net/blog/faktoriyel-0s-count/">Sayının faktoriyelinde sonda bulunan 0'ların sayısı - Matematik Problemi</a></h2>
                 <div class="summary"><p>Verilen sayının faktoriyelinde sonda bulunan sıfırların sayısını bulmamız gerekiyor.</p>
 <p>Örneğin;</p>
-<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">1</span>
-<span class="mi">5</span><span class="o">!</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="highlight"><pre><span></span><code><span class="n">Input</span><span class="o">:</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="n">Output</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">5</span><span class="o">!</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
 
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">4</span>
-<span class="mi">20</span><span class="o">!</span> <span class="o">=</span> <span class="mi">2432902008176640000</span>
+<span class="n">Input</span><span class="o">:</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span>
+<span class="n">Output</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="mi">20</span><span class="o">!</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2432902008176640000</span>
 
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">24</span>
-</pre></div>
-
+<span class="n">Input</span><span class="o">:</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span>
+<span class="n">Output</span><span class="o">:</span><span class="w"> </span><span class="mi">24</span>
+</code></pre></div>
 
 <p>En basit hali ile çözüm, sayının faktoriyelini hesaplamak ve sondaki sıfıların sayısını saymak. Masraflı ve büyük sayılar için çalışmayacak bir yöntem …</p>
                     <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/faktoriyel-0s-count/">more ...</a>
@@ -179,25 +181,6 @@ Output:
                 <div class="summary"><p>Verilen bir fonksiyon yazı tura işlemini %60 yazı %40 tura gelecek şekilde gerçekleştiriyor. Bu verilen fonksiyonu kullanarak bu işlemi nasıl hilesiz yapabiliriz?</p>
 <p>Paranın %60 olasılıkla 0, %40 olasılık ile 1 döndürdüğünü biliyoruz. Çözüm olarak bu fonksiyonu iki kere çağıracağız. Eğer sonuçlar (1,0) veya (0,1) ise problem yok, direk …</p>
                     <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/0-1-50/">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://www.koseburak.net/blog/nth-score/">Hedef puana kaç farklı şekilde ulaşılır? - Dinamik Programlama</a></h2>
-                <div class="summary"><p>3, 5 ve 10 puan almanın mümkün olduğu ve hedef puana bu puan gruplarını kullanarak kaç farklı şekilde ulaşılabileceğini bulacağız.</p>
-<p>Örnek;</p>
-<div class="highlight"><pre><span></span><span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">4</span>
-<span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">10</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
-
-<span class="n">Input</span><span class="o">:</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">13</span>
-<span class="n">Output</span><span class="o">:</span> <span class="mi">2</span>
-<span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
-<span class="o">(</span><span class="mi">3 …</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="https://www.koseburak.net/blog/nth-score/">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -226,15 +209,10 @@ Output:
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
               <ul class="list-group" id="social">
                 <li class="list-group-item"><a href="mailto:burakks41@gmail.com"><i class="fa fa-envelope fa-lg"></i> envelope</a></li>
-                <li class="list-group-item"><a href="http://facebook.com/burakks41"><i class="fa fa-facebook-square fa-lg"></i> facebook</a></li>
                 <li class="list-group-item"><a href="http://twitter.com/burakkose41"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
                 <li class="list-group-item"><a href="http://www.linkedin.com/in/burakkose"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
                 <li class="list-group-item"><a href="http://github.com/burakkose"><i class="fa fa-github-square fa-lg"></i> github</a></li>
-                <li class="list-group-item"><a href="https://www.youtube.com/channel/UC6KivSaGWmirxNt2IyHFL0g"><i class="fa fa-youtube-square fa-lg"></i> youtube</a></li>
-                <li class="list-group-item"><a href="skype:ksv7r41?chat"><i class="fa fa-skype fa-lg"></i> skype</a></li>
                 <li class="list-group-item"><a href="https://play.spotify.com/user/11138384529"><i class="fa fa-spotify fa-lg"></i> spotify</a></li>
-                <li class="list-group-item"><a href="https://www.quora.com/Burak-K%C3%B6se-1"><i class="fa fa-quora fa-lg"></i> quora</a></li>
-                <li class="list-group-item"><a href="https://www.koseburak.net/feeds/all.atom.xml"><i class="fa fa-rss-square fa-lg"></i> rss</a></li>
               </ul>
             </li>
 
@@ -257,6 +235,11 @@ Output:
                         </a>
                     </li>
                     <li class="list-group-item">
+                        <a href="https://www.koseburak.net/category/interview.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Interview
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="https://www.koseburak.net/category/linux.html">
                             <i class="fa fa-folder-open fa-lg"></i> Linux
                         </a>
@@ -271,11 +254,6 @@ Output:
                             algorithm
                         </a>
                     </li>
-                    <li class="list-group-item tag-4">
-                        <a href="https://www.koseburak.net/tags/amazon/">
-                            amazon
-                        </a>
-                    </li>
                     <li class="list-group-item tag-3">
                         <a href="https://www.koseburak.net/tags/bigdata/">
                             bigdata
@@ -284,11 +262,6 @@ Output:
                     <li class="list-group-item tag-3">
                         <a href="https://www.koseburak.net/tags/bioinformatic/">
                             bioinformatic
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="https://www.koseburak.net/tags/bit/">
-                            bit
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -306,6 +279,11 @@ Output:
                             fp
                         </a>
                     </li>
+                    <li class="list-group-item tag-4">
+                        <a href="https://www.koseburak.net/tags/google/">
+                            google
+                        </a>
+                    </li>
                     <li class="list-group-item tag-3">
                         <a href="https://www.koseburak.net/tags/graph-theory/">
                             graph theory
@@ -316,7 +294,7 @@ Output:
                             greedy
                         </a>
                     </li>
-                    <li class="list-group-item tag-4">
+                    <li class="list-group-item tag-3">
                         <a href="https://www.koseburak.net/tags/interview/">
                             interview
                         </a>
@@ -324,6 +302,11 @@ Output:
                     <li class="list-group-item tag-2">
                         <a href="https://www.koseburak.net/tags/mathematical/">
                             mathematical
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="https://www.koseburak.net/tags/microsoft/">
+                            microsoft
                         </a>
                     </li>
                     <li class="list-group-item tag-3">
@@ -379,7 +362,7 @@ Output:
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2018 Burak Köse
+         <div class="col-xs-10">&copy; 2023 Burak Köse
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
