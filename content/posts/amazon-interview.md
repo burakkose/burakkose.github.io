@@ -7,7 +7,7 @@ Slug: amazon-mulakat
 
 Nisan ayında Amazon’un Dublin ofisinde mülakat yaptıktan ve teklif aldıktan sonra, yaşadığım tecrübeyi paylaşma kararı verdim.
 <center>
-![amazon-logo-300px](https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Amazon_logo_plain.svg/320px-Amazon_logo_plain.svg.png)
+![amazon-logo-300px](https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg)
 </center>
 Bir gün merakımdan Amazon’nun kariyer [sayfasında](https://www.amazon.jobs/) açık olan ilanlara bakıyordum. O gün gözüme bir pozisyon takıldı, iş ilanında güvenlik alanındaki verilerin analizi için uğraşacak, Scala ve Spark bilen kişi arıyorlardı. Çok sıradan bir başvuru ile(sadece cv) başvurumu tamamladım. Yaklaşık 1 hafta sonra Amazon’un İK’sı tarafından mülakat daveti aldım ve zorlu süreç böylece başlamış oldu.
 
