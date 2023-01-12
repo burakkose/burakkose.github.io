@@ -5,7 +5,7 @@ Category: Fonksiyonel Programlama
 Tags: fp, scala
 Slug: algebraic-data-types
 
-İsmi bu kadar karmaşık olup da arkasındaki fikir bu kafar basit olan bir yapı olduğunu sanmıyorum. Olay tamamen veriyi modellemektir, davranışlar ile ilgilenilmez. Veri modellenirken mantıksal ve(and) ile veya(or) işleminden yararlanılır. Kısaca örnek vermek gerekirse:
+İsmi bu kadar karmaşık olup da arkasındaki fikir bu kadar basit olan bir yapı olduğunu sanmıyorum. Olay tamamen veriyi modellemektir, davranışlar ile ilgilenilmez. Veri modellenirken mantıksal ve(and) ile veya(or) işleminden yararlanılır. Kısaca örnek vermek gerekirse:
 
 ```
 sealed trait Şekil
